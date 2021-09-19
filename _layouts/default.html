@@ -14,7 +14,6 @@
         {% include header.html %}
         <section>{{ content }}</section>
 
-        {% if jekyll.environment == 'production' %} {% include analytics.html %}
-        {% endif %}
+        {% if jekyll.environment == 'production' %} {% include analytics.html %} {% endif %}
     </body>
 </html>

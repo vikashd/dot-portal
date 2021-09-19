@@ -10,37 +10,37 @@ https://github.com/jekyll/jekyll-sass-converter/issues/116#issuecomment-85091242
 */
 
 body {
-  @apply text-gray-dark;
+    @apply text-gray-dark;
 }
 
 @layer components {
-  .link {
-    @apply text-sm text-gray-dark flex items-center;
+    .link {
+        @apply text-sm text-gray-dark flex items-center;
 
-    span {
-      &:after {
-        content: "";
-        @apply absolute w-full h-px left-0 -bottom-1 bg-gray-dark opacity-0;
-      }
+        span {
+            &:after {
+                content: "";
+                @apply absolute w-full h-px left-0 -bottom-1 bg-gray-dark opacity-0;
+            }
 
-      @apply relative;
+            @apply relative;
+        }
+
+        &:focus {
+            @apply focus:outline-none;
+        }
+
+        &.active,
+        &:focus,
+        &:hover {
+            span:after {
+                @apply opacity-100;
+            }
+        }
     }
 
-    &:focus {
-      @apply focus:outline-none;
+    .dashboard-thumb-image {
+        padding-top: 56%;
+        @apply relative mb-8;
     }
-
-    &.active,
-    &:focus,
-    &:hover {
-      span:after {
-        @apply opacity-100;
-      }
-    }
-  }
-
-  .dashboard-thumb-image {
-    padding-top: 56%;
-    @apply relative mb-8;
-  }
 }
