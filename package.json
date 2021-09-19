@@ -26,10 +26,5 @@
     "dependencies": {
         "save-dev": "0.0.1-security",
         "tippy.js": "^6.3.1"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "pretty-quick --staged"
-        }
     }
 }
