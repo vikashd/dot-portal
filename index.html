@@ -12,4 +12,7 @@ layout: default
         <div class="text-sm">Sort by: <strong>Recently viewed</strong></div>
     </div>
 </div>
-<div class="container mx-auto py-28">{% include dashboard-group.html %} {% include dashboard-group.html %}</div>
+<div class="container mx-auto py-28">
+    {% include dashboard-group.html title=site.data.dashboards.bespoke.title items=site.data.dashboards.bespoke.items %}
+    {% include dashboard-group.html title=site.data.dashboards.dot.title items=site.data.dashboards.dot.items %}
+</div>

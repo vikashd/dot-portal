@@ -1,5 +1,6 @@
-<h2 class="text-2xl font-serif mb-14">My Bespoke dashboards</h2>
+<!-- dashboard-group start -->
+<h2 class="text-2xl font-serif mb-14">{{ include.title }}</h2>
 <div class="grid grid-cols-3 gap-x-5 gap-y-20 mb-20">
-    {% include dashboard-item.html %} {% include dashboard-item.html %} {% include dashboard-item.html %} {% include
-    dashboard-item.html %}
+    {% for item in include.items %} {% include dashboard-item.html item=item %} {% endfor %}
 </div>
+<!-- dashboard-group end -->
