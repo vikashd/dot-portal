@@ -47,6 +47,7 @@ exclude:
     - package-lock.json
     - postcss.config.js
     - tailwind.config.js
+    - README.md
 #   - .sass-cache/
 #   - .jekyll-cache/
 #   - gemfiles/
