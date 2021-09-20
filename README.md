@@ -17,3 +17,11 @@ $ npm install && npm run serve
 ```
 
 Open from http://localhost:4000
+
+### Deployment/build
+
+```
+$ npm run build
+```
+
+Static files generated in `_site` folder
