@@ -16,7 +16,9 @@
 @import "bootstrap/scss/containers";
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/buttons";
+/* purgecss start ignore */
 @import "bootstrap/scss/dropdown";
+/* purgecss end ignore */
 @import "bootstrap/scss/helpers";
 @import "bootstrap/scss/utilities/api";
 
@@ -38,5 +40,11 @@
 
     @include media-breakpoint-up(md) {
         max-width: 100%;
+    }
+}
+
+.header-container {
+    @include media-breakpoint-down(md) {
+        min-height: 32px;
     }
 }

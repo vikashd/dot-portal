@@ -15,7 +15,7 @@ var offset = {
     name: "offset",
     options: {
         offset: ({ placement, reference, popper }) => {
-            return [0, -reference.height];
+            return [0, -reference.height - 10];
         },
     },
 };
@@ -28,3 +28,23 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
         },
     });
 });
+
+(function () {
+    var mobileMenuBtn = document.getElementById("mobile-menu-btn");
+    var mobileMenuBtnClose = document.getElementById("mobile-menu-close-btn");
+    var menu = document.getElementById("mobile-menu");
+    var open = false;
+
+    function clickHandler() {
+        open = !open;
+
+        if (open) {
+            menu.style.transform = "translate3d(0, 0, 0)";
+        } else {
+            menu.style.transform = "translate3d(-100%, 0, 0)";
+        }
+    }
+
+    mobileMenuBtn.addEventListener("click", clickHandler);
+    mobileMenuBtnClose.addEventListener("click", clickHandler);
+})();
