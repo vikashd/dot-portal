@@ -3,6 +3,3 @@
 .jekyll-metadata
 node_modules
 vendor
-
-docs/*
-!docs/.gitkeep
