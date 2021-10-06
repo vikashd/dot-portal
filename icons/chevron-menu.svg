@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-chevron-menu">
+      <rect width="16" height="16"/>
+    </clipPath>
+  </defs>
+  <g id="chevron-menu" clip-path="url(#clip-chevron-menu)">
+    <path id="Path_4" data-name="Path 4" d="M8,9.616.335,1.951A1.143,1.143,0,0,1,1.951.335L8,6.384,14.049.335a1.143,1.143,0,0,1,1.616,1.616Z" transform="translate(0 4)" fill="#191919"/>
+  </g>
+</svg>

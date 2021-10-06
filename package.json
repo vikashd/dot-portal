@@ -3,6 +3,9 @@
     "version": "1.0.0",
     "description": "",
     "main": "index.js",
+    "engines": {
+        "node": ">=14"
+    },
     "scripts": {
         "build": "JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build",
         "serve": "bundle exec jekyll serve --livereload",
@@ -12,7 +15,6 @@
     "author": "",
     "license": "ISC",
     "devDependencies": {
-        "@tailwindcss/typography": "^0.4.1",
         "autoprefixer": "^10.3.4",
         "cssnano": "^5.0.8",
         "husky": "^7.0.0",
@@ -20,10 +22,10 @@
         "postcss-import": "^14.0.2",
         "postcss-scss": "^4.0.0",
         "prettier": "2.4.1",
-        "pretty-quick": "^3.1.1",
-        "tailwindcss": "^2.2.15"
+        "pretty-quick": "^3.1.1"
     },
     "dependencies": {
+        "bootstrap": "^5.1.1",
         "save-dev": "0.0.1-security",
         "tippy.js": "^6.3.1"
     }

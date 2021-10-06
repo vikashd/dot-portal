@@ -1,0 +1,48 @@
+footer {
+    font-size: $font-size-base * 0.9375;
+    line-height: 1.6;
+    color: $gray-700;
+    background-color: $gray-100;
+    padding-top: $spacer * 3.125;
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+.footer-heading {
+    font-family: $font-family-sans-serif;
+    font-size: $font-size-base * 0.9375;
+    font-weight: $font-weight-bold;
+    color: $gray-900;
+    margin-bottom: $spacer * 0.75;
+}
+
+.footer-copyright {
+    border-top: 1px solid rgba($gray-700, 0.5);
+    padding: 1.75rem 0;
+
+    @include media-breakpoint-up(lg) {
+        margin: 0 $spacer * 3;
+    }
+}
+
+.footer-link-icon {
+    color: $gray-800;
+    height: 0.75em;
+    margin-right: 0.4em;
+}
+
+.link-social {
+    svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}

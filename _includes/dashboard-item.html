@@ -1,19 +1,21 @@
 <!-- dashboard-item start -->
-<div>
-    <div class="relative dashboard-thumb-image">
+<div class="dashboard-thumb">
+    <div class="position-relative dashboard-thumb-image mb-7">
         <picture>
             <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/413x232" />
             <img
-                class="absolute max-w-full w-full h-auto rounded top-0 left-0"
+                class="position-absolute top-0 start-0 rounded"
                 src="https://via.placeholder.com/365x205"
                 alt="Dashboard" />
         </picture>
-        <div class="absolute p-2 left-0 right-0 bottom-0 flex items-center">
-            <div class="text-sm leading-none bg-yellow px-3 py-2 rounded-2xl">Updated</div>
-            <div class="ml-auto">{% include img/star.svg %}</div>
+        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-center justify-content-between">
+            <div class="dashboard-thumb-status">Updated</div>
+            <div class="ms-auto">
+                <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
+            </div>
         </div>
     </div>
-    <a href="#" class="hover:underline"><h4 class="text-lg leading-6 font-bold mb-1.5">{{ include.item.title }}</h4></a>
+    <a href="#" class="dashboard-thumb-title">{{ include.item.title }}</a>
     <p class="text-gray-mid text-base">
         A brief description of your product can go here. Ideally no longer than 2 lines.
     </p>

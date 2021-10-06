@@ -1,21 +1,58 @@
-<header class="flex justify-between items-center bg-gray-light pt-6 pl-9 pb-6 pr-9">
-    <a class="inline-block" href="/"><img src="assets/img/logo-dot-portal.svg" /></a>
-    <nav>
-        <ul class="flex items-center space-x-10">
-            <li>
-                <a class="link" href="#"><span>My dashboards</span></a>
-            </li>
-            <li>
-                <a class="link" href="#"><span>Learning centre</span></a>
-            </li>
-            <li>
-                <a class="link" href="#"
-                    ><span>Charlie Lee</span>
-                    <div class="font-serif rounded-full bg-yellow w-9 h-9 flex items-center justify-center ml-2.5">
-                        CL
-                    </div></a
-                >
-            </li>
-        </ul>
-    </nav>
+<header class="bg-secondary pt-5 pb-5 pt-md-6 pb-md-6">
+    <div class="container d-flex justify-content-between align-items-center">
+        <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
+        <nav class="nav d-none d-md-flex me-n4">
+            <a class="nav-link active" href="#"><span class="small">My dashboards</span></a>
+            <a class="nav-link" href="#"><span class="small">Learning centre</span></a>
+            <a class="nav-link" href="#">
+                <span class="small">Charlie Lee</span>
+                <div
+                    class="
+                        font-serif
+                        user
+                        rounded-circle
+                        d-flex
+                        justify-content-center
+                        align-items-center
+                        flex-shrink-0
+                        ms-3
+                    ">
+                    CL
+                </div>
+            </a>
+        </nav>
+        <button class="btn mobile-menu-btn d-md-none"><span></span></button>
+    </div>
 </header>
+<div class="mobile-menu" tabindex="-1">
+    <div class="container">
+        <div class="d-flex align-items-center justify-content-between mb-10">
+            <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
+            <button class="btn mobile-menu-btn d-md-none open"><span></span></button>
+        </div>
+        <div class="d-flex justify-content-between mb-8">
+            <div class="d-inline-flex align-items-center">
+                <div
+                    class="
+                        font-serif
+                        user
+                        rounded-circle
+                        d-flex
+                        justify-content-center
+                        align-items-center
+                        flex-shrink-0
+                        me-3
+                    ">
+                    CL
+                </div>
+                <span class="small">Charlie Lee</span>
+            </div>
+            <a href="#" class="btn btn-outline-dark">Logout</a>
+        </div>
+        <ul class="list-unstyled mobile-menu-links">
+            <li><a href="#" class="active">My dashboards</a></li>
+            <li><a href="#">Learning centre</a></li>
+            <li><a href="#">Account settings</a></li>
+        </ul>
+    </div>
+</div>

@@ -1,0 +1,19 @@
+.dropdown-menu {
+    width: 100%;
+}
+
+.dropdown-btn {
+    display: flex;
+    align-items: center;
+    background: none;
+    padding: 0 1rem;
+    border: 0;
+
+    &:focus {
+        box-shadow: none;
+    }
+
+    .icon {
+        height: 0.8em;
+    }
+}

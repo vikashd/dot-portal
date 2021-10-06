@@ -1,46 +1,42 @@
 ---
 ---
 
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
+@import "bootstrap/scss/functions";
+@import "variables";
+@import "bootstrap/scss/variables";
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
 
-/* 
-https://github.com/jekyll/jekyll-sass-converter/issues/116#issuecomment-850912425
-*/
+@import "utilities";
 
-body {
-    @apply text-gray-dark;
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
+@import "bootstrap/scss/images";
+@import "bootstrap/scss/containers";
+@import "bootstrap/scss/grid";
+@import "bootstrap/scss/buttons";
+@import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/helpers";
+@import "bootstrap/scss/utilities/api";
+
+@import "base";
+@import "buttons";
+@import "dashboard";
+@import "footer";
+@import "mobile-menu";
+@import "dropdown";
+
+.user {
+    width: 36px;
+    height: 36px;
+    background-color: var(--bs-yellow);
 }
 
-@layer components {
-    .link {
-        @apply text-sm text-gray-dark flex items-center;
+.header-logo {
+    max-width: 82px;
 
-        span {
-            &:after {
-                content: "";
-                @apply absolute w-full h-px left-0 -bottom-1 bg-gray-dark opacity-0;
-            }
-
-            @apply relative;
-        }
-
-        &:focus {
-            @apply focus:outline-none;
-        }
-
-        &.active,
-        &:focus,
-        &:hover {
-            span:after {
-                @apply opacity-100;
-            }
-        }
-    }
-
-    .dashboard-thumb-image {
-        padding-top: 56%;
-        @apply relative mb-8;
+    @include media-breakpoint-up(md) {
+        max-width: 100%;
     }
 }

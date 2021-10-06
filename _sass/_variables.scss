@@ -1,0 +1,52 @@
+$font-family-sans-serif: "Roboto", sans-serif;
+$font-family-serif: "Roboto Slab", serif;
+$headings-font-family: $font-family-serif;
+
+$font-size-base: 1rem;
+$h1-font-size: $font-size-base * 3.125;
+
+// Spacing
+$spacer: 1rem !default;
+$spacers: (
+    0: 0,
+    1: $spacer * 0.25,
+    2: $spacer * 0.5,
+    3: $spacer * 0.75,
+    4: $spacer,
+    5: $spacer * 1.25,
+    6: $spacer * 1.5,
+    7: $spacer * 2,
+    8: $spacer * 2.5,
+    9: $spacer * 3,
+    10: $spacer * 4,
+    11: $spacer * 5,
+    12: $spacer * 6,
+);
+
+$enable-negative-margins: true;
+$enable-shadows: true;
+
+// Colors
+$gray-100: #f6f6f6;
+$gray-600: #e4e3e5;
+$gray-700: #6b6b6b;
+$gray-800: #4a4552;
+$gray-900: #191919;
+$blue: #00c8e6;
+$yellow: #ffde00;
+
+$body-color: $gray-800;
+$link-color: $gray-800;
+$secondary: $gray-100;
+$dark: $gray-700;
+$info: $yellow;
+
+$box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.15);
+
+// Buttons
+$btn-border-radius: 1.2rem;
+$input-btn-padding-x: 1.1rem;
+
+$dropdown-border-width: 0;
+$dropdown-padding-x: 1.5rem;
+$dropdown-padding-y: 1.5rem;

@@ -1,0 +1,41 @@
+// $utilities: map-merge(
+//     $utilities,
+//     (
+//         "padding-top":
+//             map-merge(
+//                 map-get($utilities, "padding-top"),
+//                 (
+//                     values:
+//                         map-merge(
+//                             map-get(map-get($utilities, "padding-top"), "values"),
+//                             (
+//                                 6: $spacer * 4,
+//                                 7: $spacer * 5,
+//                                 8: $spacer * 6.5,
+//                             )
+//                         ),
+//                 )
+//             ),
+//     )
+// );
+
+// $utilities: map-merge(
+//     $utilities,
+//     (
+//         "padding-bottom":
+//             map-merge(
+//                 map-get($utilities, "padding-bottom"),
+//                 (
+//                     values:
+//                         map-merge(
+//                             map-get(map-get($utilities, "padding-bottom"), "values"),
+//                             (
+//                                 6: $spacer * 4,
+//                                 7: $spacer * 5,
+//                                 8: $spacer * 6.5,
+//                             )
+//                         ),
+//                 )
+//             ),
+//     )
+// );

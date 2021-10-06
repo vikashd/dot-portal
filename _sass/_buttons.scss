@@ -1,0 +1,37 @@
+.btn-primary {
+    color: white;
+}
+
+.nav-link {
+    position: relative;
+    display: flex;
+    padding: 0 $spacer * 1.25;
+    text-decoration: none;
+
+    span {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    &:focus,
+    &:hover {
+        &:not(.active) {
+            span {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &.active {
+        span:after {
+            content: "";
+            position: absolute;
+            display: block;
+            border-bottom: 2px solid $blue;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+}

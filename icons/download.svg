@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="clip-download">
+      <rect width="16" height="16"/>
+    </clipPath>
+  </defs>
+  <g id="download" clip-path="url(#clip-download)">
+    <g id="Group_2" data-name="Group 2" transform="translate(-1.5 -2)">
+      <path id="Path_5" data-name="Path 5" d="M15.994,20.9H4.506A2.256,2.256,0,0,1,2.25,18.647V15.365a.615.615,0,1,1,1.231,0v3.282a1.026,1.026,0,0,0,1.026,1.026H15.994a1.026,1.026,0,0,0,1.026-1.026V15.365a.615.615,0,1,1,1.231,0v3.282A2.256,2.256,0,0,1,15.994,20.9Z" transform="translate(-0.75 -2.904)"/>
+      <path id="Path_6" data-name="Path 6" d="M10.968,15.083a.613.613,0,0,1-.435-.18l-4.1-4.1a.615.615,0,0,1,.87-.87L10.968,13.6,14.635,9.93a.615.615,0,0,1,.87.87l-4.1,4.1A.613.613,0,0,1,10.968,15.083Z" transform="translate(-1.468 -2.006)"/>
+      <path id="Path_7" data-name="Path 7" d="M11.865,13.827a.615.615,0,0,1-.615-.615V3.365a.615.615,0,1,1,1.231,0v9.846A.615.615,0,0,1,11.865,13.827Z" transform="translate(-2.365 -0.75)"/>
+    </g>
+  </g>
+</svg>
