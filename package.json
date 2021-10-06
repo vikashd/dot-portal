@@ -10,7 +10,7 @@
         "build": "JEKYLL_ENV=production NODE_ENV=production bundle exec jekyll build",
         "serve": "bundle exec jekyll serve --livereload",
         "prepare": "husky install",
-        "deploy": "npm run build && gh-pages -b main -d docs"
+        "deploy": "npm run build && gh-pages -d docs"
     },
     "keywords": [],
     "author": "",
