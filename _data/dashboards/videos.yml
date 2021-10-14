@@ -1,0 +1,10 @@
+title: My Bespoke dashboards
+items:
+    - title: Us - Getting started
+      type: video
+      src: https://player.vimeo.com/video/561070574
+      status: progress
+    - title: Us - Using filters
+      type: video
+      src: https://player.vimeo.com/video/350635729
+      status: complete

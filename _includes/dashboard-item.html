@@ -1,20 +1,46 @@
 <!-- dashboard-item start -->
 <div class="dashboard-thumb">
-    <div class="position-relative dashboard-thumb-image mb-7">
+    <!-- prettier-ignore-start -->
+    <a class="d-block ratio ratio-16x9 mb-7" {% if include.item.type == 'video' %} data-toggle-video="{{ include.item.src }}" {% endif %}>
         <picture>
-            <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/413x232" />
+            <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
+            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
             <img
                 class="position-absolute top-0 start-0 rounded"
-                src="https://via.placeholder.com/365x205"
+                src="https://via.placeholder.com/516x290"
                 alt="Dashboard" />
         </picture>
-        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-center justify-content-between">
+        {% if include.item.type != nil %}
+        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
+            {% if include.item.type == 'dashboard' %}
             <div class="dashboard-thumb-status">Updated</div>
             <div class="ms-auto">
                 <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
             </div>
+            {% else if include.item.type == 'video' %}
+            <div class="ms-auto">
+                {% if include.item.status == 'progress' %}
+                <div class="dashboard-thumb-status-progress">
+                    <svg height="20" width="20" viewBox="0 0 20 20">
+                      <circle r="10" cx="10" cy="10" fill="#ffde00" />
+                      <circle r="5" cx="10" cy="10" fill="transparent"
+                              stroke="white"
+                              stroke-width="10"
+                              stroke-dasharray="calc(12.5 * 31.4 / 100) 31.4"
+                              transform="rotate(-90) translate(-20)" />
+                    </svg>
+                </div>
+                {% else %}
+                <div class="dashboard-thumb-status-icon">
+                    <svg class="icon"><use xlink:href="#icon-tick"></use></svg>
+                </div>
+                {% endif %}
+            </div>
+            {% endif %}
         </div>
-    </div>
+        {% endif %}
+    </a>
+    <!-- prettier-ignore-end -->
     <a href="#" class="dashboard-thumb-title">{{ include.item.title }}</a>
     <p class="text-gray-mid text-base">
         A brief description of your product can go here. Ideally no longer than 2 lines.

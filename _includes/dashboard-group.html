@@ -1,5 +1,7 @@
 <!-- dashboard-group start -->
+{% if include.title != nil %}
 <h2 class="h3 mb-8">{{ include.title }}</h2>
+{% endif %}
 <div class="row">
     {% for item in include.items %}
     <div class="col-md-6 col-xl-4">{% include dashboard-item.html item=item %}</div>

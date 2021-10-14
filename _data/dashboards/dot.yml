@@ -1,6 +1,10 @@
 title: My DOT dashboards
 items:
     - title: Sky - Entertainment Dashboard
+      type: dashboard
     - title: Sky - Shared Audience Model
+      type: dashboard
     - title: Sky - Entertainment Dashboard
+      type: dashboard
     - title: Sky - Shared Audience Model
+      type: dashboard

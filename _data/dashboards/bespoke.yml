@@ -1,4 +1,6 @@
 title: My Bespoke dashboards
 items:
     - title: Sky - Entertainment Dashboard 1
+      type: dashboard
     - title: Sky - Entertainment Dashboard 2
+      type: dashboard

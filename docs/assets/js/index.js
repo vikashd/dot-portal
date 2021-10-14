@@ -1,34 +1,42 @@
-var sameWidth = {
-    name: "sameWidth",
-    enabled: true,
-    phase: "beforeWrite",
-    requires: ["computeStyles"],
-    fn: ({ state }) => {
-        state.styles.popper.width = `${state.rects.reference.width}px`;
-    },
-    effect: ({ state }) => {
-        state.elements.popper.style.width = `${state.elements.reference.offsetWidth}px`;
-    },
-};
-
-var offset = {
-    name: "offset",
-    options: {
-        offset: ({ placement, reference, popper }) => {
-            return [0, -reference.height - 10];
+/**
+ * Dropdown menu
+ */
+(function () {
+    var sameWidth = {
+        name: "sameWidth",
+        enabled: true,
+        phase: "beforeWrite",
+        requires: ["computeStyles"],
+        fn: ({ state }) => {
+            state.styles.popper.width = `${state.rects.reference.width}px`;
         },
-    },
-};
-
-var dropdownElementList = [].slice.call(document.querySelectorAll(".dropdown-btn"));
-var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
-    return new bootstrap.Dropdown(dropdownToggleEl, {
-        popperConfig: function (defaultBsPopperConfig) {
-            return Object.assign(defaultBsPopperConfig, { modifiers: [sameWidth, offset] });
+        effect: ({ state }) => {
+            state.elements.popper.style.width = `${state.elements.reference.offsetWidth}px`;
         },
+    };
+
+    var offset = {
+        name: "offset",
+        options: {
+            offset: ({ placement, reference, popper }) => {
+                return [0, -reference.height - 10];
+            },
+        },
+    };
+
+    var dropdownElementList = [].slice.call(document.querySelectorAll(".dropdown-btn"));
+    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+        return new bootstrap.Dropdown(dropdownToggleEl, {
+            popperConfig: function (defaultBsPopperConfig) {
+                return Object.assign(defaultBsPopperConfig, { modifiers: [sameWidth, offset] });
+            },
+        });
     });
-});
+})();
 
+/**
+ * Mobile menu
+ */
 (function () {
     var mobileMenuBtn = document.getElementById("mobile-menu-btn");
     var mobileMenuBtnClose = document.getElementById("mobile-menu-close-btn");
@@ -47,4 +55,27 @@ var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
 
     mobileMenuBtn.addEventListener("click", clickHandler);
     mobileMenuBtnClose.addEventListener("click", clickHandler);
+})();
+
+/**
+ * Video modal
+ */
+(function () {
+    var videoBtns = Array.prototype.slice.call(document.querySelectorAll("[data-toggle-video]"));
+    var modalEl = document.getElementById("modal-video");
+    var modal = new bootstrap.Modal(modalEl);
+    var iframe = modalEl.querySelector("iframe");
+
+    videoBtns.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+            var src = e.currentTarget.getAttribute("data-toggle-video");
+
+            iframe.src = src;
+            modal.show();
+        });
+    });
+
+    modalEl.addEventListener("hidden.bs.modal", function () {
+        iframe.src = "";
+    });
 })();

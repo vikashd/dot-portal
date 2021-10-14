@@ -35,3 +35,35 @@
         }
     }
 }
+
+.nav-link-secondary {
+    position: relative;
+    display: flex;
+    padding: 0 $spacer * 1 $spacer * 0.75;
+    text-decoration: none;
+
+    &:focus,
+    &:hover {
+        &:not(.active) {
+            text-decoration: underline;
+        }
+    }
+
+    &.active {
+        font-weight: $font-weight-bold;
+
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            border-bottom: 3px solid $blue;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    + .nav-link-secondary {
+        margin-left: $spacer * 2;
+    }
+}

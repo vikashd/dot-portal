@@ -127,14 +127,40 @@
     </div>
 </div>
 
-        <main><div class="position-relative masthead bg-secondary">
+        <main><div class="bg-secondary py-8">
+    <div class="container d-flex align-items-center justify-content-between">
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mt-0 mb-0">
+                <li class="breadcrumb-item" aria-current="page">My dashboards</li>
+                <li class="breadcrumb-item active" aria-current="page">Us</li>
+            </ol>
+        </nav>
+        <button href="#" class="btn btn-outline-dark">
+            Fullscreen
+            <svg class="icon ms-2"><use xlink:href="#icon-expand"></use></svg>
+        </button>
+    </div>
+</div>
+<div class="bg-secondary">
     <div class="container">
-        <h1 class="font-serif mb-6">
-            Kia ora Charlie,
-            <br />
-            welcome back to the Portal.
-        </h1>
-        <p>Your data awaits. Access your dashboard products below.</p>
+        <div class="mb-12">
+            <div class="ratio ratio-16x9 mb-4">
+                <iframe src="https://player.vimeo.com/video/561070574" title="Us" allowfullscreen></iframe>
+            </div>
+            <p>
+                Last updated
+                <strong>6 July 2021</strong>
+                Expires
+                <strong>1 July 2022</strong>
+            </p>
+        </div>
+        <h3 class="mb-9">Learning Centre</h3>
+        <nav class="nav d-flex">
+            <a class="nav-link-secondary active" href="#"><span>Video</span></a>
+            <a class="nav-link-secondary" href="#"><span>Collateral</span></a>
+            <a class="nav-link-secondary" href="#"><span>Updates</span></a>
+            <a class="nav-link-secondary" href="#"><span>More</span></a>
+        </nav>
     </div>
 </div>
 <div class="container py-6 d-flex justify-content-end">
@@ -167,17 +193,14 @@
         </ul>
     </div>
 </div>
-<div class="container py-11">
-    <!-- dashboard-group start -->
-
-<h2 class="h3 mb-8">My Bespoke dashboards</h2>
+<div class="container py-11"><!-- dashboard-group start -->
 
 <div class="row">
     
     <div class="col-md-6 col-xl-4"><!-- dashboard-item start -->
 <div class="dashboard-thumb">
     <!-- prettier-ignore-start -->
-    <a class="d-block ratio ratio-16x9 mb-7" >
+    <a class="d-block ratio ratio-16x9 mb-7"  data-toggle-video="https://player.vimeo.com/video/561070574" >
         <picture>
             <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
             <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
@@ -189,16 +212,26 @@
         
         <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
             
-            <div class="dashboard-thumb-status">Updated</div>
             <div class="ms-auto">
-                <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
+                
+                <div class="dashboard-thumb-status-progress">
+                    <svg height="20" width="20" viewBox="0 0 20 20">
+                      <circle r="10" cx="10" cy="10" fill="#ffde00" />
+                      <circle r="5" cx="10" cy="10" fill="transparent"
+                              stroke="white"
+                              stroke-width="10"
+                              stroke-dasharray="calc(12.5 * 31.4 / 100) 31.4"
+                              transform="rotate(-90) translate(-20)" />
+                    </svg>
+                </div>
+                
             </div>
             
         </div>
         
     </a>
     <!-- prettier-ignore-end -->
-    <a href="#" class="dashboard-thumb-title">Sky - Entertainment Dashboard 1</a>
+    <a href="#" class="dashboard-thumb-title">Us - Getting started</a>
     <p class="text-gray-mid text-base">
         A brief description of your product can go here. Ideally no longer than 2 lines.
     </p>
@@ -209,7 +242,7 @@
     <div class="col-md-6 col-xl-4"><!-- dashboard-item start -->
 <div class="dashboard-thumb">
     <!-- prettier-ignore-start -->
-    <a class="d-block ratio ratio-16x9 mb-7" >
+    <a class="d-block ratio ratio-16x9 mb-7"  data-toggle-video="https://player.vimeo.com/video/350635729" >
         <picture>
             <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
             <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
@@ -221,16 +254,19 @@
         
         <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
             
-            <div class="dashboard-thumb-status">Updated</div>
             <div class="ms-auto">
-                <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
+                
+                <div class="dashboard-thumb-status-icon">
+                    <svg class="icon"><use xlink:href="#icon-tick"></use></svg>
+                </div>
+                
             </div>
             
         </div>
         
     </a>
     <!-- prettier-ignore-end -->
-    <a href="#" class="dashboard-thumb-title">Sky - Entertainment Dashboard 2</a>
+    <a href="#" class="dashboard-thumb-title">Us - Using filters</a>
     <p class="text-gray-mid text-base">
         A brief description of your product can go here. Ideally no longer than 2 lines.
     </p>
@@ -240,144 +276,15 @@
     
 </div>
 <!-- dashboard-group end -->
+</div>
 
-    <!-- dashboard-group start -->
-
-<h2 class="h3 mb-8">My DOT dashboards</h2>
-
-<div class="row">
-    
-    <div class="col-md-6 col-xl-4"><!-- dashboard-item start -->
-<div class="dashboard-thumb">
-    <!-- prettier-ignore-start -->
-    <a class="d-block ratio ratio-16x9 mb-7" >
-        <picture>
-            <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
-            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
-            <img
-                class="position-absolute top-0 start-0 rounded"
-                src="https://via.placeholder.com/516x290"
-                alt="Dashboard" />
-        </picture>
-        
-        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
-            
-            <div class="dashboard-thumb-status">Updated</div>
-            <div class="ms-auto">
-                <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
-            </div>
-            
+<!-- Modal -->
+<div class="modal fade" id="modal-video" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-video">
+        <div class="bg-secondary ratio ratio-16x9 pe-auto">
+            <iframe title="Dashboard video" allowfullscreen></iframe>
         </div>
-        
-    </a>
-    <!-- prettier-ignore-end -->
-    <a href="#" class="dashboard-thumb-title">Sky - Entertainment Dashboard</a>
-    <p class="text-gray-mid text-base">
-        A brief description of your product can go here. Ideally no longer than 2 lines.
-    </p>
-</div>
-<!-- dashboard-item end -->
-</div>
-    
-    <div class="col-md-6 col-xl-4"><!-- dashboard-item start -->
-<div class="dashboard-thumb">
-    <!-- prettier-ignore-start -->
-    <a class="d-block ratio ratio-16x9 mb-7" >
-        <picture>
-            <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
-            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
-            <img
-                class="position-absolute top-0 start-0 rounded"
-                src="https://via.placeholder.com/516x290"
-                alt="Dashboard" />
-        </picture>
-        
-        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
-            
-            <div class="dashboard-thumb-status">Updated</div>
-            <div class="ms-auto">
-                <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
-            </div>
-            
-        </div>
-        
-    </a>
-    <!-- prettier-ignore-end -->
-    <a href="#" class="dashboard-thumb-title">Sky - Shared Audience Model</a>
-    <p class="text-gray-mid text-base">
-        A brief description of your product can go here. Ideally no longer than 2 lines.
-    </p>
-</div>
-<!-- dashboard-item end -->
-</div>
-    
-    <div class="col-md-6 col-xl-4"><!-- dashboard-item start -->
-<div class="dashboard-thumb">
-    <!-- prettier-ignore-start -->
-    <a class="d-block ratio ratio-16x9 mb-7" >
-        <picture>
-            <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
-            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
-            <img
-                class="position-absolute top-0 start-0 rounded"
-                src="https://via.placeholder.com/516x290"
-                alt="Dashboard" />
-        </picture>
-        
-        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
-            
-            <div class="dashboard-thumb-status">Updated</div>
-            <div class="ms-auto">
-                <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
-            </div>
-            
-        </div>
-        
-    </a>
-    <!-- prettier-ignore-end -->
-    <a href="#" class="dashboard-thumb-title">Sky - Entertainment Dashboard</a>
-    <p class="text-gray-mid text-base">
-        A brief description of your product can go here. Ideally no longer than 2 lines.
-    </p>
-</div>
-<!-- dashboard-item end -->
-</div>
-    
-    <div class="col-md-6 col-xl-4"><!-- dashboard-item start -->
-<div class="dashboard-thumb">
-    <!-- prettier-ignore-start -->
-    <a class="d-block ratio ratio-16x9 mb-7" >
-        <picture>
-            <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
-            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
-            <img
-                class="position-absolute top-0 start-0 rounded"
-                src="https://via.placeholder.com/516x290"
-                alt="Dashboard" />
-        </picture>
-        
-        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
-            
-            <div class="dashboard-thumb-status">Updated</div>
-            <div class="ms-auto">
-                <svg class="icon dashboard-thumb-favourite"><use xlink:href="#icon-star"></use></svg>
-            </div>
-            
-        </div>
-        
-    </a>
-    <!-- prettier-ignore-end -->
-    <a href="#" class="dashboard-thumb-title">Sky - Shared Audience Model</a>
-    <p class="text-gray-mid text-base">
-        A brief description of your product can go here. Ideally no longer than 2 lines.
-    </p>
-</div>
-<!-- dashboard-item end -->
-</div>
-    
-</div>
-<!-- dashboard-group end -->
-
+    </div>
 </div>
 </main>
         <footer>
