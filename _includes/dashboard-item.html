@@ -1,6 +1,6 @@
 <!-- dashboard-item start -->
 <div class="dashboard-thumb">
-    <a class="d-block ratio ratio-16x9 mb-7" {% if include.item.type == 'video' %} data-toggle-video="{{ include.item.src }}" {% endif %}>
+    <a {% if include.item.type != 'video' %} href="{{ '/' | relative_url }}dashboard" {% endif %} class="d-block ratio ratio-16x9 mb-7" {% if include.item.type == 'video' %} data-toggle-video="{{ include.item.src }}" {% endif %}>
         <picture>
             <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
             <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
@@ -46,7 +46,7 @@
         </div>
         {% endif %}
     </a>
-    <a href="#" class="dashboard-thumb-title">{{ include.item.title }}</a>
+    <a href="{{ '/' | relative_url }}dashboard" class="dashboard-thumb-title">{{ include.item.title }}</a>
     {% if include.item.description %}
     <p class="text-gray-mid text-base">
         {{ include.item.description }}
