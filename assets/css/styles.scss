@@ -28,7 +28,11 @@
 
 @import "base";
 @import "buttons";
+@import "nav";
+@import "carousel";
 @import "dashboard";
+@import "breadcrumb";
+@import "header";
 @import "footer";
 @import "mobile-menu";
 @import "dropdown";
@@ -36,52 +40,6 @@
 .bg-dots {
     background: $gray-800 url("../img/dots.svg") center center;
     background-size: cover;
-}
-
-.user {
-    width: 36px;
-    height: 36px;
-    background-color: var(--bs-yellow);
-}
-
-.header-logo {
-    max-width: 82px;
-
-    @include media-breakpoint-up(md) {
-        max-width: 100%;
-    }
-}
-
-.header-container {
-    @include media-breakpoint-down(md) {
-        min-height: 32px;
-    }
-}
-
-.breadcrumb {
-    color: $gray-700;
-}
-
-.breadcrumb-item {
-    display: flex;
-    align-items: baseline;
-
-    + .breadcrumb-item {
-        &:before {
-            content: "";
-            display: block;
-            background-image: url("data:image/svg+xml;utf8, %3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%236b6b6b%22%3E%3Cdefs%3E%3CclipPath%20id%3D%22a%22%3E%3Cpath%20d%3D%22M0%200h16v16H0z%22%2F%3E%3C%2FclipPath%3E%3C%2Fdefs%3E%3Cg%20clip-path%3D%22url%28%23a%29%22%3E%3Cpath%20data-name%3D%22Path%201%22%20d%3D%22m4.625%2016-.624-.677L10.754%208%204%20.678%204.625%200l7.376%208Z%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-            background-repeat: no-repeat;
-            background-size: contain;
-            width: 0.5rem;
-            height: 0.75rem;
-            padding-right: 1.2rem;
-        }
-    }
-
-    &.active {
-        font-weight: $font-weight-bold;
-    }
 }
 
 .modal-dialog-video {
@@ -106,108 +64,10 @@
     background-color: var(--bs-yellow);
 }
 
-.nav {
-    overflow: auto;
-}
-
-.nav-link-secondary {
-    white-space: nowrap;
-}
-
 .dot {
     width: 46px;
     height: 46px;
     border-radius: 50%;
-}
-
-.ipad {
-    position: relative;
-    padding-top: calc((484 / 1064) * 100%);
-    margin: auto;
-
-    &:before {
-        content: "";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        background: url("../img/ipad.png") no-repeat;
-        background-size: cover;
-        pointer-events: none;
-        z-index: 1;
-    }
-
-    > .carousel {
-        position: absolute;
-        top: 7.4%;
-        right: 3.2%;
-        bottom: 0;
-        left: 3.4%;
-        background: white;
-
-        > .carousel-inner {
-            height: 100%;
-
-            > .carousel-item {
-                height: 100%;
-            }
-        }
-    }
-}
-
-.carousel-indicators-ipad {
-    display: flex;
-    padding: 0;
-    margin-right: 0;
-    margin-bottom: 0;
-    margin-left: 0;
-    bottom: 10px;
-
-    [data-bs-target] {
-        position: relative;
-        flex: 0 0 auto;
-        width: 24px;
-        height: 24px;
-        background: none;
-        margin: 0 14px;
-        border: none;
-        opacity: 1;
-
-        &:before {
-            content: "";
-            position: absolute;
-            display: block;
-            top: 0;
-            right: 0;
-            bottom: 0;
-            left: 0;
-            margin: auto;
-            width: 12px;
-            height: 12px;
-            background-color: #d7d7d7;
-            border-radius: 50%;
-        }
-    }
-
-    .active {
-        &:before {
-            background-color: $gray-800;
-        }
-    }
-
-    @include media-breakpoint-up(xxl) {
-        flex-direction: column;
-        justify-content: center;
-        left: auto;
-        bottom: auto;
-        right: -7%;
-        height: 100%;
-
-        [data-bs-target] {
-            margin: 14px 0;
-        }
-    }
 }
 
 .testimonial {

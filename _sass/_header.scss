@@ -1,0 +1,19 @@
+.user {
+    width: 36px;
+    height: 36px;
+    background-color: var(--bs-yellow);
+}
+
+.header-logo {
+    max-width: 82px;
+
+    @include media-breakpoint-up(md) {
+        max-width: 100%;
+    }
+}
+
+.header-container {
+    @include media-breakpoint-down(md) {
+        min-height: 32px;
+    }
+}
