@@ -2615,7 +2615,9 @@ body {
 }
 
 .nav-header {
+  align-items: center;
   padding: 5px;
+  min-height: 48px;
 }
 
 .nav-link {
