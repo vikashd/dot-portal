@@ -2615,7 +2615,6 @@ body {
 }
 
 .nav-header {
-  align-items: center;
   padding: 5px;
   min-height: 48px;
 }
@@ -2832,6 +2831,7 @@ body {
 }
 
 .user {
+  align-self: center;
   width: 36px;
   height: 36px;
   background-color: var(--bs-yellow);
