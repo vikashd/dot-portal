@@ -22,6 +22,11 @@ $font-sizes: (
     7: $h7-font-size,
 );
 
+$blockquote-font-size: $font-size-base * 1.4;
+$blockquote-footer-color: inherit;
+$blockquote-footer-font-size: $font-size-base * 1.125;
+$blockquote-margin-y: 0;
+
 // Spacing
 $spacer: 1rem !default;
 $spacers: (

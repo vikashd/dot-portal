@@ -34,7 +34,8 @@
 @import "dropdown";
 
 .bg-dots {
-    background: $gray-800;
+    background: $gray-800 url("../img/dots.svg") center center;
+    background-size: cover;
 }
 
 .user {
@@ -161,6 +162,7 @@
     margin-right: 0;
     margin-bottom: 0;
     margin-left: 0;
+    bottom: 10px;
 
     [data-bs-target] {
         position: relative;
@@ -169,6 +171,7 @@
         height: 24px;
         background: none;
         margin: 0 14px;
+        border: none;
         opacity: 1;
 
         &:before {
@@ -198,10 +201,30 @@
         justify-content: center;
         left: auto;
         bottom: auto;
+        right: -7%;
         height: 100%;
 
         [data-bs-target] {
             margin: 14px 0;
         }
+    }
+}
+
+.testimonial {
+    position: relative;
+    background-color: $yellow;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: calc(790px / 1440px * 100%);
+    }
+
+    > * {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
     }
 }
