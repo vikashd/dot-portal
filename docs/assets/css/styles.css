@@ -2768,7 +2768,7 @@ body {
 }
 
 .dashboard-thumb-title {
-  display: block;
+  display: inline-block;
   font-size: 1.25rem;
   font-weight: 700;
   line-height: 1.75rem;
