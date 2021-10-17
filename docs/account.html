@@ -1,16 +1,17 @@
-<head>
-    <title>Dot Portal</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta charset="utf-8" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="shortcut icon" href="./assets/img/favicon.png" />
-    <link
-        href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500;700&display=swap"
-        rel="stylesheet" />
-    <link rel="stylesheet" href="./assets/css/styles.css" />
-</head>
-<html>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Dot Portal</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link rel="shortcut icon" href="./assets/img/favicon.png" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500;700&display=swap"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="./assets/css/styles.css" />
+    </head>
     <body>
         <svg
     aria-hidden="true"
@@ -70,7 +71,9 @@
 </svg>
  <header class="bg-secondary pt-5 pb-5 pt-md-6 pb-md-6">
     <div class="container header-container d-flex justify-content-between align-items-center">
-        <a href="/dot-portal/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
+        <a href="/dot-portal/">
+            <img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
+        </a>
         <nav class="nav d-none d-md-flex me-n4">
             <a
                 class="nav-link "
@@ -104,7 +107,7 @@
  <div id="mobile-menu" class="mobile-menu" style="transform: translate3d(-100%, 0, 0)">
     <div class="container header-container">
         <div class="d-flex align-items-center justify-content-between mb-10">
-            <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
+            <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" /></a>
             <button id="mobile-menu-close-btn" class="btn mobile-menu-btn d-md-none open"><span></span></button>
         </div>
         
@@ -130,7 +133,7 @@
         <main><div class="position-relative bg-secondary">
     <div class="container pt-10">
         <h1 class="font-serif mb-6 h2">Account settings</h1>
-        <button href="#" class="btn btn-outline-dark mb-12">Log out</button>
+        <button class="btn btn-outline-dark mb-12">Log out</button>
         <nav class="nav d-flex">
             <a class="nav-link-secondary active" href="#"><span>My account</span></a>
             <a class="nav-link-secondary" href="#"><span>Subscriptions</span></a>
@@ -146,7 +149,7 @@
         <div class="col-lg-6">
             <form method="post" enctype="multipart/form-data">
                 <label for="profile-image" class="d-flex align-items-center mb-7">
-                    <div class="profile-image me-7">CL</div>
+                    <span class="profile-image me-7">CL</span>
                     <span class="btn btn-outline-dark">Upload photo</span>
                 </label>
                 <input type="file" id="profile-image" class="d-none" />
@@ -182,7 +185,7 @@
     <div class="container">
         <div class="row mb-8">
             <div class="col-lg-3 mb-7 mb-lg-0">
-                <a href="/"><img src="assets/img/logo-dot.png" /></a>
+                <a href="/"><img src="assets/img/logo-dot.png" alt="Dot Loves Data" /></a>
             </div>
             <div class="col-6 col-lg mb-8 mb-lg-0">
                 <h5 class="footer-heading">Contact</h5>

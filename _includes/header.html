@@ -1,6 +1,8 @@
 <header class="bg-secondary pt-5 pb-5 pt-md-6 pb-md-6">
     <div class="container header-container d-flex justify-content-between align-items-center">
-        <a href="{{ '/' | relative_url }}"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
+        <a href="{{ '/' | relative_url }}">
+            <img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
+        </a>
         <nav class="nav d-none d-md-flex me-n4">
             <a
                 class="nav-link {% if page.active == 'dashboards' %}active{% endif %}"
