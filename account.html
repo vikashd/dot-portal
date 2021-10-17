@@ -1,0 +1,55 @@
+---
+layout: default
+active: account
+---
+
+<div class="position-relative bg-secondary">
+    <div class="container pt-10">
+        <h1 class="font-serif mb-6 h2">Account settings</h1>
+        <button href="#" class="btn btn-outline-dark mb-12">Log out</button>
+        <nav class="nav d-flex">
+            <a class="nav-link-secondary active" href="#"><span>My account</span></a>
+            <a class="nav-link-secondary" href="#"><span>Subscriptions</span></a>
+            <a class="nav-link-secondary" href="#"><span>Payment</span></a>
+            <a class="nav-link-secondary" href="#"><span>Analytics</span></a>
+            <a class="nav-link-secondary" href="#"><span>Communication</span></a>
+            <a class="nav-link-secondary" href="#"><span>Support</span></a>
+        </nav>
+    </div>
+</div>
+<div class="container py-11">
+    <div class="row">
+        <div class="col-lg-6">
+            <form method="post" enctype="multipart/form-data">
+                <label for="profile-image" class="d-flex align-items-center mb-7">
+                    <div class="profile-image me-7">CL</div>
+                    <span class="btn btn-outline-dark">Upload photo</span>
+                </label>
+                <input type="file" id="profile-image" class="d-none" />
+                <div class="mb-7">
+                    <div class="col-lg-9">
+                        <label for="name" class="form-label">First & Last Name</label>
+                        <input type="text" class="form-control" id="name" />
+                    </div>
+                </div>
+                <div class="mb-7">
+                    <div class="col-lg-9">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" />
+                    </div>
+                </div>
+                <div class="mb-7">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="row">
+                        <div class="col-lg-9 mb-7 mb-lg-0">
+                            <input type="password" class="form-control" id="password" />
+                        </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <button type="submit" class="btn btn-outline-dark">Change</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

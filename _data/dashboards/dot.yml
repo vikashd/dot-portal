@@ -2,9 +2,13 @@ title: My DOT dashboards
 items:
     - title: Sky - Entertainment Dashboard
       type: dashboard
+      description: A brief description of your product can go here. Ideally no longer than 2 lines.
     - title: Sky - Shared Audience Model
       type: dashboard
+      description: A brief description of your product can go here. Ideally no longer than 2 lines.
     - title: Sky - Entertainment Dashboard
       type: dashboard
+      description: A brief description of your product can go here. Ideally no longer than 2 lines.
     - title: Sky - Shared Audience Model
       type: dashboard
+      description: A brief description of your product can go here. Ideally no longer than 2 lines.

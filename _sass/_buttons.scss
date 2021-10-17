@@ -2,6 +2,41 @@
     color: white;
 }
 
+.btn-icon {
+    @include media-breakpoint-up(md) {
+        .icon {
+            margin-left: 0.5rem;
+        }
+    }
+
+    @include media-breakpoint-down(md) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 38px;
+        height: 38px;
+        border-radius: 50%;
+        padding: 0;
+
+        span {
+            display: none;
+        }
+    }
+}
+
+.btn-icon-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    line-height: 1;
+
+    .icon {
+        width: 24px;
+        height: 18px;
+        margin-right: 0.35rem;
+    }
+}
+
 .nav-link {
     position: relative;
     display: flex;

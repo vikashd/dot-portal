@@ -18,7 +18,9 @@
 @import "bootstrap/scss/buttons";
 /* purgecss start ignore */
 @import "bootstrap/scss/dropdown";
+@import "bootstrap/scss/forms";
 @import "bootstrap/scss/modal";
+@import "bootstrap/scss/carousel";
 /* purgecss end ignore */
 @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/helpers";
@@ -30,6 +32,10 @@
 @import "footer";
 @import "mobile-menu";
 @import "dropdown";
+
+.bg-dots {
+    background: $gray-800;
+}
 
 .user {
     width: 36px;
@@ -84,5 +90,118 @@
     @include media-breakpoint-up(md) {
         max-width: 80%;
         margin: 0 auto;
+    }
+}
+
+.profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family-serif;
+    font-size: 32px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: var(--bs-yellow);
+}
+
+.nav {
+    overflow: auto;
+}
+
+.nav-link-secondary {
+    white-space: nowrap;
+}
+
+.dot {
+    width: 46px;
+    height: 46px;
+    border-radius: 50%;
+}
+
+.ipad {
+    position: relative;
+    padding-top: calc((484 / 1064) * 100%);
+    margin: auto;
+
+    &:before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: url("../img/ipad.png") no-repeat;
+        background-size: cover;
+        pointer-events: none;
+        z-index: 1;
+    }
+
+    > .carousel {
+        position: absolute;
+        top: 7.4%;
+        right: 3.2%;
+        bottom: 0;
+        left: 3.4%;
+        background: white;
+
+        > .carousel-inner {
+            height: 100%;
+
+            > .carousel-item {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.carousel-indicators-ipad {
+    display: flex;
+    padding: 0;
+    margin-right: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+
+    [data-bs-target] {
+        position: relative;
+        flex: 0 0 auto;
+        width: 24px;
+        height: 24px;
+        background: none;
+        margin: 0 14px;
+        opacity: 1;
+
+        &:before {
+            content: "";
+            position: absolute;
+            display: block;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            margin: auto;
+            width: 12px;
+            height: 12px;
+            background-color: #d7d7d7;
+            border-radius: 50%;
+        }
+    }
+
+    .active {
+        &:before {
+            background-color: $gray-800;
+        }
+    }
+
+    @include media-breakpoint-up(xxl) {
+        flex-direction: column;
+        justify-content: center;
+        left: auto;
+        bottom: auto;
+        height: 100%;
+
+        [data-bs-target] {
+            margin: 14px 0;
+        }
     }
 }

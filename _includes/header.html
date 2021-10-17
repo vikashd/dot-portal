@@ -2,9 +2,15 @@
     <div class="container header-container d-flex justify-content-between align-items-center">
         <a href="{{ '/' | relative_url }}"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
         <nav class="nav d-none d-md-flex me-n4">
-            <a class="nav-link active" href="#"><span class="small">My dashboards</span></a>
+            <a
+                class="nav-link {% if page.active == 'dashboards' %}active{% endif %}"
+                href="{{ '/' | relative_url }}dashboards">
+                <span class="small">My dashboards</span>
+            </a>
             <a class="nav-link" href="#"><span class="small">Learning centre</span></a>
-            <a class="nav-link" href="#">
+            <a
+                class="nav-link {% if page.active == 'account' %}active{% endif %}"
+                href="{{ '/' | relative_url }}account">
                 <span class="small">Charlie Lee</span>
                 <div
                     class="
@@ -24,35 +30,20 @@
         <button id="mobile-menu-btn" class="btn mobile-menu-btn d-md-none"><span></span></button>
     </div>
 </header>
-<div id="mobile-menu" class="mobile-menu" style="transform: translate3d(-100%, 0, 0)">
-    <div class="container header-container">
-        <div class="d-flex align-items-center justify-content-between mb-10">
-            <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
-            <button id="mobile-menu-close-btn" class="btn mobile-menu-btn d-md-none open"><span></span></button>
+
+{% capture menu_content %}
+<div class="d-flex justify-content-between mb-8">
+    <div class="d-inline-flex align-items-center">
+        <div class="font-serif user rounded-circle d-flex justify-content-center align-items-center flex-shrink-0 me-3">
+            CL
         </div>
-        <div class="d-flex justify-content-between mb-8">
-            <div class="d-inline-flex align-items-center">
-                <div
-                    class="
-                        font-serif
-                        user
-                        rounded-circle
-                        d-flex
-                        justify-content-center
-                        align-items-center
-                        flex-shrink-0
-                        me-3
-                    ">
-                    CL
-                </div>
-                <span class="small">Charlie Lee</span>
-            </div>
-            <a href="#" class="btn btn-outline-dark">Logout</a>
-        </div>
-        <ul class="list-unstyled mobile-menu-links">
-            <li><a href="#" class="active">My dashboards</a></li>
-            <li><a href="#">Learning centre</a></li>
-            <li><a href="#">Account settings</a></li>
-        </ul>
+        <span class="small">Charlie Lee</span>
     </div>
+    <a href="#" class="btn btn-outline-dark">Logout</a>
 </div>
+<ul class="list-unstyled mobile-menu-links">
+    <li><a href="#" class="active">My dashboards</a></li>
+    <li><a href="#">Learning centre</a></li>
+    <li><a href="#">Account settings</a></li>
+</ul>
+{% endcapture %} {% include mobile-menu.html content=menu_content %}

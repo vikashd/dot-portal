@@ -1,9 +1,26 @@
+// Fonts
 $font-family-sans-serif: "Roboto", sans-serif;
 $font-family-serif: "Roboto Slab", serif;
 $headings-font-family: $font-family-serif;
 
 $font-size-base: 1rem;
 $h1-font-size: $font-size-base * 3.125;
+$h2-font-size: $font-size-base * 2.5 !default;
+$h3-font-size: $font-size-base * 1.75 !default;
+$h4-font-size: $font-size-base * 1.5 !default;
+$h5-font-size: $font-size-base * 1.125;
+$h6-font-size: $font-size-base !default;
+$h7-font-size: $font-size-base * 0.9375 !default;
+
+$font-sizes: (
+    1: $h1-font-size,
+    2: $h2-font-size,
+    3: $h3-font-size,
+    4: $h4-font-size,
+    5: $h5-font-size,
+    6: $h6-font-size,
+    7: $h7-font-size,
+);
 
 // Spacing
 $spacer: 1rem !default;
@@ -21,6 +38,8 @@ $spacers: (
     10: $spacer * 4,
     11: $spacer * 5,
     12: $spacer * 6,
+    13: $spacer * 7,
+    14: $spacer * 8,
 );
 
 $enable-negative-margins: true;
@@ -33,6 +52,8 @@ $gray-700: #6b6b6b;
 $gray-800: #4a4552;
 $gray-900: #191919;
 $blue: #00c8e6;
+$green: #add64a;
+$teal: #5cd194;
 $yellow: #ffde00;
 
 $body-color: $gray-800;
@@ -52,3 +73,7 @@ $dropdown-padding-x: 1.5rem;
 $dropdown-padding-y: 1.5rem;
 
 $breadcrumb-active-color: $gray-800;
+
+// form
+$input-padding-y: 0.75rem;
+$form-label-font-weight: 500;

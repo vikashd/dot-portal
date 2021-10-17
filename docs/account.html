@@ -72,12 +72,35 @@
     <div class="container header-container d-flex justify-content-between align-items-center">
         <a href="/dot-portal/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" /></a>
         <nav class="nav d-none d-md-flex me-n4">
-            <a href="" class="btn ms-5 me-5">Login</a>
-            <a href="" class="btn btn-primary ms-5">Sign up</a>
+            <a
+                class="nav-link "
+                href="/dot-portal/dashboards">
+                <span class="small">My dashboards</span>
+            </a>
+            <a class="nav-link" href="#"><span class="small">Learning centre</span></a>
+            <a
+                class="nav-link active"
+                href="/dot-portal/account">
+                <span class="small">Charlie Lee</span>
+                <div
+                    class="
+                        font-serif
+                        user
+                        rounded-circle
+                        d-flex
+                        justify-content-center
+                        align-items-center
+                        flex-shrink-0
+                        ms-3
+                    ">
+                    CL
+                </div>
+            </a>
         </nav>
         <button id="mobile-menu-btn" class="btn mobile-menu-btn d-md-none"><span></span></button>
     </div>
 </header>
+
  <div id="mobile-menu" class="mobile-menu" style="transform: translate3d(-100%, 0, 0)">
     <div class="container header-container">
         <div class="d-flex align-items-center justify-content-between mb-10">
@@ -85,205 +108,72 @@
             <button id="mobile-menu-close-btn" class="btn mobile-menu-btn d-md-none open"><span></span></button>
         </div>
         
-<div></div>
+<div class="d-flex justify-content-between mb-8">
+    <div class="d-inline-flex align-items-center">
+        <div class="font-serif user rounded-circle d-flex justify-content-center align-items-center flex-shrink-0 me-3">
+            CL
+        </div>
+        <span class="small">Charlie Lee</span>
+    </div>
+    <a href="#" class="btn btn-outline-dark">Logout</a>
+</div>
+<ul class="list-unstyled mobile-menu-links">
+    <li><a href="#" class="active">My dashboards</a></li>
+    <li><a href="#">Learning centre</a></li>
+    <li><a href="#">Account settings</a></li>
+</ul>
 
     </div>
 </div>
 
 
-        <main><div class="bg-dots text-white py-14">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-7 col-xxl-5 text-center">
-                <h2 class="h1 mb-8">
-                    Dot loves data,
-                    <br />
-                    and now you will too.
-                </h2>
-                <p class="fs-5 mb-8">
-                    We want to make the power of data available and accessible to all. The DOT Portal is your gateway to
-                    simple, smart, beautiful data solutions from DOT all in one secure place.
-                </p>
-                <a href="" class="btn btn-primary">Sign up</a>
-            </div>
-        </div>
+        <main><div class="position-relative bg-secondary">
+    <div class="container pt-10">
+        <h1 class="font-serif mb-6 h2">Account settings</h1>
+        <button href="#" class="btn btn-outline-dark mb-12">Log out</button>
+        <nav class="nav d-flex">
+            <a class="nav-link-secondary active" href="#"><span>My account</span></a>
+            <a class="nav-link-secondary" href="#"><span>Subscriptions</span></a>
+            <a class="nav-link-secondary" href="#"><span>Payment</span></a>
+            <a class="nav-link-secondary" href="#"><span>Analytics</span></a>
+            <a class="nav-link-secondary" href="#"><span>Communication</span></a>
+            <a class="nav-link-secondary" href="#"><span>Support</span></a>
+        </nav>
     </div>
 </div>
-<div class="bg-secondary py-14">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 col-lg-3 text-center px-md-7 mb-4 mb-md-0">
-                <div class="dot bg-yellow mx-auto mb-6"></div>
-                <h3 class="mb-4">Customise</h3>
-                <p class="fs-7">
-                    Manage subscriptions and team access to over 10 data-driven products, or allow us to create a
-                    bespoke data solution for you.
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-3 text-center px-md-7 mb-4 mb-md-0">
-                <div class="dot bg-green mx-auto mb-6"></div>
-                <h3 class="mb-4">Secure</h3>
-                <p class="fs-7">100% secure login and protected by... so your data remains your data.</p>
-            </div>
-            <div class="col-md-6 col-lg-3 text-center px-md-7 mb-4 mb-md-0">
-                <div class="dot bg-teal mx-auto mb-6"></div>
-                <h3 class="mb-4">Learn</h3>
-                <p class="fs-7">
-                    See the latest updates and watch our how-to videos to help you and your team learn become fluent in
-                    reading and interpreting the dashboards.
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-3 text-center px-md-7 mb-4 mb-md-0">
-                <div class="dot bg-blue mx-auto mb-6"></div>
-                <h3 class="mb-4">Analyse</h3>
-                <p class="fs-7">
-                    Data is everything! Review how your team engage with the dashboards to schedule further training or
-                    gauge ROI.
-                </p>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="pt-14">
-    <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-md-9 col-lg-8 col-xxl-6 text-center">
-                <h2 class="mb-8">
-                    No one knows
-                    <br />
-                    New Zealand’s big data
-                    <br />
-                    story like DOT.
-                </h2>
-                <p class="fs-5 mb-10">
-                    And one of the many ways we tell this story is through dashboards. Our range of data products
-                    address what matters to our wellbeing, our communities and our businesses.
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="position-relative">
-        <div class="container">
-            <div class="ipad">
-                <div id="projects" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-indicators carousel-indicators-ipad">
-                        <button
-                            type="button"
-                            data-bs-target="#projects"
-                            data-bs-slide-to="0"
-                            class="active"
-                            aria-current="true"
-                            aria-label="Slide 1"></button>
-                        <button
-                            type="button"
-                            data-bs-target="#projects"
-                            data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button
-                            type="button"
-                            data-bs-target="#projects"
-                            data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
-                        <button
-                            type="button"
-                            data-bs-target="#projects"
-                            data-bs-slide-to="3"
-                            aria-label="Slide 4"></button>
+<div class="container py-11">
+    <div class="row">
+        <div class="col-lg-6">
+            <form method="post" enctype="multipart/form-data">
+                <label for="profile-image" class="d-flex align-items-center mb-7">
+                    <div class="profile-image me-7">CL</div>
+                    <span class="btn btn-outline-dark">Upload photo</span>
+                </label>
+                <input type="file" id="profile-image" class="d-none" />
+                <div class="mb-7">
+                    <div class="col-lg-9">
+                        <label for="name" class="form-label">First & Last Name</label>
+                        <input type="text" class="form-control" id="name" />
                     </div>
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="row h-100 mx-0">
-                                <div
-                                    class="col-md-6 d-flex flex-column align-items-center justify-content-center"
-                                    style="background-color: #f6f8fb">
-                                    <img
-                                        src="assets/img/logos/bizmomento.svg"
-                                        width="125"
-                                        height="auto"
-                                        alt="Bizmomento" />
-                                </div>
-                                <div
-                                    class="col-md-6 d-flex flex-column justify-content-center px-md-10"
-                                    style="color: white; background-color: #365ad3">
-                                    <h5 class="font-sans-serif"><strong>Bizmomento</strong></h5>
-                                    <p>
-                                        Maximise profit, minimise waste. Predict how many people will turn up to your
-                                        next event, attraction, restaurant or store. By day, season, month or year.
-                                    </p>
-                                </div>
-                            </div>
+                </div>
+                <div class="mb-7">
+                    <div class="col-lg-9">
+                        <label for="email" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" id="email" />
+                    </div>
+                </div>
+                <div class="mb-7">
+                    <label for="password" class="form-label">Password</label>
+                    <div class="row">
+                        <div class="col-lg-9 mb-7 mb-lg-0">
+                            <input type="password" class="form-control" id="password" />
                         </div>
-                        <div class="carousel-item">
-                            <div class="row h-100 mx-0">
-                                <div
-                                    class="col-md-6 d-flex flex-column align-items-center justify-content-center"
-                                    style="background-color: #f6f8fb">
-                                    <img src="assets/img/logos/us.svg" width="182" height="auto" alt="Us" />
-                                </div>
-                                <div
-                                    class="col-md-6 d-flex flex-column justify-content-center px-md-10"
-                                    style="color: #084130; background-color: #b2e375">
-                                    <h5 class="font-sans-serif"><strong>Us</strong></h5>
-                                    <p>
-                                        Unique Segmentation for today’s New Zealand. A dynamic, fully interactive
-                                        customer segmentation tool that reveals NZ’s changing population and behaviours.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row h-100 mx-0">
-                                <div
-                                    class="col-md-6 d-flex flex-column align-items-center justify-content-center"
-                                    style="background-color: #1e1e1e">
-                                    <img
-                                        src="assets/img/logos/dot-dot-dash.svg"
-                                        width="146"
-                                        height="auto"
-                                        alt="DotDotDash" />
-                                </div>
-                                <div
-                                    class="col-md-6 d-flex flex-column justify-content-center px-md-10"
-                                    style="color: white; background-color: #3366ff">
-                                    <h5 class="font-sans-serif"><strong>DotDotDash</strong></h5>
-                                    <p>
-                                        Interactive and dynamic dashboards providing up-to-date and aggregated data on
-                                        how communities across NZ are performing and changing over time.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="row h-100 mx-0">
-                                <div
-                                    class="col-md-6 d-flex flex-column align-items-center justify-content-center"
-                                    style="background-color: #f6f8fb">
-                                    <img src="assets/img/logos/turn-up.png" width="200" height="auto" alt="Turn Up" />
-                                </div>
-                                <div
-                                    class="col-md-6 d-flex flex-column justify-content-center px-md-10"
-                                    style="color: white; background-color: #634fe8">
-                                    <h5 class="font-sans-serif"><strong>Turn Up</strong></h5>
-                                    <p>
-                                        Maximise profit, minimise waste. Predict how many people will turn up to your
-                                        next event, attraction, restaurant or store. By day, season, month or year.
-                                    </p>
-                                </div>
-                            </div>
+                        <div class="col-lg-3 d-flex align-items-center">
+                            <button type="submit" class="btn btn-outline-dark">Change</button>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="bg-gray-800 text-white py-13">
-    <div class="container">
-        <div class="row">
-            <div class="col text-center">
-                <h2 class="mb-7">Ready to get started?</h2>
-                <a href="" class="btn btn-primary">Get in touch</a>
-            </div>
+            </form>
         </div>
     </div>
 </div>

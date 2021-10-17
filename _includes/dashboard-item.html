@@ -1,6 +1,6 @@
 <!-- dashboard-item start -->
 <div class="dashboard-thumb">
-    <a class="d-block ratio ratio-16x9 mb-7">
+    <a class="d-block ratio ratio-16x9 mb-7" {% if include.item.type == 'video' %} data-toggle-video="{{ include.item.src }}" {% endif %}>
         <picture>
             <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
             <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
@@ -44,8 +44,16 @@
         {% endif %}
     </a>
     <a href="#" class="dashboard-thumb-title">{{ include.item.title }}</a>
+    {% if include.item.description %}
     <p class="text-gray-mid text-base">
-        A brief description of your product can go here. Ideally no longer than 2 lines.
+        {{ include.item.description }}
     </p>
+    {% else %}
+    <ul class="list-unstyled d-flex">
+        <li><a href="#" class="btn-icon-link small"><svg class="icon"><use xlink:href="#icon-preview"></use></svg>Preview</a></li>
+        <li class="ms-4"><a href="#" class="btn-icon-link small"><svg class="icon"><use xlink:href="#icon-download"></use></svg>Download</a></li>
+    </ul>
+</ul>
+    {% endif %}
 </div>
 <!-- dashboard-item end -->
