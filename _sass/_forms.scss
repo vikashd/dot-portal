@@ -1,0 +1,13 @@
+.was-validated .form-control:valid,
+.form-control.is-valid {
+    border: 2px solid $success;
+    background-size: 1.125rem 1.125rem;
+    padding-right: 2.875rem;
+}
+
+.was-validated .form-control:invalid,
+.form-control.is-invalid {
+    border: 2px solid $danger;
+    background-size: 1.125rem 1.125rem;
+    padding-right: 2.875rem;
+}
