@@ -3206,29 +3206,6 @@ footer a:focus, footer a:hover {
   background-size: cover;
 }
 
-.modal-dialog-video {
-  margin: 0 1rem;
-  max-width: none;
-}
-@media (min-width: 768px) {
-  .modal-dialog-video {
-    max-width: 80%;
-    margin: 0 auto;
-  }
-}
-
-.profile-image {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Roboto Slab", serif;
-  font-size: 32px;
-  width: 85px;
-  height: 85px;
-  border-radius: 50%;
-  background-color: var(--bs-yellow);
-}
-
 .dot {
   width: 46px;
   height: 46px;
@@ -3256,5 +3233,28 @@ footer a:focus, footer a:hover {
     right: 0;
     height: 100%;
   }
+}
+
+.modal-dialog-video {
+  margin: 0 1rem;
+  max-width: none;
+}
+@media (min-width: 768px) {
+  .modal-dialog-video {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+}
+
+.profile-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Roboto Slab", serif;
+  font-size: 32px;
+  width: 85px;
+  height: 85px;
+  border-radius: 50%;
+  background-color: var(--bs-yellow);
 }
 /*# sourceMappingURL=styles.css.map */
