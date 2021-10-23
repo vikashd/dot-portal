@@ -1,16 +1,18 @@
 <!-- dashboard-item start -->
 <div class="dashboard-thumb">
-    <a {% if include.item.type != 'video' %} href="{{ '/' | relative_url }}dashboard" {% endif %} class="d-block ratio ratio-16x9 mb-7" {% if include.item.type == 'video' %} data-toggle-video="{{ include.item.src }}" {% endif %}>
-        <picture>
-            <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
-            <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
-            <img
-                class="position-absolute top-0 start-0 rounded"
-                src="https://via.placeholder.com/516x290"
-                alt="Dashboard" />
-        </picture>
+    <a {% if include.item.type != 'video' %} href="{{ '/' | relative_url }}dashboard" {% endif %} class="dashboard-thumb-image" {% if include.item.type == 'video' %} data-toggle-video="{{ include.item.src }}" {% endif %}>
+        <div class="ratio ratio-16x9">
+            <picture>
+                <source media="(min-width: 1024px)" srcset="https://via.placeholder.com/416x234" />
+                <source media="(min-width: 768px)" srcset="https://via.placeholder.com/336x189" />
+                <img
+                    class="top-0 start-0"
+                    src="https://via.placeholder.com/516x290"
+                    alt="Dashboard" />
+            </picture>
+        </div>
         {% if include.item.type != nil %}
-        <div class="position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
+        <div class="dasboard-thumb-actions position-absolute p-3 start-0 end-0 bottom-0 d-flex align-items-end justify-content-between">
             {% if include.item.type == 'dashboard' %}
             <div class="dashboard-thumb-status">Updated</div>
             <div class="ms-auto">

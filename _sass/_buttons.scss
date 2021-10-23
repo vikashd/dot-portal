@@ -1,5 +1,21 @@
+@keyframes rotate {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
 .btn-primary {
     color: white;
+
+    &:hover {
+        color: $blue;
+        border-color: $blue;
+        background-color: transparent;
+    }
 }
 
 .btn-icon {
@@ -34,5 +50,93 @@
         width: 24px;
         height: 18px;
         margin-right: 0.35rem;
+    }
+}
+
+.btn-play-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: none;
+    border: none;
+
+    > .btn-play {
+        max-width: 135px;
+        transition: background-color 0.2s ease-out, transform 0.2s ease-in-out;
+    }
+
+    &:hover {
+        > .btn-play {
+            background-color: rgba(255, 255, 255, 0.7);
+            transform: scale(1.05);
+        }
+    }
+}
+
+.btn-play-container.is-playing {
+    opacity: 0;
+}
+
+.btn-play {
+    position: relative;
+    width: 20%;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0;
+    border: none;
+    border-radius: 50%;
+    transition: background-color 0.2s ease-out;
+
+    &:before {
+        content: "";
+        display: block;
+        padding-top: 100%;
+    }
+
+    &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 50%;
+        border: 6px solid white;
+        border-top-color: rgba(255, 255, 255, 0.3);
+        opacity: 0;
+        animation-name: rotate;
+        animation: 0.4s ease-in-out infinite rotate;
+        transition: opacity 0.2s ease-out;
+    }
+
+    svg {
+        position: absolute;
+        width: 45%;
+        height: auto;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 10%;
+        margin: auto;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+}
+
+.btn-play.is-loading {
+    svg {
+        opacity: 0;
+    }
+
+    &:after {
+        opacity: 1;
     }
 }

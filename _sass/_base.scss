@@ -1,3 +1,9 @@
+:root {
+    @include media-breakpoint-down(md) {
+        --#{$variable-prefix}body-font-size: 15px;
+    }
+}
+
 html,
 body {
     -webkit-font-smoothing: antialiased;

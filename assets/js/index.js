@@ -25,7 +25,7 @@
     };
 
     var dropdownElementList = [].slice.call(document.querySelectorAll(".dropdown-btn"));
-    var dropdownList = dropdownElementList.map(function (dropdownToggleEl) {
+    dropdownElementList.map(function (dropdownToggleEl) {
         return new bootstrap.Dropdown(dropdownToggleEl, {
             popperConfig: function (defaultBsPopperConfig) {
                 return Object.assign(defaultBsPopperConfig, { modifiers: [sameWidth, offset] });
@@ -63,19 +63,62 @@
 (function () {
     var videoBtns = Array.prototype.slice.call(document.querySelectorAll("[data-toggle-video]"));
     var modalEl = document.getElementById("modal-video");
-    var modal = new bootstrap.Modal(modalEl);
-    var iframe = modalEl.querySelector("iframe");
 
-    videoBtns.forEach((btn) => {
-        btn.addEventListener("click", function (e) {
-            var src = e.currentTarget.getAttribute("data-toggle-video");
+    if (modalEl) {
+        var modal = new bootstrap.Modal(modalEl);
+        var iframe = modalEl.querySelector("iframe");
 
-            iframe.src = src;
-            modal.show();
+        videoBtns.forEach((btn) => {
+            btn.addEventListener("click", function (e) {
+                var src = e.currentTarget.getAttribute("data-toggle-video");
+
+                iframe.src = src;
+                modal.show();
+            });
         });
+
+        modalEl.addEventListener("hidden.bs.modal", function () {
+            iframe.src = "";
+        });
+    }
+})();
+
+/**
+ * Landing page
+ */
+(function () {
+    var introVideo = document.getElementById("intro-video");
+    var playBtnContainer = document.getElementById("btn-intro-video-play-container");
+    var playBtn = document.getElementById("btn-intro-video-play");
+    var player = new Vimeo.Player(introVideo);
+
+    player.on("loaded", function () {
+        playBtnContainer.classList.remove("d-none");
     });
 
-    modalEl.addEventListener("hidden.bs.modal", function () {
-        iframe.src = "";
+    player.on("playing", function () {
+        playBtnContainer.classList.add("is-playing");
+    });
+
+    player.on("pause", function () {
+        playBtnContainer.classList.remove("is-playing");
+    });
+
+    player.on("bufferstart", function () {
+        playBtn.classList.add("is-loading");
+    });
+
+    player.on("bufferend", function () {
+        playBtn.classList.remove("is-loading");
+    });
+
+    playBtnContainer.addEventListener("click", function () {
+        player.getPaused().then(function (paused) {
+            if (paused) {
+                player.play();
+            } else {
+                player.pause();
+            }
+        });
     });
 })();
