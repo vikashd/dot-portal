@@ -87,7 +87,7 @@
     var modal = new bootstrap.Modal(modalEl);
     var iframe = modalEl.querySelector("iframe");
 
-    videoBtns.forEach((btn) => {
+    videoBtns.forEach(function (btn) {
         btn.addEventListener("click", function (e) {
             var src = e.currentTarget.getAttribute("data-toggle-video");
 
@@ -98,6 +98,27 @@
 
     modalEl.addEventListener("hidden.bs.modal", function () {
         iframe.src = "";
+    });
+})();
+
+/**
+ * Fullscreen video
+ */
+(function () {
+    var fullscreenBtns = Array.prototype.slice.call(document.querySelectorAll("[data-vimeo-fs]"));
+
+    fullscreenBtns.forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+            var videoId = e.currentTarget.getAttribute("data-vimeo-fs");
+
+            const video = document.querySelector(`iframe[src*="${videoId}"]`);
+
+            if (video) {
+                var player = new Vimeo.Player(video);
+
+                player.requestFullscreen();
+            }
+        });
     });
 })();
 
@@ -113,7 +134,7 @@
 
     var playBtnContainer = document.getElementById("btn-intro-video-play-container");
     var playBtn = document.getElementById("btn-intro-video-play");
-    var player = new Vimeo.Player(introVideo, { controls: false });
+    var player = new Vimeo.Player(introVideo);
 
     player.on("loaded", function () {
         playBtnContainer.classList.remove("d-none");
