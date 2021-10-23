@@ -17,19 +17,8 @@
         position: relative;
         display: flex;
         align-items: center;
-    }
 
-    &:focus,
-    &:hover {
-        &:not(.active) {
-            span {
-                text-decoration: underline;
-            }
-        }
-    }
-
-    &.active {
-        span:after {
+        &:after {
             content: "";
             position: absolute;
             display: block;
@@ -37,6 +26,18 @@
             left: 0;
             right: 0;
             bottom: 0;
+            opacity: 0;
+            transform: scaleX(0);
+            transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
+        }
+    }
+
+    &:focus,
+    &:hover,
+    &.active {
+        span:after {
+            opacity: 1;
+            transform: scaleX(1);
         }
     }
 }
@@ -44,25 +45,28 @@
 .nav-link-secondary {
     position: relative;
     display: flex;
-    padding: 0 $spacer * 1 $spacer * 0.75;
+    color: $gray-900;
+    padding: 0 $spacer * 1 $spacer * 1;
     text-decoration: none;
     white-space: nowrap;
+    opacity: 0.7;
 
     &:focus,
     &:hover {
         &:not(.active) {
-            text-decoration: underline;
+            opacity: 1;
         }
     }
 
     &.active {
         font-weight: $font-weight-bold;
+        opacity: 1;
 
         &:after {
             content: "";
             position: absolute;
             display: block;
-            border-bottom: 3px solid $blue;
+            border-bottom: 2px solid $blue;
             left: 0;
             right: 0;
             bottom: 0;

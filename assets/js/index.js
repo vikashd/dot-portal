@@ -64,23 +64,25 @@
     var videoBtns = Array.prototype.slice.call(document.querySelectorAll("[data-toggle-video]"));
     var modalEl = document.getElementById("modal-video");
 
-    if (modalEl) {
-        var modal = new bootstrap.Modal(modalEl);
-        var iframe = modalEl.querySelector("iframe");
-
-        videoBtns.forEach((btn) => {
-            btn.addEventListener("click", function (e) {
-                var src = e.currentTarget.getAttribute("data-toggle-video");
-
-                iframe.src = src;
-                modal.show();
-            });
-        });
-
-        modalEl.addEventListener("hidden.bs.modal", function () {
-            iframe.src = "";
-        });
+    if (!modalEl) {
+        return;
     }
+
+    var modal = new bootstrap.Modal(modalEl);
+    var iframe = modalEl.querySelector("iframe");
+
+    videoBtns.forEach((btn) => {
+        btn.addEventListener("click", function (e) {
+            var src = e.currentTarget.getAttribute("data-toggle-video");
+
+            iframe.src = src;
+            modal.show();
+        });
+    });
+
+    modalEl.addEventListener("hidden.bs.modal", function () {
+        iframe.src = "";
+    });
 })();
 
 /**
@@ -88,9 +90,14 @@
  */
 (function () {
     var introVideo = document.getElementById("intro-video");
+
+    if (!introVideo) {
+        return;
+    }
+
     var playBtnContainer = document.getElementById("btn-intro-video-play-container");
     var playBtn = document.getElementById("btn-intro-video-play");
-    var player = new Vimeo.Player(introVideo);
+    var player = new Vimeo.Player(introVideo, { controls: false });
 
     player.on("loaded", function () {
         playBtnContainer.classList.remove("d-none");
