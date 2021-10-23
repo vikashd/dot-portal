@@ -43,18 +43,34 @@
     var menu = document.getElementById("mobile-menu");
     var open = false;
 
-    function clickHandler() {
-        open = !open;
+    function openMenu() {
+        open = true;
+        menu.style.transform = "translate3d(0, 0, 0)";
+    }
 
+    function closeMenu() {
+        open = false;
+        menu.style.transform = "translate3d(-100%, 0, 0)";
+    }
+
+    function clickHandler() {
         if (open) {
-            menu.style.transform = "translate3d(0, 0, 0)";
+            closeMenu();
         } else {
-            menu.style.transform = "translate3d(-100%, 0, 0)";
+            openMenu();
         }
     }
 
     mobileMenuBtn.addEventListener("click", clickHandler);
     mobileMenuBtnClose.addEventListener("click", clickHandler);
+
+    const mediaQuery = window.matchMedia("(min-width: 768px)");
+
+    mediaQuery.addEventListener("change", function (e) {
+        if (e.matches && open) {
+            closeMenu();
+        }
+    });
 })();
 
 /**
