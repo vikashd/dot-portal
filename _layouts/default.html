@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
-        {% include svg.html %} {% if page.loggedin %}{% include header-index.html %}{% else %}{% include header.html
+        {% include svg.html %} {% if page.loggedin %}{% include header.html %}{% else %}{% include header-index.html
         %}{% endif %}
         <main>{{ content }}</main>
         {% include footer.html %}
