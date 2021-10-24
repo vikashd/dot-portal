@@ -1,14 +1,20 @@
 title: My DOT dashboards
 items:
-    - title: Sky - Entertainment Dashboard
+    - title: Us (Unique Segmentation)
       type: dashboard
-      description: A brief description of your product can go here. Ideally no longer than 2 lines.
-    - title: Sky - Shared Audience Model
+      description: Unique segmentation for today’s New Zealand.
+      updated: true
+    - title: Bizmomento Profile
       type: dashboard
-      description: A brief description of your product can go here. Ideally no longer than 2 lines.
-    - title: Sky - Entertainment Dashboard
+      description: New Zealand’s leading business registry. Understand business activity at a small area unity.
+      updated: true
+      favourite: true
+    - title: Bizmomento Monitor
       type: dashboard
-      description: A brief description of your product can go here. Ideally no longer than 2 lines.
-    - title: Sky - Shared Audience Model
+      description: Monitor the impact of recent events on New Zealand’s retail sector.
+    - title: Bizmomento Predict
       type: dashboard
-      description: A brief description of your product can go here. Ideally no longer than 2 lines.
+      description: Predicting business growth in New Zealand communities.
+    - title: DotDotDash Gambling
+      type: dashboard
+      description: Visualises and tracks the level of gambling, and distribution of gambling proceeds, in NZ communities.

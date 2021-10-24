@@ -1,8 +1,10 @@
 title: My Bespoke dashboards
 items:
-    - title: Sky - Entertainment Dashboard 1
+    - title: Sky - Entertainment Dashboard
       type: dashboard
       description: A brief description of your product can go here. Ideally no longer than 2 lines.
-    - title: Sky - Entertainment Dashboard 2
+      updated: true
+    - title: Sky - Shared Audience Model
       type: dashboard
       description: A brief description of your product can go here. Ideally no longer than 2 lines.
+      favourite: true

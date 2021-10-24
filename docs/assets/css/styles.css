@@ -2286,6 +2286,11 @@ textarea.form-control-lg {
   margin-left: auto !important;
 }
 
+.my-8 {
+  margin-top: 2.5rem !important;
+  margin-bottom: 2.5rem !important;
+}
+
 .mt-0 {
   margin-top: 0 !important;
 }
@@ -2404,11 +2409,6 @@ textarea.form-control-lg {
   padding-bottom: 6rem !important;
 }
 
-.py-13 {
-  padding-top: 7rem !important;
-  padding-bottom: 7rem !important;
-}
-
 .pt-5 {
   padding-top: 1.25rem !important;
 }
@@ -2503,6 +2503,11 @@ textarea.form-control-lg {
     padding-left: 5rem !important;
   }
 
+  .py-md-13 {
+    padding-top: 7rem !important;
+    padding-bottom: 7rem !important;
+  }
+
   .py-md-14 {
     padding-top: 8rem !important;
     padding-bottom: 8rem !important;
@@ -2521,6 +2526,10 @@ textarea.form-control-lg {
   }
 }
 @media (min-width: 992px) {
+
+  .flex-lg-row {
+    flex-direction: row !important;
+  }
 
   .mb-lg-0 {
     margin-bottom: 0 !important;
@@ -2820,7 +2829,10 @@ body {
   height: 100%;
 }
 .ipad > .carousel > .carousel-inner > .carousel-item [class*=col-] {
-  height: 50%;
+  height: 45%;
+}
+.ipad > .carousel > .carousel-inner > .carousel-item [class*=col-] + [class*=col-] {
+  height: 55%;
 }
 .ipad > .carousel > .carousel-inner > .carousel-item .carousel-logo {
   width: auto;
@@ -2859,6 +2871,9 @@ body {
     height: 100%;
   }
   .ipad > .carousel > .carousel-inner > .carousel-item [class*=col-] {
+    height: auto;
+  }
+  .ipad > .carousel > .carousel-inner > .carousel-item [class*=col-] + [class*=col-] {
     height: auto;
   }
 }
@@ -3231,7 +3246,7 @@ footer a:focus, footer a:hover {
   background-color: #ffde00;
   padding: 4rem 0;
 }
-@media (min-width: 576px) {
+@media (min-width: 992px) {
   .testimonial {
     padding: 0;
   }
@@ -3246,6 +3261,32 @@ footer a:focus, footer a:hover {
     left: 0;
     right: 0;
     height: 100%;
+  }
+}
+
+.testimonial-logos {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+@media (min-width: 992px) {
+  .testimonial-logos {
+    flex-direction: column;
+    padding: 5vw 0;
+  }
+}
+
+.testimonial-logo {
+  position: relative;
+  background-size: cover;
+  background-blend-mode: multiply;
+  background-color: #ffde00;
+}
+@media (max-width: 991.98px) {
+  .testimonial-logo {
+    left: 0 !important;
+    margin: 1rem;
   }
 }
 

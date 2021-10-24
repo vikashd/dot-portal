@@ -14,7 +14,7 @@
     background-color: $yellow;
     padding: 4rem 0;
 
-    @include media-breakpoint-up(sm) {
+    @include media-breakpoint-up(lg) {
         padding: 0;
 
         &:before {
@@ -30,5 +30,29 @@
             right: 0;
             height: 100%;
         }
+    }
+}
+
+.testimonial-logos {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+
+    @include media-breakpoint-up(lg) {
+        flex-direction: column;
+        padding: 5vw 0;
+    }
+}
+
+.testimonial-logo {
+    position: relative;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: #ffde00;
+
+    @include media-breakpoint-down(lg) {
+        left: 0 !important;
+        margin: 1rem;
     }
 }
