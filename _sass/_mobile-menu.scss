@@ -7,7 +7,7 @@
     background-color: $gray-100;
     padding: $spacer * 1.25 0;
     overflow-y: auto;
-    z-index: 999;
+    z-index: $zindex-offcanvas;
     transform: translate3d(-100%, 0, 0);
     transition: transform 0.3s cubic-bezier(0.56, 0.19, 0.55, 0.93);
 }

@@ -4,7 +4,7 @@
 
 .nav-header {
     padding: 5px;
-    min-height: 48px;
+    min-height: 52px;
 }
 
 .nav-link {
@@ -13,32 +13,33 @@
     padding: 0 $spacer * 1.25;
     text-decoration: none;
 
-    span {
-        position: relative;
-        display: flex;
-        align-items: center;
-
-        &:after {
-            content: "";
-            position: absolute;
-            display: block;
-            border-bottom: 2px solid $blue;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            opacity: 0;
-            transform: scaleX(0);
-            transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
-        }
-    }
-
     &:focus,
     &:hover,
     &.active {
-        span:after {
+        .nav-link-text:after {
             opacity: 1;
             transform: scaleX(1);
         }
+    }
+}
+
+.nav-link-text {
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 0.9375rem;
+
+    &:after {
+        content: "";
+        position: absolute;
+        display: block;
+        border-bottom: 2px solid $blue;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        opacity: 0;
+        transform: scaleX(0);
+        transition: transform 0.15s ease-in-out, opacity 0.15s ease-in-out;
     }
 }
 

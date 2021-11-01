@@ -29,6 +29,7 @@
 @import "base";
 /* purgecss start ignore */
 @import "buttons";
+@import "notification-bar";
 /* purgecss end ignore */
 @import "nav";
 @import "carousel";
@@ -38,27 +39,7 @@
 @import "footer";
 @import "mobile-menu";
 @import "dropdown";
+@import "modal";
 @import "forms";
+@import "account";
 @import "landing-page";
-
-.modal-dialog-video {
-    margin: 0 1rem;
-    max-width: none;
-
-    @include media-breakpoint-up(md) {
-        max-width: 80%;
-        margin: 0 auto;
-    }
-}
-
-.profile-image {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $font-family-serif;
-    font-size: 32px;
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    background-color: var(--bs-yellow);
-}

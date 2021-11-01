@@ -13,8 +13,23 @@
         <link rel="stylesheet" href="./assets/css/styles.css" />
     </head>
     <body>
-        {% include svg.html %} {% if page.loggedin %}{% include header.html %}{% else %}{% include header-index.html
-        %}{% endif %}
+        {% if page.notification %}
+        <div
+            id="notification-bar"
+            class="notification-bar notification-bar-hide"
+            style="visibility: hidden; transform: translateY(-100%)">
+            <div class="container">
+                <div>
+                    A new
+                    <strong>announcement feature</strong>
+                    has been added to your admin interface. Let us know what you think on our
+                    <a href="">feedback form</a>
+                </div>
+                <button id="notification-close" class="notification-bar-close"><span></span></button>
+            </div>
+        </div>
+        {% endif %} {% include svg.html %} {% if page.loggedin %}{% include header.html %}{% else %}{% include
+        header-index.html %}{% endif %}
         <main>{{ content }}</main>
         {% include footer.html %}
         <script

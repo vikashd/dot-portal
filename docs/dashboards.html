@@ -82,13 +82,13 @@
                 <a href="/dot-portal/">
                     <img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
                 </a>
-                <nav class="nav nav-header d-none d-md-flex me-n4">
+                <nav class="nav nav-header d-none d-md-flex me-n4 me-md-n6">
                     <a class="nav-link active" href="/dot-portal/dashboards">
-                        <span class="fs-7">My dashboards</span>
+                        <span class="nav-link-text">My dashboards</span>
                     </a>
-                    <a class="nav-link" href="#"><span class="fs-7">Learning centre</span></a>
-                    <a class="nav-link" href="/dot-portal/account">
-                        <span class="fs-7">Charlie Lee</span>
+                    <a class="nav-link" href="#"><span class="nav-link-text">Learning centre</span></a>
+                    <a id="account-menu-btn" class="nav-link" href="" data-bs-toggle="dropdown">
+                        <span class="nav-link-text">Charlie Lee</span>
                         <div
                             class="
                                 font-serif
@@ -100,15 +100,22 @@
                                 flex-shrink-0
                                 ms-3
                             ">
-                            CL
+                            <span>CL</span>
                         </div>
                     </a>
+                    <div
+                        class="dropdown-menu dropdown-menu-end dropdown-menu-account"
+                        aria-labelledby="account-menu-btn">
+                        <span class="user-name">Charlie Lee</span>
+                        <small class="user-email">charlie.lee@dotlovesdata.co</small>
+                        <button class="btn btn-outline-dark fs-7">Log out</button>
+                    </div>
                 </nav>
                 <button id="mobile-menu-btn" class="btn mobile-menu-btn d-md-none"><span></span></button>
             </div>
         </header>
 
-        <div id="mobile-menu" class="mobile-menu" style="transform: translate3d(-100%, 0, 0)">
+        <div id="mobile-menu" class="mobile-menu" tabindex="-1" style="transform: translate3d(-100%, 0, 0)">
             <div class="container header-container d-flex align-items-center justify-content-between">
                 <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" /></a>
                 <button id="mobile-menu-close-btn" class="btn mobile-menu-btn d-md-none open"><span></span></button>
@@ -134,9 +141,9 @@
                     <a href="#" class="btn btn-outline-dark">Logout</a>
                 </div>
                 <ul class="list-unstyled mobile-menu-links">
-                    <li><a href="#" class="active">My dashboards</a></li>
+                    <li><a href="/dot-portal/dashboards" class="active">My dashboards</a></li>
                     <li><a href="#">Learning centre</a></li>
-                    <li><a href="#">Account settings</a></li>
+                    <li><a href="/dot-portal/account">Account settings</a></li>
                 </ul>
             </div>
         </div>

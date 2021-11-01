@@ -1,8 +1,24 @@
 .user {
     align-self: center;
+    letter-spacing: 2px;
     width: 36px;
     height: 36px;
     background-color: var(--bs-yellow);
+
+    span {
+        margin-left: 0.15em;
+    }
+}
+
+.user-name {
+    font-size: 0.9375rem;
+    font-weight: 500;
+}
+
+.user-email {
+    display: block;
+    color: rgba($gray-800, 70%);
+    margin-bottom: 1.25rem;
 }
 
 .header-logo {
@@ -17,4 +33,8 @@
     @include media-breakpoint-down(md) {
         min-height: 32px;
     }
+}
+
+.dropdown-menu-account {
+    min-width: 260px;
 }

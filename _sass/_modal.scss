@@ -1,0 +1,17 @@
+.modal-dialog-video {
+    margin: 0 1rem;
+    max-width: none;
+
+    @include media-breakpoint-up(md) {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+}
+
+.modal-dialog-form {
+    max-width: 660px;
+
+    p {
+        color: $gray-700;
+    }
+}

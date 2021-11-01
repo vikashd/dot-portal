@@ -1,0 +1,18 @@
+.profile-image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $font-family-serif;
+    font-size: 32px;
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    background-color: var(--bs-yellow);
+}
+
+.field-rules {
+    font-size: 0.8125rem;
+    color: #595959;
+    padding-left: 1.5rem;
+    line-height: 1.65;
+}
