@@ -87,7 +87,7 @@
                     <img src="/dot-portal/assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
                 </a>
                 <nav class="nav nav-header d-none d-md-flex me-n4 me-md-n6">
-                    <a class="nav-link active" href="/dot-portal/dashboards">
+                    <a class="nav-link" href="/dot-portal/dashboards">
                         <span class="nav-link-text">My dashboards</span>
                     </a>
                     <a class="nav-link" href="#"><span class="nav-link-text">Learning centre</span></a>
@@ -163,14 +163,44 @@
         </div>
 
         <main>
-            <div class="position-relative masthead bg-secondary">
+            <div class="bg-secondary py-8">
+                <div class="container d-flex align-items-center justify-content-between">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb mt-0 mb-0">
+                            <li class="breadcrumb-item" aria-current="page">My dashboards</li>
+                            <li class="breadcrumb-item active" aria-current="page">Us</li>
+                        </ol>
+                    </nav>
+                    <button data-vimeo-fs="561070574" class="btn btn-outline-dark btn-icon">
+                        <span>Fullscreen</span>
+                        <svg class="icon"><use xlink:href="#icon-expand"></use></svg>
+                    </button>
+                </div>
+            </div>
+            <div class="bg-secondary">
                 <div class="container">
-                    <h1 class="font-serif mb-6">
-                        Kia ora Charlie,
-                        <br />
-                        welcome back to the Portal.
-                    </h1>
-                    <p>Your data awaits. Access your dashboard products below.</p>
+                    <div class="mb-12">
+                        <div class="ratio ratio-16x9 mb-4">
+                            <iframe src="https://player.vimeo.com/video/561070574" title="Us" allowfullscreen></iframe>
+                        </div>
+                        <p>
+                            Last updated
+                            <strong>6 July 2021</strong>
+                            Expires
+                            <strong>1 July 2022</strong>
+                        </p>
+                    </div>
+                    <h3 class="mb-9">Learning Centre</h3>
+                    <nav class="nav d-flex">
+                        <a class="nav-link-secondary" href="/dot-portal/dashboard">
+                            <span>Video</span>
+                        </a>
+                        <a class="nav-link-secondary active" href="/dot-portal/dashboard/collateral">
+                            <span>Collateral</span>
+                        </a>
+                        <a class="nav-link-secondary" href="#"><span>Updates</span></a>
+                        <a class="nav-link-secondary" href="#"><span>More</span></a>
+                    </nav>
                 </div>
             </div>
             <div class="container py-6 d-flex justify-content-end">
@@ -203,11 +233,10 @@
                     </ul>
                 </div>
             </div>
+
             <div class="container py-11">
                 <!-- dashboard-group start -->
 
-                <h2 class="h3 mb-8">My Bespoke dashboards</h2>
-
                 <div class="row">
                     <div class="col-md-6 col-xl-4">
                         <!-- dashboard-item start -->
@@ -240,16 +269,40 @@
                                         align-items-end
                                         justify-content-between
                                     ">
-                                    <div class="dashboard-thumb-status">Updated</div>
+                                    <div class="ms-auto">
+                                        <div class="dashboard-thumb-status-progress">
+                                            <svg height="20" width="20" viewBox="0 0 20 20">
+                                                <circle r="10" cx="10" cy="10" fill="#ffde00" />
+                                                <circle
+                                                    r="5"
+                                                    cx="10"
+                                                    cy="10"
+                                                    fill="transparent"
+                                                    stroke="white"
+                                                    stroke-width="10"
+                                                    stroke-dasharray="3.925 31.4"
+                                                    transform="rotate(-90) translate(-20)" />
+                                            </svg>
+                                        </div>
+                                    </div>
                                 </div>
                             </a>
-                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">
-                                Sky - Entertainment Dashboard
-                            </a>
+                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">Us - Getting started</a>
 
-                            <p class="text-gray-mid text-base">
-                                A brief description of your product can go here. Ideally no longer than 2 lines.
-                            </p>
+                            <ul class="list-unstyled d-flex">
+                                <li>
+                                    <a href="#" class="btn-icon-link small">
+                                        <svg class="icon"><use xlink:href="#icon-preview"></use></svg>
+                                        Preview
+                                    </a>
+                                </li>
+                                <li class="ms-4">
+                                    <a href="#" class="btn-icon-link small">
+                                        <svg class="icon"><use xlink:href="#icon-download"></use></svg>
+                                        Download
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <!-- dashboard-item end -->
                     </div>
@@ -286,246 +339,42 @@
                                         justify-content-between
                                     ">
                                     <div class="ms-auto">
-                                        <svg class="icon dashboard-thumb-favourite">
-                                            <use xlink:href="#icon-star"></use>
-                                        </svg>
+                                        <div class="dashboard-thumb-status-icon">
+                                            <svg class="icon"><use xlink:href="#icon-tick"></use></svg>
+                                        </div>
                                     </div>
                                 </div>
                             </a>
-                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">
-                                Sky - Shared Audience Model
-                            </a>
+                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">Us - Using filters</a>
 
-                            <p class="text-gray-mid text-base">
-                                A brief description of your product can go here. Ideally no longer than 2 lines.
-                            </p>
+                            <ul class="list-unstyled d-flex">
+                                <li>
+                                    <a href="#" class="btn-icon-link small">
+                                        <svg class="icon"><use xlink:href="#icon-preview"></use></svg>
+                                        Preview
+                                    </a>
+                                </li>
+                                <li class="ms-4">
+                                    <a href="#" class="btn-icon-link small">
+                                        <svg class="icon"><use xlink:href="#icon-download"></use></svg>
+                                        Download
+                                    </a>
+                                </li>
+                            </ul>
                         </div>
                         <!-- dashboard-item end -->
                     </div>
                 </div>
                 <!-- dashboard-group end -->
+            </div>
 
-                <!-- dashboard-group start -->
-
-                <h2 class="h3 mb-8">My DOT dashboards</h2>
-
-                <div class="row">
-                    <div class="col-md-6 col-xl-4">
-                        <!-- dashboard-item start -->
-                        <div class="dashboard-thumb">
-                            <a class="dashboard-thumb-image" href="/dot-portal/dashboard">
-                                <div class="ratio ratio-16x9">
-                                    <picture>
-                                        <source
-                                            media="(min-width: 1024px)"
-                                            srcset="https://via.placeholder.com/416x234" />
-                                        <source
-                                            media="(min-width: 768px)"
-                                            srcset="https://via.placeholder.com/336x189" />
-                                        <img
-                                            class="top-0 start-0"
-                                            src="https://via.placeholder.com/516x290"
-                                            alt="Dashboard" />
-                                    </picture>
-                                </div>
-
-                                <div
-                                    class="
-                                        dasboard-thumb-actions
-                                        position-absolute
-                                        p-3
-                                        start-0
-                                        end-0
-                                        bottom-0
-                                        d-flex
-                                        align-items-end
-                                        justify-content-between
-                                    ">
-                                    <div class="dashboard-thumb-status">Updated</div>
-                                </div>
-                            </a>
-                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">Us (Unique Segmentation)</a>
-
-                            <p class="text-gray-mid text-base">Unique segmentation for today’s New Zealand.</p>
-                        </div>
-                        <!-- dashboard-item end -->
-                    </div>
-
-                    <div class="col-md-6 col-xl-4">
-                        <!-- dashboard-item start -->
-                        <div class="dashboard-thumb">
-                            <a class="dashboard-thumb-image" href="/dot-portal/dashboard">
-                                <div class="ratio ratio-16x9">
-                                    <picture>
-                                        <source
-                                            media="(min-width: 1024px)"
-                                            srcset="https://via.placeholder.com/416x234" />
-                                        <source
-                                            media="(min-width: 768px)"
-                                            srcset="https://via.placeholder.com/336x189" />
-                                        <img
-                                            class="top-0 start-0"
-                                            src="https://via.placeholder.com/516x290"
-                                            alt="Dashboard" />
-                                    </picture>
-                                </div>
-
-                                <div
-                                    class="
-                                        dasboard-thumb-actions
-                                        position-absolute
-                                        p-3
-                                        start-0
-                                        end-0
-                                        bottom-0
-                                        d-flex
-                                        align-items-end
-                                        justify-content-between
-                                    ">
-                                    <div class="dashboard-thumb-status">Updated</div>
-
-                                    <div class="ms-auto">
-                                        <svg class="icon dashboard-thumb-favourite">
-                                            <use xlink:href="#icon-star"></use>
-                                        </svg>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">Bizmomento Profile</a>
-
-                            <p class="text-gray-mid text-base">
-                                New Zealand’s leading business registry. Understand business activity at a small area
-                                unity.
-                            </p>
-                        </div>
-                        <!-- dashboard-item end -->
-                    </div>
-
-                    <div class="col-md-6 col-xl-4">
-                        <!-- dashboard-item start -->
-                        <div class="dashboard-thumb">
-                            <a class="dashboard-thumb-image" href="/dot-portal/dashboard">
-                                <div class="ratio ratio-16x9">
-                                    <picture>
-                                        <source
-                                            media="(min-width: 1024px)"
-                                            srcset="https://via.placeholder.com/416x234" />
-                                        <source
-                                            media="(min-width: 768px)"
-                                            srcset="https://via.placeholder.com/336x189" />
-                                        <img
-                                            class="top-0 start-0"
-                                            src="https://via.placeholder.com/516x290"
-                                            alt="Dashboard" />
-                                    </picture>
-                                </div>
-
-                                <div
-                                    class="
-                                        dasboard-thumb-actions
-                                        position-absolute
-                                        p-3
-                                        start-0
-                                        end-0
-                                        bottom-0
-                                        d-flex
-                                        align-items-end
-                                        justify-content-between
-                                    "></div>
-                            </a>
-                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">Bizmomento Monitor</a>
-
-                            <p class="text-gray-mid text-base">
-                                Monitor the impact of recent events on New Zealand’s retail sector.
-                            </p>
-                        </div>
-                        <!-- dashboard-item end -->
-                    </div>
-
-                    <div class="col-md-6 col-xl-4">
-                        <!-- dashboard-item start -->
-                        <div class="dashboard-thumb">
-                            <a class="dashboard-thumb-image" href="/dot-portal/dashboard">
-                                <div class="ratio ratio-16x9">
-                                    <picture>
-                                        <source
-                                            media="(min-width: 1024px)"
-                                            srcset="https://via.placeholder.com/416x234" />
-                                        <source
-                                            media="(min-width: 768px)"
-                                            srcset="https://via.placeholder.com/336x189" />
-                                        <img
-                                            class="top-0 start-0"
-                                            src="https://via.placeholder.com/516x290"
-                                            alt="Dashboard" />
-                                    </picture>
-                                </div>
-
-                                <div
-                                    class="
-                                        dasboard-thumb-actions
-                                        position-absolute
-                                        p-3
-                                        start-0
-                                        end-0
-                                        bottom-0
-                                        d-flex
-                                        align-items-end
-                                        justify-content-between
-                                    "></div>
-                            </a>
-                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">Bizmomento Predict</a>
-
-                            <p class="text-gray-mid text-base">
-                                Predicting business growth in New Zealand communities.
-                            </p>
-                        </div>
-                        <!-- dashboard-item end -->
-                    </div>
-
-                    <div class="col-md-6 col-xl-4">
-                        <!-- dashboard-item start -->
-                        <div class="dashboard-thumb">
-                            <a class="dashboard-thumb-image" href="/dot-portal/dashboard">
-                                <div class="ratio ratio-16x9">
-                                    <picture>
-                                        <source
-                                            media="(min-width: 1024px)"
-                                            srcset="https://via.placeholder.com/416x234" />
-                                        <source
-                                            media="(min-width: 768px)"
-                                            srcset="https://via.placeholder.com/336x189" />
-                                        <img
-                                            class="top-0 start-0"
-                                            src="https://via.placeholder.com/516x290"
-                                            alt="Dashboard" />
-                                    </picture>
-                                </div>
-
-                                <div
-                                    class="
-                                        dasboard-thumb-actions
-                                        position-absolute
-                                        p-3
-                                        start-0
-                                        end-0
-                                        bottom-0
-                                        d-flex
-                                        align-items-end
-                                        justify-content-between
-                                    "></div>
-                            </a>
-                            <a href="/dot-portal/dashboard" class="dashboard-thumb-title">DotDotDash Gambling</a>
-
-                            <p class="text-gray-mid text-base">
-                                Visualises and tracks the level of gambling, and distribution of gambling proceeds, in
-                                NZ communities.
-                            </p>
-                        </div>
-                        <!-- dashboard-item end -->
+            <!-- Modal -->
+            <div class="modal fade" id="modal-video" tabindex="-1" aria-labelledby="modal-video" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered modal-dialog-video">
+                    <div class="bg-secondary ratio ratio-16x9 pe-auto">
+                        <iframe title="Dashboard video" allowfullscreen></iframe>
                     </div>
                 </div>
-                <!-- dashboard-group end -->
             </div>
         </main>
         <footer>

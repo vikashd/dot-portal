@@ -6,11 +6,11 @@
         <meta charset="utf-8" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="shortcut icon" href="./assets/img/favicon.png" />
+        <link rel="shortcut icon" href="/dot-portal//assets/img/favicon.png" />
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="/dot-portal//assets/css/styles.css" />
     </head>
     <body>
         <svg
@@ -20,6 +20,10 @@
             xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
             <defs>
+                <symbol id="icon-settings" viewBox="0 0 32 32">
+                    <path
+                        d="M10.886 3.558c-0.982 0-1.778 0.796-1.778 1.778s0.796 1.778 1.778 1.778c0.982 0 1.778-0.796 1.778-1.778v0c0-0.982-0.796-1.778-1.778-1.778v0zM5.856 3.558c0.754-2.091 2.72-3.559 5.030-3.559s4.276 1.468 5.018 3.522l0.012 0.037h12.744c0.018-0.001 0.039-0.001 0.060-0.001 0.982 0 1.778 0.796 1.778 1.778s-0.796 1.778-1.778 1.778c-0.021 0-0.042-0-0.063-0.001l0.003 0h-12.744c-0.754 2.091-2.72 3.559-5.030 3.559s-4.276-1.468-5.018-3.522l-0.012-0.037h-2.078c-0.018 0.001-0.039 0.001-0.060 0.001-0.982 0-1.778-0.796-1.778-1.778s0.796-1.778 1.778-1.778c0.021 0 0.042 0 0.063 0.001l-0.003-0zM21.55 14.222c-0.982 0-1.778 0.796-1.778 1.778s0.796 1.778 1.778 1.778c0.981 0 1.776-0.794 1.778-1.774v-0c0-0.001 0-0.003 0-0.004 0-0.982-0.796-1.778-1.778-1.778 0 0 0 0 0 0v0zM16.52 14.222c0.754-2.091 2.72-3.559 5.030-3.559s4.276 1.468 5.018 3.522l0.012 0.037h2.080c0.018-0.001 0.039-0.001 0.060-0.001 0.982 0 1.778 0.796 1.778 1.778s-0.796 1.778-1.778 1.778c-0.021 0-0.042-0-0.063-0.001l0.003 0h-2.080c-0.754 2.091-2.72 3.559-5.030 3.559s-4.276-1.468-5.018-3.522l-0.012-0.037h-12.742c-0.018 0.001-0.039 0.001-0.060 0.001-0.982 0-1.778-0.796-1.778-1.778s0.796-1.778 1.778-1.778c0.021 0 0.042 0 0.063 0.001l-0.003-0zM10.886 24.886c-0.982 0-1.778 0.796-1.778 1.778s0.796 1.778 1.778 1.778c0.982 0 1.778-0.796 1.778-1.778v0c0-0.982-0.796-1.778-1.778-1.778v0zM5.856 24.886c0.754-2.091 2.72-3.559 5.030-3.559s4.276 1.468 5.018 3.522l0.012 0.037h12.744c0.018-0.001 0.039-0.001 0.060-0.001 0.982 0 1.778 0.796 1.778 1.778s-0.796 1.778-1.778 1.778c-0.021 0-0.042-0-0.063-0.001l0.003 0h-12.744c-0.754 2.091-2.72 3.559-5.030 3.559s-4.276-1.468-5.018-3.522l-0.012-0.037h-2.078c-0.956-0.033-1.718-0.816-1.718-1.777s0.762-1.744 1.715-1.777l0.003-0z"></path>
+                </symbol>
                 <symbol id="icon-success" viewBox="0 0 32 32">
                     <path
                         d="M16 32c-8.832-0.010-15.99-7.168-16-15.999v-0.001c0.010-8.832 7.168-15.99 15.999-16h0.001c8.832 0.010 15.99 7.168 16 15.999v0.001c-0.010 8.832-7.168 15.99-15.999 16h-0.001zM8.65 13.928l-2.27 2.042 7 7.654 11.492-12.762-2.258-2.034-9.226 10.36-4.738-5.262z"></path>
@@ -91,7 +95,9 @@
         </header>
         <div id="mobile-menu" class="mobile-menu" tabindex="-1" style="transform: translate3d(-100%, 0, 0)">
             <div class="container header-container d-flex align-items-center justify-content-between">
-                <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" /></a>
+                <a href="/">
+                    <img src="/dot-portal/assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
+                </a>
                 <button id="mobile-menu-close-btn" class="btn mobile-menu-btn d-md-none open"><span></span></button>
             </div>
             <div class="container py-10">
@@ -114,7 +120,7 @@
                                 your gateway to simple, smart, beautiful data solutions from DOT all in one secure
                                 place.
                             </p>
-                            <a href="" class="btn btn-primary">Sign up</a>
+                            <a href="" class="btn btn-primary btn-lg">Sign up</a>
                         </div>
                     </div>
                 </div>
@@ -173,7 +179,7 @@
                     </div>
                 </div>
                 <div class="position-relative">
-                    <div class="container">
+                    <div class="container ipad-container">
                         <div class="ipad">
                             <div id="projects" class="carousel slide" data-bs-ride="carousel" data-bs-interval="false">
                                 <div class="carousel-indicators carousel-indicators-ipad">
@@ -505,7 +511,7 @@
                     <div class="col-lg-3 mb-7 mb-lg-0">
                         <a href="https://dotlovesdata.com" target="_blank">
                             <img
-                                src="assets/img/logo-dot-loves-data.png"
+                                src="/dot-portal/assets/img/logo-dot-loves-data.png"
                                 width="84"
                                 height="auto"
                                 alt="Dot Loves Data" />
@@ -542,85 +548,85 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-6 col-lg mb-8 mb-lg-0">
-                        <h5 class="footer-heading">DOT Portal</h5>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#">Bizmomento</a></li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    Profile
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    Monitor
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    Predict
-                                </a>
-                            </li>
-                        </ul>
-                        <ul class="list-unstyled">
-                            <li class="mb-2"><a href="#">DotDotDash</a></li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    <span>Benefits</span>
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    Crime
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    Deprivation
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    Gambling
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="#">
-                                    <svg class="icon footer-link-icon">
-                                        <use xlink:href="#icon-chevron-right"></use>
-                                    </svg>
-                                    Transport
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="mb-2">
-                            <a href="#">Turnup</a>
-                        </div>
-                        <div>
-                            <a href="#">Us</a>
-                        </div>
-                    </div>
+                    <!-- <div class="col-6 col-lg mb-8 mb-lg-0">
+                <h5 class="footer-heading">DOT Portal</h5>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#">Bizmomento</a></li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            Profile
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            Monitor
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            Predict
+                        </a>
+                    </li>
+                </ul>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="#">DotDotDash</a></li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            <span>Benefits</span>
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            Crime
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            Deprivation
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            Gambling
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="#">
+                            <svg class="icon footer-link-icon">
+                                <use xlink:href="#icon-chevron-right"></use>
+                            </svg>
+                            Transport
+                        </a>
+                    </li>
+                </ul>
+                <div class="mb-2">
+                    <a href="#">Turnup</a>
+                </div>
+                <div>
+                    <a href="#">Us</a>
+                </div>
+            </div> -->
                     <div class="col-6 col-lg mb-8 mb-lg-0">
                         <h5 class="footer-heading">Follow Dot</h5>
                         <ul class="list-unstyled">
@@ -662,6 +668,6 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"></script>
         <script src="https://player.vimeo.com/api/player.js"></script>
-        <script src="./assets/js/index.js"></script>
+        <script src="/dot-portal//assets/js/index.js"></script>
     </body>
 </html>

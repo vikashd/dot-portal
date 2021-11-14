@@ -1,3 +1,11 @@
+.modal {
+    .btn-close {
+        position: absolute;
+        top: 1.25rem;
+        right: 1.25rem;
+    }
+}
+
 .modal-dialog-video {
     margin: 0 1rem;
     max-width: none;

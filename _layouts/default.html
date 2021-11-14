@@ -6,11 +6,11 @@
         <meta charset="utf-8" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link rel="shortcut icon" href="./assets/img/favicon.png" />
+        <link rel="shortcut icon" href="{{ '/' | relative_url }}/assets/img/favicon.png" />
         <link
             href="https://fonts.googleapis.com/css2?family=Roboto+Slab&family=Roboto:wght@400;500;700&display=swap"
             rel="stylesheet" />
-        <link rel="stylesheet" href="./assets/css/styles.css" />
+        <link rel="stylesheet" href="{{ '/' | relative_url }}/assets/css/styles.css" />
     </head>
     <body>
         {% if page.notification %}
@@ -25,7 +25,7 @@
                     has been added to your admin interface. Let us know what you think on our
                     <a href="">feedback form</a>
                 </div>
-                <button id="notification-close" class="notification-bar-close"><span></span></button>
+                <button id="notification-close" class="btn-close"><span></span></button>
             </div>
         </div>
         {% endif %} {% include svg.html %} {% if page.loggedin %}{% include header.html %}{% else %}{% include
@@ -43,6 +43,6 @@
             crossorigin="anonymous"
             referrerpolicy="no-referrer"></script>
         <script src="https://player.vimeo.com/api/player.js"></script>
-        <script src="./assets/js/index.js"></script>
+        <script src="{{ '/' | relative_url }}/assets/js/index.js"></script>
     </body>
 </html>

@@ -5,7 +5,7 @@ module.exports = {
     plugins: [
         require("autoprefixer"),
         purgecss({
-            content: ["./docs/*.html"],
+            content: ["./docs/**/*.html"],
         }),
         ...(process.env.JEKYLL_ENV == "production" ? [require("cssnano")({ preset: "default" })] : []),
     ],

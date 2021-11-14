@@ -18,7 +18,6 @@
 .user-email {
     display: block;
     color: rgba($gray-800, 70%);
-    margin-bottom: 1.25rem;
 }
 
 .header-logo {
@@ -37,4 +36,27 @@
 
 .dropdown-menu-account {
     min-width: 260px;
+}
+
+.dropdown-menu-account-links {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 1rem 0 0.5rem;
+}
+
+.dropdown-menu-account-link-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    padding: 1rem 0;
+
+    .icon {
+        width: 1.125rem;
+        height: 1.125rem;
+        margin-right: 1.25rem;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
 }

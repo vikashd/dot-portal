@@ -1,6 +1,8 @@
 <div id="mobile-menu" class="mobile-menu" tabindex="-1" style="transform: translate3d(-100%, 0, 0)">
     <div class="container header-container d-flex align-items-center justify-content-between">
-        <a href="/"><img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" /></a>
+        <a href="/">
+            <img src="{{ '/' | relative_url }}assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
+        </a>
         <button id="mobile-menu-close-btn" class="btn mobile-menu-btn d-md-none open"><span></span></button>
     </div>
     <div class="container py-10">{{ include.content }}</div>

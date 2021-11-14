@@ -1,0 +1,9 @@
+items:
+    - title: Us - Getting started
+      type: collateral
+      src: https://player.vimeo.com/video/561070574
+      status: progress
+    - title: Us - Using filters
+      type: collateral
+      src: https://player.vimeo.com/video/350635729
+      status: complete

@@ -515,6 +515,12 @@ iframe {
   color: #6b6b6b;
   background-color: transparent;
 }
+
+.btn-lg {
+  padding: 0.875rem 2.125rem;
+  font-size: 1.25rem;
+  border-radius: 2rem;
+}
 .dropup,
 .dropend,
 .dropdown,
@@ -2611,7 +2617,7 @@ body {
 
 .masthead {
   font-size: 1.125rem;
-  padding: 4rem 0 9.375rem;
+  padding: 4rem 0 7.8125rem;
 }
 @-webkit-keyframes rotate {
   from {
@@ -2636,6 +2642,10 @@ body {
   color: #00c8e6;
   border-color: #00c8e6;
   background-color: transparent;
+}
+
+.btn-lg {
+  font-weight: 500;
 }
 
 @media (min-width: 768px) {
@@ -2749,6 +2759,46 @@ body {
   opacity: 1;
 }
 
+.btn-close {
+  display: block;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+.btn-close span {
+  display: block;
+  transition: transform 0.2s ease-in-out;
+}
+.btn-close span:before, .btn-close span:after {
+  position: absolute;
+  display: block;
+  background-color: #6b6b6b;
+  width: 100%;
+  height: 2px;
+  left: 0;
+}
+.btn-close span:before, .btn-close span:after {
+  content: "";
+  margin: auto;
+  top: 0;
+  bottom: 0;
+  transition: all 0.25s ease-out;
+}
+.btn-close span:before {
+  transform: rotate(135deg);
+}
+.btn-close span:after {
+  transform: rotate(225deg);
+}
+.btn-close:hover span {
+  transform: scale(0.9) rotate(90deg);
+}
+
 .notification-bar {
   position: fixed;
   font-size: 0.9375rem;
@@ -2774,52 +2824,15 @@ body {
   position: relative;
   padding-right: calc(1.5rem + 25px);
 }
-.notification-bar .notification-bar-close {
+.notification-bar .btn-close {
   position: absolute;
   top: 0;
   right: 0.75rem;
   bottom: 0;
   margin: auto;
 }
-
-.notification-bar-close {
-  display: block;
-  position: relative;
-  width: 24px;
-  height: 24px;
-  padding: 0;
-  border-radius: 0;
-  border: none;
-  background: none;
-  cursor: pointer;
-}
-.notification-bar-close span {
-  display: block;
-  transition: transform 0.2s ease-in-out;
-}
-.notification-bar-close span:before, .notification-bar-close span:after {
-  position: absolute;
-  display: block;
+.notification-bar .btn-close span:before, .notification-bar .btn-close span:after {
   background-color: white;
-  width: 100%;
-  height: 2px;
-  left: 0;
-}
-.notification-bar-close span:before, .notification-bar-close span:after {
-  content: "";
-  margin: auto;
-  top: 0;
-  bottom: 0;
-  transition: all 0.25s ease-out;
-}
-.notification-bar-close span:before {
-  transform: rotate(135deg);
-}
-.notification-bar-close span:after {
-  transform: rotate(225deg);
-}
-.notification-bar-close:hover span {
-  transform: scale(0.9) rotate(90deg);
 }
 
 .body-notification {
@@ -2973,6 +2986,18 @@ body {
   .ipad > .carousel > .carousel-inner > .carousel-item [class*=col-] + [class*=col-] {
     height: auto;
   }
+}
+@media (min-width: 1200px) {
+  .ipad > .carousel {
+    top: 7.4%;
+    right: 3.2%;
+    bottom: 0;
+    left: 3.4%;
+  }
+}
+
+.ipad-container {
+  max-width: 1140px;
 }
 
 .carousel-indicators-ipad {
@@ -3164,7 +3189,6 @@ body {
 .user-email {
   display: block;
   color: rgba(74, 69, 82, 0.7);
-  margin-bottom: 1.25rem;
 }
 
 .header-logo {
@@ -3184,6 +3208,27 @@ body {
 
 .dropdown-menu-account {
   min-width: 260px;
+}
+
+.dropdown-menu-account-links {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+  margin: 1rem 0 0.5rem;
+}
+
+.dropdown-menu-account-link-btn {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9375rem;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+.dropdown-menu-account-link-btn .icon {
+  width: 1.125rem;
+  height: 1.125rem;
+  margin-right: 1.25rem;
+}
+.dropdown-menu-account-link-btn:hover {
+  text-decoration: underline;
 }
 
 footer {
@@ -3321,11 +3366,34 @@ footer a:focus, footer a:hover {
   padding: 0 1rem;
   border: 0;
 }
+.dropdown-btn .icon {
+  height: 0.8em;
+}
+.dropdown-btn strong {
+  position: relative;
+}
+.dropdown-btn strong:after {
+  content: "";
+  display: block;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 100%;
+  border-bottom: 1px solid;
+  transform: scaleX(0);
+  transition: transform 0.2s;
+}
 .dropdown-btn:focus {
   box-shadow: none;
 }
-.dropdown-btn .icon {
-  height: 0.8em;
+.dropdown-btn:hover strong:after {
+  transform: scaleX(1);
+}
+
+.modal .btn-close {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
 }
 
 .modal-dialog-video {

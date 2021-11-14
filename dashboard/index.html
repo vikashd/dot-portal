@@ -1,0 +1,9 @@
+---
+layout: default
+active: dashboard
+loggedin: true
+---
+
+{% capture projects %}
+<div class="container py-11">{% include dashboard-group.html items=site.data.dashboards.videos.items %}</div>
+{% endcapture %} {% include dashboard.html active='video' projects=projects %}

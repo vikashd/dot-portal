@@ -4,7 +4,9 @@ items:
       type: video
       src: https://player.vimeo.com/video/561070574
       status: progress
+      description: A brief description of your product can go here. Ideally no longer than 2 lines.
     - title: Us - Using filters
       type: video
       src: https://player.vimeo.com/video/350635729
       status: complete
+      description: A brief description of your product can go here. Ideally no longer than 2 lines.

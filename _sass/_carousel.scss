@@ -95,6 +95,19 @@
             }
         }
     }
+
+    @include media-breakpoint-up(xl) {
+        > .carousel {
+            top: 7.4%;
+            right: 3.2%;
+            bottom: 0;
+            left: 3.4%;
+        }
+    }
+}
+
+.ipad-container {
+    max-width: 1140px;
 }
 
 .carousel-indicators-ipad {

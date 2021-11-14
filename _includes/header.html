@@ -1,7 +1,7 @@
 <header class="bg-secondary pt-5 pb-5 pt-md-6 pb-md-6">
     <div class="container header-container d-flex justify-content-between align-items-center">
         <a href="{{ '/' | relative_url }}">
-            <img src="assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
+            <img src="{{ '/' | relative_url }}assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
         </a>
         <nav class="nav nav-header d-none d-md-flex me-n4 me-md-n6">
             <a
@@ -33,6 +33,14 @@
             <div class="dropdown-menu dropdown-menu-end dropdown-menu-account" aria-labelledby="account-menu-btn">
                 <span class="user-name">Charlie Lee</span>
                 <small class="user-email">charlie.lee@dotlovesdata.co</small>
+                <ul class="dropdown-menu-account-links list-unstyled">
+                    <li>
+                        <a href="{{ '/' | relative_url }}account" class="dropdown-menu-account-link-btn">
+                            <svg class="icon"><use xlink:href="#icon-settings"></use></svg>
+                            <span>Account Settings</span>
+                        </a>
+                    </li>
+                </ul>
                 <button class="btn btn-outline-dark fs-7">Log out</button>
             </div>
         </nav>
