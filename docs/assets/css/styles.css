@@ -3061,7 +3061,7 @@ body {
     justify-content: center;
     left: auto;
     bottom: auto;
-    right: -7%;
+    right: -10%;
     height: 100%;
   }
   .carousel-indicators-ipad [data-bs-target] {
@@ -3266,11 +3266,6 @@ footer a:focus, footer a:hover {
 .footer-copyright {
   border-top: 1px solid rgba(107, 107, 107, 0.5);
   padding: 1.75rem 0;
-}
-@media (min-width: 992px) {
-  .footer-copyright {
-    margin: 0 3rem;
-  }
 }
 
 .footer-link-icon {

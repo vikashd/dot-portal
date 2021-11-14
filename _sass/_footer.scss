@@ -28,10 +28,6 @@ footer {
 .footer-copyright {
     border-top: 1px solid rgba($gray-700, 0.5);
     padding: 1.75rem 0;
-
-    @include media-breakpoint-up(lg) {
-        margin: 0 $spacer * 3;
-    }
 }
 
 .footer-link-icon {
