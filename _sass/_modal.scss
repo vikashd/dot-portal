@@ -1,8 +1,13 @@
 .modal {
     .btn-close {
         position: absolute;
-        top: 1.25rem;
-        right: 1.25rem;
+        top: 1rem;
+        right: 1rem;
+
+        @include media-breakpoint-up(md) {
+            top: 1.25rem;
+            right: 1.25rem;
+        }
     }
 }
 

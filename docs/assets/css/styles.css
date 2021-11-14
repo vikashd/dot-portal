@@ -2389,9 +2389,9 @@ textarea.form-control-lg {
   padding-left: 0 !important;
 }
 
-.px-10 {
-  padding-right: 4rem !important;
-  padding-left: 4rem !important;
+.px-4 {
+  padding-right: 1rem !important;
+  padding-left: 1rem !important;
 }
 
 .py-6 {
@@ -2402,11 +2402,6 @@ textarea.form-control-lg {
 .py-8 {
   padding-top: 2.5rem !important;
   padding-bottom: 2.5rem !important;
-}
-
-.py-9 {
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
 }
 
 .py-10 {
@@ -2498,6 +2493,19 @@ textarea.form-control-lg {
 
 .rounded-circle {
   border-radius: 50% !important;
+}
+
+@media (min-width: 576px) {
+
+  .px-sm-10 {
+    padding-right: 4rem !important;
+    padding-left: 4rem !important;
+  }
+
+  .py-sm-9 {
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
+  }
 }
 @media (min-width: 768px) {
 
@@ -3392,8 +3400,14 @@ footer a:focus, footer a:hover {
 
 .modal .btn-close {
   position: absolute;
-  top: 1.25rem;
-  right: 1.25rem;
+  top: 1rem;
+  right: 1rem;
+}
+@media (min-width: 768px) {
+  .modal .btn-close {
+    top: 1.25rem;
+    right: 1.25rem;
+  }
 }
 
 .modal-dialog-video {
