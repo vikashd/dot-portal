@@ -57,6 +57,11 @@
     <p class="text-gray-mid text-base">
         {{ include.item.description }}
     </p>
+    {% if include.item.expiring %}
+    <strong class="small text-danger hstack gap-2 lh-1">
+        <span class="fs-5"><svg class="icon d-block"><use xlink:href="#icon-error"></use></svg></span><span>Subscription expires soon</span>
+    </strong>
+    {% endif %}
     {% else %}
     <ul class="list-unstyled d-flex">
         <li><a href="#" class="btn-icon-link small"><svg class="icon"><use xlink:href="#icon-preview"></use></svg>Preview</a></li>

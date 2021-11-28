@@ -4,6 +4,7 @@ items:
       type: dashboard
       description: A brief description of your product can go here. Ideally no longer than 2 lines.
       updated: true
+      expiring: true
     - title: Sky - Shared Audience Model
       type: dashboard
       description: A brief description of your product can go here. Ideally no longer than 2 lines.
