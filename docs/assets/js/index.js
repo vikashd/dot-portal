@@ -126,7 +126,7 @@
     mobileMenuBtn.addEventListener("click", clickHandler);
     mobileMenuBtnClose.addEventListener("click", clickHandler);
 
-    const mediaQuery = window.matchMedia("(min-width: 768px)");
+    var mediaQuery = window.matchMedia("(min-width: 768px)");
 
     mediaQuery.addEventListener("change", function (e) {
         if (e.matches && open) {
@@ -173,7 +173,7 @@
         btn.addEventListener("click", function (e) {
             var videoId = e.currentTarget.getAttribute("data-vimeo-fs");
 
-            const video = document.querySelector(`iframe[src*="${videoId}"]`);
+            var video = document.querySelector(`iframe[src*="${videoId}"]`);
 
             if (video) {
                 var player = new Vimeo.Player(video);
@@ -181,6 +181,28 @@
                 player.requestFullscreen();
             }
         });
+    });
+})();
+
+/**
+ * Notification
+ */
+(function () {
+    var notifications = Array.prototype.slice.call(document.querySelectorAll("[data-notification]"));
+
+    function closeAlert(closeBtn, container, _e) {
+        closeBtn.removeEventListener("click", this.click);
+        container.parentNode.removeChild(container);
+    }
+
+    notifications.forEach(function (notification) {
+        var closeBtn = notification.getElementsByClassName("btn-close")[0];
+
+        if (closeBtn) {
+            var listeners = {};
+            listeners.click = closeAlert.bind(listeners, closeBtn, notification);
+            closeBtn.addEventListener("click", listeners.click);
+        }
     });
 })();
 

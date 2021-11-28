@@ -1,0 +1,39 @@
+<div class="position-relative d-flex flex-grow-1">
+    <div class="container-fluid d-flex flex-grow-1">
+        <div class="row flex-grow-1">
+            <div class="col-md-5 col-lg-4 col-xl-4 col-xxl-3 bg-cyan pt-12 pt-md-14 pb-5 pb-md-15 px-md-9">
+                <div class="container px-2 px-md-0">
+                    <div class="row">
+                        <div class="col-9 col-md-12 d-flex align-items-center">
+                            <h2 class="mb-md-9">
+                                Where data
+                                <br />
+                                meets design
+                            </h2>
+                        </div>
+                        <div class="col-3 col-lg-8 col-md-12 d-flex justify-content-center flex-grow-1">
+                            <img src="{{ '/' | relative_url }}assets/img/dot-portal-circles.svg" class="img-fluid" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="position-relative col-md-7 col-lg-8 col-xl-8 col-xxl-9 pt-7 pt-md-14 pb-14">
+                <div class="container px-2 px-md-0">{{ include.content }}</div>
+                <div class="row position-absolute w-100 bottom-0">
+                    <div class="offset-md-1 offset-lg-2 offset-xl-1 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="container px-2 px-md-0">
+                            <p class="text-gray-700">
+                                <small>
+                                    By logging in you agree to our
+                                    <a href="" class="text-link" target="_blank">Terms and conditions</a>
+                                    and
+                                    <a href="" class="text-link" target="_blank">Privacy Policy</a>
+                                </small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

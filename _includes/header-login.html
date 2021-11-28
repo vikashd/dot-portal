@@ -1,0 +1,20 @@
+<header class="position-absolute w-100 pt-5 pb-5 pt-md-6 pb-md-6">
+    <div class="container header-container d-flex justify-content-between align-items-center">
+        <a href="{{ '/' | relative_url }}">
+            <img src="{{ '/' | relative_url }}assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
+        </a>
+        <div class="nav-header d-none d-md-flex align-items-center">
+            <small class="text-gray-700">
+                {% if include.type == "login" %}Not a member yet?
+                <a href="{{ '/' | relative_url }}signup/1" class="text-link">Signup now</a>
+                {% else %}Already signed up?
+                <a href="{{ '/' | relative_url }}login" class="text-link">Sign in here</a>
+                {% endif %}
+            </small>
+        </div>
+        <button id="mobile-menu-btn" class="btn mobile-menu-btn d-md-none"><span></span></button>
+    </div>
+</header>
+{% capture menu_content %}
+<div></div>
+{% endcapture %} {% include mobile-menu.html content=menu_content %}

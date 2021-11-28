@@ -15,7 +15,16 @@ loggedin: true
     </div>
 </div>
 <div class="container py-6 d-flex justify-content-end">{% include dropdown-sort-by.html %}</div>
-<div class="container py-11">
+<div class="container" data-notification>
+    <div class="alert alert-success">
+        <div class="alert-icon">
+            <svg class="icon"><use xlink:href="#icon-tick-bold"></use></svg>
+        </div>
+        Your subscriptions have been updated
+        <button class="btn-close"><span></span></button>
+    </div>
+</div>
+<div class="container pt-10 pb-11">
     {% include dashboard-group.html title=site.data.dashboards.bespoke.title items=site.data.dashboards.bespoke.items %}
     {% include dashboard-group.html title=site.data.dashboards.dot.title items=site.data.dashboards.dot.items %}
 </div>

@@ -28,8 +28,9 @@
                 <button id="notification-close" class="btn-close"><span></span></button>
             </div>
         </div>
-        {% endif %} {% include svg.html %} {% if page.loggedin %}{% include header.html %}{% else %}{% include
-        header-index.html %}{% endif %}
+        {% endif %} {% include svg.html %} {% if page.type != "signup" and page.type != "login" %} {% if page.loggedin
+        %} {% include header.html %}{% else %}{% include header-index.html %}{% endif %}{% else %}{% include
+        header-login.html type=page.type %}{% endif %}
         <main>{{ content }}</main>
         {% include footer.html %}
         <script

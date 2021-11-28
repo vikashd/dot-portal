@@ -1,0 +1,32 @@
+---
+layout: default
+type: login
+---
+
+{% capture login_content %}
+<div class="offset-md-1 offset-lg-2 offset-xl-1 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+    <h3 class="mb-9" id="change-password-label">Log into the DOT Portal</h3>
+    <form action="{{ '/' | relative_url }}dashboards" enctype="multipart/form-data">
+        <div class="mb-7">
+            <label for="email" class="form-label">Email Address</label>
+            <input type="text" class="form-control" id="email" />
+        </div>
+        <div class="mb-7">
+            <label for="password-new" class="form-label">Password</label>
+            <input type="password" class="form-control" id="password" />
+            <p class="mt-2 text-end">
+                <a href="#" class="text-link-muted text-link-no-decoration">
+                    <small>Forgot password?</small>
+                </a>
+            </p>
+        </div>
+        <button class="btn btn-primary">Login</button>
+    </form>
+    <p class="mt-6 d-md-none text-gray-700">
+        <small>
+            Not a member yet
+            <a href="{{ '/' | relative_url }}signup" class="text-link">Signup now</a>
+        </small>
+    </p>
+</div>
+{% endcapture %} {% include login.html content=login_content %}

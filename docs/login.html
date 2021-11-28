@@ -13,20 +13,6 @@
         <link rel="stylesheet" href="/dot-portal//assets/css/styles.css" />
     </head>
     <body>
-        <div
-            id="notification-bar"
-            class="notification-bar notification-bar-hide"
-            style="visibility: hidden; transform: translateY(-100%)">
-            <div class="container">
-                <div>
-                    A new
-                    <strong>announcement feature</strong>
-                    has been added to your admin interface. Let us know what you think on our
-                    <a href="">feedback form</a>
-                </div>
-                <button id="notification-close" class="btn-close"><span></span></button>
-            </div>
-        </div>
         <svg
             aria-hidden="true"
             style="position: absolute; width: 0; height: 0; overflow: hidden"
@@ -99,52 +85,20 @@
                 </symbol>
             </defs>
         </svg>
-        <header class="bg-secondary pt-5 pb-5 pt-md-6 pb-md-6">
+        <header class="position-absolute w-100 pt-5 pb-5 pt-md-6 pb-md-6">
             <div class="container header-container d-flex justify-content-between align-items-center">
                 <a href="/dot-portal/">
                     <img src="/dot-portal/assets/img/logo-dot-portal.svg" class="header-logo" alt="Dot Portal" />
                 </a>
-                <nav class="nav nav-header d-none d-md-flex me-n4 me-md-n6">
-                    <a class="nav-link" href="/dot-portal/dashboards">
-                        <span class="nav-link-text">My dashboards</span>
-                    </a>
-                    <a class="nav-link" href="#"><span class="nav-link-text">Learning centre</span></a>
-                    <a id="account-menu-btn" class="nav-link active" href="" data-bs-toggle="dropdown">
-                        <span class="nav-link-text">Charlie Lee</span>
-                        <div
-                            class="
-                                font-serif
-                                user
-                                rounded-circle
-                                d-flex
-                                justify-content-center
-                                align-items-center
-                                flex-shrink-0
-                                ms-3
-                            ">
-                            <span>CL</span>
-                        </div>
-                    </a>
-                    <div
-                        class="dropdown-menu dropdown-menu-end dropdown-menu-account"
-                        aria-labelledby="account-menu-btn">
-                        <span class="user-name">Charlie Lee</span>
-                        <small class="user-email">charlie.lee@dotlovesdata.co</small>
-                        <ul class="dropdown-menu-account-links list-unstyled">
-                            <li>
-                                <a href="/dot-portal/account" class="dropdown-menu-account-link-btn">
-                                    <svg class="icon"><use xlink:href="#icon-settings"></use></svg>
-                                    <span>Account settings</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <button class="btn btn-outline-dark fs-7">Log out</button>
-                    </div>
-                </nav>
+                <div class="nav-header d-none d-md-flex align-items-center">
+                    <small class="text-gray-700">
+                        Not a member yet?
+                        <a href="/dot-portal/signup/1" class="text-link">Signup now</a>
+                    </small>
+                </div>
                 <button id="mobile-menu-btn" class="btn mobile-menu-btn d-md-none"><span></span></button>
             </div>
         </header>
-
         <div id="mobile-menu" class="mobile-menu" tabindex="-1" style="transform: translate3d(-100%, 0, 0)">
             <div class="container header-container d-flex align-items-center justify-content-between">
                 <a href="/">
@@ -153,121 +107,73 @@
                 <button id="mobile-menu-close-btn" class="btn mobile-menu-btn d-md-none open"><span></span></button>
             </div>
             <div class="container py-10">
-                <div class="d-flex justify-content-between mb-8">
-                    <div class="d-inline-flex align-items-center">
-                        <div
-                            class="
-                                font-serif
-                                user
-                                rounded-circle
-                                d-flex
-                                justify-content-center
-                                align-items-center
-                                flex-shrink-0
-                                me-3
-                            ">
-                            CL
-                        </div>
-                        <span class="small">Charlie Lee</span>
-                    </div>
-                    <a href="#" class="btn btn-outline-dark">Logout</a>
-                </div>
-                <ul class="list-unstyled mobile-menu-links">
-                    <li><a href="/dot-portal/dashboards" class="active">My dashboards</a></li>
-                    <li><a href="#">Learning centre</a></li>
-                    <li><a href="/dot-portal/account">Account settings</a></li>
-                </ul>
+                <div></div>
             </div>
         </div>
 
         <main>
-            <div class="position-relative bg-secondary">
-                <div class="container pt-10">
-                    <h1 class="font-serif mb-12 h2">Account settings</h1>
-                    <nav class="nav d-flex">
-                        <a class="nav-link-secondary active" href="#"><span>My account</span></a>
-                        <a class="nav-link-secondary" href="#"><span>Subscriptions</span></a>
-                        <a class="nav-link-secondary" href="#"><span>Payment</span></a>
-                        <a class="nav-link-secondary" href="#"><span>Analytics</span></a>
-                        <a class="nav-link-secondary" href="#"><span>Communication</span></a>
-                        <a class="nav-link-secondary" href="#"><span>Support</span></a>
-                    </nav>
-                </div>
-            </div>
-            <div class="container py-11">
-                <div class="row">
-                    <div class="col-lg-6">
-                        <form method="post" enctype="multipart/form-data">
-                            <div class="mb-7">
-                                <div class="col-lg-9">
-                                    <label for="name" class="form-label">First & Last Name</label>
-                                    <input type="text" class="form-control is-valid" id="name" />
-                                </div>
-                            </div>
-                            <div class="mb-7">
-                                <div class="col-lg-9">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control is-invalid" id="email" />
-                                    <div class="invalid-feedback">Please enter a valid email.</div>
-                                </div>
-                            </div>
-                            <div class="mb-7">
-                                <label for="password" class="form-label">Password</label>
+            <div class="position-relative d-flex flex-grow-1">
+                <div class="container-fluid d-flex flex-grow-1">
+                    <div class="row flex-grow-1">
+                        <div class="col-md-5 col-lg-4 col-xl-4 col-xxl-3 bg-cyan pt-12 pt-md-14 pb-5 pb-md-15 px-md-9">
+                            <div class="container px-2 px-md-0">
                                 <div class="row">
-                                    <div class="col-lg-9 mb-7 mb-lg-0">
-                                        <input type="password" class="form-control" id="password" />
+                                    <div class="col-9 col-md-12 d-flex align-items-center">
+                                        <h2 class="mb-md-9">
+                                            Where data
+                                            <br />
+                                            meets design
+                                        </h2>
                                     </div>
-                                    <div class="col-lg-3 d-flex align-items-center">
-                                        <button
-                                            type="button"
-                                            class="btn btn-outline-dark"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#change-password">
-                                            Change
-                                        </button>
+                                    <div class="col-3 col-lg-8 col-md-12 d-flex justify-content-center flex-grow-1">
+                                        <img src="/dot-portal/assets/img/dot-portal-circles.svg" class="img-fluid" />
                                     </div>
                                 </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="modal fade"
-                id="change-password"
-                tabindex="-1"
-                aria-labelledby="change-password-label"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-form">
-                    <div class="bg-white position-relative pe-auto px-4 py-8 px-sm-10 py-sm-9">
-                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
-                        <div class="col-lg-10">
-                            <h3 class="modal-title mb-3" id="change-password-label">Change your password</h3>
-                            <p class="fs-5 mb-8">
-                                Please fill out the fields below to change your current password to a new one.
-                            </p>
                         </div>
-                        <form class="col-lg-9" method="post" enctype="multipart/form-data">
-                            <div class="mb-7">
-                                <label for="password-old" class="form-label">Old password</label>
-                                <input type="password" class="form-control" id="password-old" />
+                        <div class="position-relative col-md-7 col-lg-8 col-xl-8 col-xxl-9 pt-7 pt-md-14 pb-14">
+                            <div class="container px-2 px-md-0">
+                                <div class="offset-md-1 offset-lg-2 offset-xl-1 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                                    <h3 class="mb-9" id="change-password-label">Log into the DOT Portal</h3>
+                                    <form action="/dot-portal/dashboards" enctype="multipart/form-data">
+                                        <div class="mb-7">
+                                            <label for="email" class="form-label">Email Address</label>
+                                            <input type="text" class="form-control" id="email" />
+                                        </div>
+                                        <div class="mb-7">
+                                            <label for="password-new" class="form-label">Password</label>
+                                            <input type="password" class="form-control" id="password" />
+                                            <p class="mt-2 text-end">
+                                                <a href="#" class="text-link-muted text-link-no-decoration">
+                                                    <small>Forgot password?</small>
+                                                </a>
+                                            </p>
+                                        </div>
+                                        <button class="btn btn-primary">Login</button>
+                                    </form>
+                                    <p class="mt-6 d-md-none text-gray-700">
+                                        <small>
+                                            Not a member yet
+                                            <a href="/dot-portal/signup" class="text-link">Signup now</a>
+                                        </small>
+                                    </p>
+                                </div>
                             </div>
-                            <div class="mb-7">
-                                <label for="password-new" class="form-label">New password</label>
-                                <input type="password" class="form-control mb-3" id="password-new" />
-                                <ul class="field-rules">
-                                    <li>Your password can’t be too similar to your other personal information.</li>
-                                    <li>Your password must contain at least 8 characters.</li>
-                                    <li>Your password can’t be a commonly used password.</li>
-                                    <li>Your password can’t be entirely numeric.</li>
-                                </ul>
+                            <div class="row position-absolute w-100 bottom-0">
+                                <div class="offset-md-1 offset-lg-2 offset-xl-1 col-md-10 col-lg-8 col-xl-7 col-xxl-6">
+                                    <div class="container px-2 px-md-0">
+                                        <p class="text-gray-700">
+                                            <small>
+                                                By logging in you agree to our
+                                                <a href="" class="text-link" target="_blank">Terms and conditions</a>
+                                                and
+                                                <a href="" class="text-link" target="_blank">Privacy Policy</a>
+                                            </small>
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="mb-7">
-                                <label for="password-new" class="form-label">New password confirmation</label>
-                                <input type="password" class="form-control" id="password-new" />
-                            </div>
-                            <button class="btn btn-primary">Change password</button>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
