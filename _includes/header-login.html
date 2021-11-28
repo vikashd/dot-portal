@@ -6,7 +6,7 @@
         <div class="nav-header d-none d-md-flex align-items-center">
             <small class="text-gray-700">
                 {% if include.type == "login" %}Not a member yet?
-                <a href="{{ '/' | relative_url }}signup/1" class="text-link">Signup now</a>
+                <a href="{{ '/' | relative_url }}signup" class="text-link">Signup now</a>
                 {% else %}Already signed up?
                 <a href="{{ '/' | relative_url }}login" class="text-link">Sign in here</a>
                 {% endif %}
