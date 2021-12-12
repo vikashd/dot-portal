@@ -36,12 +36,24 @@
 .testimonial-logos {
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     flex-wrap: wrap;
 
     @include media-breakpoint-up(lg) {
         flex-direction: column;
+        justify-content: space-around;
         padding: 5vw 0;
+    }
+}
+
+.testimonial-logo-row {
+    display: inline-flex;
+    align-items: center;
+
+    @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
     }
 }
 
@@ -52,7 +64,10 @@
     background-color: #ffde00;
 
     @include media-breakpoint-down(lg) {
+        top: 0 !important;
         left: 0 !important;
+        bottom: 0 !important;
+        right: 0 !important;
         margin: 1rem;
     }
 }

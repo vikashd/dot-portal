@@ -13,20 +13,6 @@
         <link rel="stylesheet" href="/dot-portal//assets/css/styles.css" />
     </head>
     <body>
-        <div
-            id="notification-bar"
-            class="notification-bar notification-bar-hide"
-            style="visibility: hidden; transform: translateY(-100%)">
-            <div class="container">
-                <div>
-                    A new
-                    <strong>announcement feature</strong>
-                    has been added to your admin interface. Let us know what you think on our
-                    <a href="">feedback form</a>
-                </div>
-                <button id="notification-close" class="btn-close"><span></span></button>
-            </div>
-        </div>
         <svg
             aria-hidden="true"
             style="position: absolute; width: 0; height: 0; overflow: hidden"
@@ -185,8 +171,10 @@
                 <div class="container pt-10">
                     <h1 class="font-serif mb-12 h2">Account settings</h1>
                     <nav class="nav d-flex">
-                        <a class="nav-link-secondary active" href="#"><span>My account</span></a>
-                        <a class="nav-link-secondary" href="#"><span>Subscriptions</span></a>
+                        <a class="nav-link-secondary" href="./"><span>My account</span></a>
+                        <a class="nav-link-secondary active" href="./account/subscriptions">
+                            <span>Subscriptions</span>
+                        </a>
                         <a class="nav-link-secondary" href="#"><span>Payment</span></a>
                         <a class="nav-link-secondary" href="#"><span>Analytics</span></a>
                         <a class="nav-link-secondary" href="#"><span>Communication</span></a>
@@ -196,78 +184,50 @@
             </div>
             <div class="container py-11">
                 <div class="row">
-                    <div class="col-lg-6">
-                        <form method="post" enctype="multipart/form-data">
-                            <div class="mb-7">
-                                <div class="col-lg-9">
-                                    <label for="name" class="form-label">First & Last Name</label>
-                                    <input type="text" class="form-control is-valid" id="name" />
-                                </div>
-                            </div>
-                            <div class="mb-7">
-                                <div class="col-lg-9">
-                                    <label for="email" class="form-label">Email Address</label>
-                                    <input type="email" class="form-control is-invalid" id="email" />
-                                    <div class="invalid-feedback">Please enter a valid email.</div>
-                                </div>
-                            </div>
-                            <div class="mb-7">
-                                <label for="password" class="form-label">Password</label>
-                                <div class="row">
-                                    <div class="col-lg-9 mb-7 mb-lg-0">
-                                        <input type="password" class="form-control" id="password" />
-                                    </div>
-                                    <div class="col-lg-3 d-flex align-items-center">
-                                        <button
-                                            type="button"
-                                            class="btn btn-outline-dark"
-                                            data-bs-toggle="modal"
-                                            data-bs-target="#change-password">
-                                            Change
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div
-                class="modal fade"
-                id="change-password"
-                tabindex="-1"
-                aria-labelledby="change-password-label"
-                aria-hidden="true">
-                <div class="modal-dialog modal-dialog-centered modal-dialog-form">
-                    <div class="bg-white position-relative pe-auto px-4 py-8 px-sm-10 py-sm-9">
-                        <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
-                        <div class="col-lg-10">
-                            <h3 class="modal-title mb-3" id="change-password-label">Change your password</h3>
-                            <p class="fs-5 mb-8">
-                                Please fill out the fields below to change your current password to a new one.
-                            </p>
+                    <div class="col-md-10">
+                        <div class="table-responsive">
+                            <table class="table table-borderless">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Dashboard</th>
+                                        <th scope="col">Start date</th>
+                                        <th scope="col">End date</th>
+                                        <th scope="col">License term</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>Us</td>
+                                        <td>Nov. 16. 2021</td>
+                                        <td>Dec. 16. 2022</td>
+                                        <td>4 months</td>
+                                        <td>Current</td>
+                                        <td>
+                                            <span class="fs-5">
+                                                <svg class="icon d-block text-form-success">
+                                                    <use xlink:href="#icon-success"></use>
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Internal use</td>
+                                        <td>Nov. 12. 2021</td>
+                                        <td>Nov. 13. 2021</td>
+                                        <td>6 months</td>
+                                        <td>Expired</td>
+                                        <td>
+                                            <span class="fs-5">
+                                                <svg class="icon d-block text-danger">
+                                                    <use xlink:href="#icon-error"></use>
+                                                </svg>
+                                            </span>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
                         </div>
-                        <form class="col-lg-9" method="post" enctype="multipart/form-data">
-                            <div class="mb-7">
-                                <label for="password-old" class="form-label">Old password</label>
-                                <input type="password" class="form-control" id="password-old" />
-                            </div>
-                            <div class="mb-7">
-                                <label for="password-new" class="form-label">New password</label>
-                                <input type="password" class="form-control mb-3" id="password-new" />
-                                <ul class="field-rules">
-                                    <li>Your password can’t be too similar to your other personal information.</li>
-                                    <li>Your password must contain at least 8 characters.</li>
-                                    <li>Your password can’t be a commonly used password.</li>
-                                    <li>Your password can’t be entirely numeric.</li>
-                                </ul>
-                            </div>
-                            <div class="mb-7">
-                                <label for="password-new" class="form-label">New password confirmation</label>
-                                <input type="password" class="form-control" id="password-new" />
-                            </div>
-                            <button class="btn btn-primary">Change password</button>
-                        </form>
                     </div>
                 </div>
             </div>

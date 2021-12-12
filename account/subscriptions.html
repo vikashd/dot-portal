@@ -1,0 +1,66 @@
+---
+layout: default
+active: account
+loggedin: true
+---
+
+<div class="position-relative bg-secondary">
+    <div class="container pt-10">
+        <h1 class="font-serif mb-12 h2">Account settings</h1>
+        <nav class="nav d-flex">
+            <a class="nav-link-secondary" href="./"><span>My account</span></a>
+            <a class="nav-link-secondary active" href="./account/subscriptions"><span>Subscriptions</span></a>
+            <a class="nav-link-secondary" href="#"><span>Payment</span></a>
+            <a class="nav-link-secondary" href="#"><span>Analytics</span></a>
+            <a class="nav-link-secondary" href="#"><span>Communication</span></a>
+            <a class="nav-link-secondary" href="#"><span>Support</span></a>
+        </nav>
+    </div>
+</div>
+<div class="container py-11">
+    <div class="row">
+        <div class="col-md-10">
+            <div class="table-responsive">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th scope="col">Dashboard</th>
+                            <th scope="col">Start date</th>
+                            <th scope="col">End date</th>
+                            <th scope="col">License term</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Us</td>
+                            <td>Nov. 16. 2021</td>
+                            <td>Dec. 16. 2022</td>
+                            <td>4 months</td>
+                            <td>Current</td>
+                            <td>
+                                <span class="fs-5">
+                                    <svg class="icon d-block text-form-success">
+                                        <use xlink:href="#icon-success"></use>
+                                    </svg>
+                                </span>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Internal use</td>
+                            <td>Nov. 12. 2021</td>
+                            <td>Nov. 13. 2021</td>
+                            <td>6 months</td>
+                            <td>Expired</td>
+                            <td>
+                                <span class="fs-5">
+                                    <svg class="icon d-block text-danger"><use xlink:href="#icon-error"></use></svg>
+                                </span>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
