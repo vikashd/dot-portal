@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h16v16H0z"/>
+    </clipPath>
+  </defs>
+  <g data-name="Custom Size – 1" clip-path="url(#a)">
+    <g data-name="Group 1">
+      <path data-name="Path 1" d="M6.197 12.385a6.173 6.173 0 1 1 2.37-.469 6.193 6.193 0 0 1-2.37.469Zm0-10.793a4.593 4.593 0 1 0 1.762.348 4.6 4.6 0 0 0-1.762-.348Z"/>
+      <path data-name="Path 2" d="M15.413 15.811a.4.4 0 0 1-.282-.116l-5-5a.4.4 0 0 1 .562-.562l5 5a.4.4 0 0 1 0 .564.4.4 0 0 1-.282.116Z"/>
+      <path data-name="Path 3" d="M15.045 16.002a.955.955 0 0 1-.675-.28l-3.05-3.052a.955.955 0 0 1 1.35-1.35l3.052 3.058a.955.955 0 0 1-.677 1.632Z"/>
+    </g>
+  </g>
+</svg>

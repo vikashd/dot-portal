@@ -1,0 +1,160 @@
+---
+layout: default
+loggedin: true
+active: dot-drop
+---
+
+{% include drop-list/header.html active='about' %}
+<div class="bg-dots text-white py-11 py-md-14">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-9 col-lg-7 col-xxl-5 text-center">
+                <h2 class="h1 mb-8">
+                    Dot values your data,
+                    <br />
+                    as much as you do.
+                </h2>
+                <div class="ellipse mt-8 mb-8">
+                    <img src="{{ '/' | relative_url }}assets/img/dot-drop/lock-gold.svg" />
+                </div>
+                <p class="fs-5 mb-8">
+                    DOT Drop is a secured data sharing application where you can safely store and easily share your data
+                    with encryption.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="position-relative bg-secondary">
+    <div class="container py-9 py-lg-11">
+        <h2 class="fs-3 mb-8 text-center">How does DOT Drop work</h2>
+        <div class="row text-center justify-content-center">
+            <div class="col-lg-4">
+                <img
+                    class="dot-drop-img mb-8"
+                    src="{{ '/' | relative_url }}assets/img/dot-drop/drop-encrypted.svg"
+                    alt="Encrypted" />
+                <p class="p-small mb-0">
+                    DOT Drop conceals data by encrypting files. Encryption is converting data into a code to prevent
+                    unauthorized access.
+                </p>
+            </div>
+            <div class="col-lg-2">
+                <div class="key-token-container">
+                    <img src="{{ '/' | relative_url }}assets/img/dot-drop/key-token.svg" />
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <img
+                    class="dot-drop-img mb-8"
+                    src="{{ '/' | relative_url }}assets/img/dot-drop/drop-decrypted.svg"
+                    alt="Decrypted" />
+                <p class="p-small mb-0">
+                    Users can decrypt data files with only token presented when folder was created.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="position-relative bg-secondary">
+    <div class="container py-9 py-lg-11">
+        <div class="row justify-content-center align-items-center flex-lg-row-reverse">
+            <div class="col-lg-5 col-xl-4">
+                <img
+                    class="dot-drop-about-img new-folder-img"
+                    src="{{ '/' | relative_url }}assets/img/dot-drop/new-folder.svg"
+                    alt="New folder" />
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 col-xl-4">
+                <h2 class="fs-3 mb-7">Start with creating folder</h2>
+                <p class="p-small">
+                    You can create an airtight data folder by clicking
+                    <strong>New</strong>
+                    button.
+                </p>
+                <p class="p-small">
+                    If you’ve already got a token shared by someone,
+                    <strong>Import</strong>
+                    button will help you add the folder to your list.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="position-relative bg-secondary">
+    <div class="container py-9 py-lg-11">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 col-xl-4">
+                <img
+                    class="dot-drop-about-img token-copy-img"
+                    src="{{ '/' | relative_url }}assets/img/dot-drop/token-copy.svg"
+                    alt="Token copy" />
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 col-xl-4">
+                <h2 class="fs-3 mb-7">Keep your token safe</h2>
+                <p class="p-small">
+                    Once you create a folder, DOT Drop will grab you a token which is basically a passcode of the folder
+                    created. You can share this token with someone else who also wants to access the files.
+                </p>
+                <p class="p-small">
+                    Remember that you have to copy and save this token somewhere safe. There is no way to access the
+                    folder if you lose it.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="position-relative bg-secondary">
+    <div class="container py-9 py-lg-11">
+        <div class="row justify-content-center align-items-center flex-lg-row-reverse">
+            <div class="col-lg-5 col-xl-4">
+                <img
+                    class="dot-drop-about-img drop-list-img"
+                    src="{{ '/' | relative_url }}assets/img/dot-drop/drop-list.svg"
+                    alt="Dot Drop list" />
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 col-xl-4">
+                <h2 class="fs-3 mb-7">Make a drop</h2>
+                <p class="p-small">You can add and also remove data once you unlock the folder with token.</p>
+                <p class="p-small">
+                    A different permission level on files will be applied depending on who created the folder. Owner of
+                    the folder is able to rename the folder, regenerate the token and delete data files.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="position-relative bg-secondary">
+    <div class="container py-9 py-lg-11">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-lg-5 col-xl-4 d-flex">
+                <img
+                    class="dot-drop-about-img dot-drop-timeout-img"
+                    src="{{ '/' | relative_url }}assets/img/dot-drop/lock-time-out.svg"
+                    alt="Lock time out" />
+            </div>
+            <div class="col-lg-2"></div>
+            <div class="col-lg-5 col-xl-4">
+                <h2 class="fs-3 mb-7">Time out</h2>
+                <p class="p-small">The unlocked folder will be locked again when you go back to your drop list.</p>
+                <p class="p-small">
+                    But even if you forgot and left it open, DOT Drop will secure your data by locking the folder
+                    automatically after a certain period of inactivity.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg-gray-800 text-white py-11 py-md-13">
+    <div class="container">
+        <div class="row">
+            <div class="col text-center">
+                <h2 class="mb-7">Ready to get started?</h2>
+                <a href="{{ '/' | relative_url }}dot-drop" class="btn btn-primary">Go to my drop list</a>
+            </div>
+        </div>
+    </div>
+</div>

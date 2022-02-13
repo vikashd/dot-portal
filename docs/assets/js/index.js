@@ -61,6 +61,35 @@
 })();
 
 /**
+ * Account dropdown menu
+ */
+(function () {
+    var buttons = document.getElementsByClassName("js-menu-btn");
+
+    if (!buttons.length) {
+        return;
+    }
+
+    var offset = {
+        name: "offset",
+        options: {
+            offset: ({ placement, reference, popper }) => {
+                return [0, -reference.height];
+            },
+        },
+    };
+
+    [].slice.call(buttons).forEach(
+        (button) =>
+            new bootstrap.Dropdown(button, {
+                popperConfig: function (defaultBsPopperConfig) {
+                    return Object.assign(defaultBsPopperConfig, { modifiers: [offset] });
+                },
+            })
+    );
+})();
+
+/**
  * Notification bar
  */
 (function () {

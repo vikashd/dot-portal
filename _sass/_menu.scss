@@ -1,0 +1,51 @@
+.dropdown-menu-account {
+    min-width: 260px;
+}
+
+.dropdown-menu-account-links {
+    border-top: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 1rem 0 0.5rem;
+}
+
+.dropdown-menu-account-link-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9375rem;
+    text-decoration: none;
+    padding: 1rem 0;
+
+    .icon {
+        width: 1.125rem;
+        height: 1.125rem;
+        margin-right: 1.25rem;
+    }
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.menu {
+    padding: 0.5rem 0;
+    min-width: 180px;
+}
+
+.menu-btn {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.9375rem;
+    text-align: left;
+    text-decoration: none;
+    white-space: nowrap;
+    color: $gray-900;
+    padding: 0.5rem 2rem;
+    background: none;
+    border: none;
+    width: 100%;
+
+    .icon {
+        width: 1.125rem;
+        height: 1.125rem;
+        margin-right: 1.25rem;
+    }
+}

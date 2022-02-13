@@ -1,0 +1,106 @@
+.drop-list-item {
+    padding: 1.5rem;
+    border: 1px solid rgba($gray-700, 0.8);
+    border-radius: 10px;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+        padding: 2rem;
+    }
+}
+
+.drop-list-item-icon {
+    display: block;
+    width: 2.125rem;
+    height: 2.125rem;
+}
+
+.drop-list-item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .drop-list-item-icon {
+        position: relative;
+        top: -0.2rem;
+        margin-right: 1rem;
+
+        @include media-breakpoint-up(lg) {
+            margin-right: 1.4rem;
+        }
+    }
+}
+
+.drop-list-item-title {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.drop-list-item-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    transition: background-color 0.15s ease-in-out;
+
+    span {
+        position: relative;
+        display: block;
+        border-radius: 50%;
+        width: 5px;
+        height: 5px;
+        background-color: #a6a6a6;
+
+        &:before,
+        &:after {
+            content: "";
+            position: absolute;
+            display: block;
+            border-radius: 50%;
+            width: 5px;
+            height: 5px;
+            top: 0;
+            background-color: #a6a6a6;
+        }
+
+        &:before {
+            left: -10px;
+        }
+
+        &:after {
+            left: 10px;
+        }
+    }
+
+    &:active,
+    &:hover {
+        background-color: rgba(#00c8e6, 0.2);
+        transition: none;
+    }
+}
+
+.drop-list-files-container {
+    @include media-breakpoint-up(lg) {
+        margin: 0 4.375rem 0 3.525rem;
+    }
+}
+
+.drop-list-files {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+
+    > li {
+        padding: 2rem 0;
+
+        + li {
+            border-top: 1px solid rgba(#c4c4c4, 0.4);
+        }
+    }
+}

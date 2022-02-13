@@ -9,7 +9,11 @@
                 href="{{ '/' | relative_url }}dashboards">
                 <span class="nav-link-text">My dashboards</span>
             </a>
-            <a class="nav-link" href="#"><span class="nav-link-text">Learning centre</span></a>
+            <a
+                class="nav-link {% if page.active == 'dot-drop' %}active{% endif %}"
+                href="{{ '/' | relative_url }}dot-drop">
+                <span class="nav-link-text">DOT Drop</span>
+            </a>
             <a
                 id="account-menu-btn"
                 class="nav-link {% if page.active == 'account' %}active{% endif %}"
@@ -59,8 +63,20 @@
     <a href="#" class="btn btn-outline-dark">Logout</a>
 </div>
 <ul class="list-unstyled mobile-menu-links">
-    <li><a href="{{ '/' | relative_url }}dashboards" class="active">My dashboards</a></li>
-    <li><a href="#">Learning centre</a></li>
-    <li><a href="{{ '/' | relative_url }}account">Account settings</a></li>
+    <li>
+        <a href="{{ '/' | relative_url }}dashboards" class="{% if page.active == 'dashboards' %}active{% endif %}">
+            My dashboards
+        </a>
+    </li>
+    <li>
+        <a href="{{ '/' | relative_url }}dot-drop" class="{% if page.active == 'dot-drop' %}active{% endif %}">
+            DOT Drop
+        </a>
+    </li>
+    <li>
+        <a href="{{ '/' | relative_url }}account" class="{% if page.active == 'account' %}active{% endif %}">
+            Account settings
+        </a>
+    </li>
 </ul>
 {% endcapture %} {% include mobile-menu.html content=menu_content %}

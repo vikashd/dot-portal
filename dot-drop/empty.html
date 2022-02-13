@@ -1,0 +1,19 @@
+---
+layout: default
+loggedin: true
+footer: false
+---
+
+{% include drop-list/header.html active='drop-list' %}
+<div class="container py-8">
+    <div class="d-flex align-items-center">
+        <svg class="icon drop-list-item-icon">
+            <use xlink:href="#icon-folder-empty"></use>
+        </svg>
+        <div class="ms-7 text-muted">
+            <p class="fs-5 mb-1">Your list is empty</p>
+            <span class="fs-7">Click the button below to create a new folder or import shared folders.</span>
+        </div>
+    </div>
+    {% include drop-list/actions.html %}
+</div>

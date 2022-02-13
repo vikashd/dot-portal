@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16">
+  <defs>
+    <clipPath id="a">
+      <path d="M0 0h16v16H0z"/>
+    </clipPath>
+  </defs>
+  <g data-name="Custom Size – 1" clip-path="url(#a)">
+    <g data-name="Group 1">
+      <path data-name="Union 1" d="M.171 8.176A.585.585 0 0 1 1 7.349l6.4 6.392-.021-.847c-.071-2.7-.145-5.5.675-7.819C9 2.375 11.03.719 14.248.014a.585.585 0 1 1 .252 1.143c-2.828.621-4.527 1.989-5.346 4.308-.747 2.116-.676 4.8-.608 7.4l.023.915L15 7.349a.585.585 0 1 1 .828.828L8 16Z"/>
+    </g>
+  </g>
+</svg>
