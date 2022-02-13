@@ -4088,6 +4088,16 @@ footer a:focus, footer a:hover {
   }
 }
 
+a.drop-list-item {
+  text-decoration: none;
+  transition: border-color 0.15s ease-out, box-shadow 0.15s ease-out;
+}
+a.drop-list-item:hover {
+  border-color: black;
+  box-shadow: 0 0 10px 4px rgba(107, 107, 107, 0.2);
+  transition: none;
+}
+
 .drop-list-item-icon {
   display: block;
   width: 2.125rem;
@@ -4098,7 +4108,6 @@ footer a:focus, footer a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-decoration: none;
 }
 .drop-list-item-header .drop-list-item-icon {
   position: relative;
