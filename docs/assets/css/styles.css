@@ -4098,6 +4098,7 @@ footer a:focus, footer a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  text-decoration: none;
 }
 .drop-list-item-header .drop-list-item-icon {
   position: relative;
@@ -4173,5 +4174,9 @@ footer a:focus, footer a:hover {
 }
 .drop-list-files > li + li {
   border-top: 1px solid rgba(196, 196, 196, 0.4);
+}
+.drop-list-files .form-check-input:checked {
+  background-color: #00c8e6;
+  border-color: #00c8e6;
 }
 /*# sourceMappingURL=styles.css.map */

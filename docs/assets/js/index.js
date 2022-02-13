@@ -61,7 +61,7 @@
 })();
 
 /**
- * Account dropdown menu
+ * Dropdown menu (DOT Drop item)
  */
 (function () {
     var buttons = document.getElementsByClassName("js-menu-btn");
@@ -87,6 +87,27 @@
                 },
             })
     );
+
+    // document.querySelectorAll('[data-drop-item]').forEach
+    var menus = document.getElementsByClassName("js-drop-item-menu");
+
+    if (!menus.length) {
+        return;
+    }
+
+    [].slice.call(menus).forEach((menu) => {
+        menu.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            if (!e.target.dataset.dropItem) {
+                return;
+            }
+
+            var dataset = e.target.dataset;
+
+            alert(`${dataset.action} ${dataset.dropItem}`);
+        });
+    });
 })();
 
 /**
