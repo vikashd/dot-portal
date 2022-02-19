@@ -20,7 +20,7 @@
         &:before {
             content: "";
             display: block;
-            padding-top: calc(790px / 1440px * 100%);
+            padding-top: calc(790 / 1440 * 100%);
         }
 
         > * {

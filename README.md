@@ -21,7 +21,13 @@ $ npm install && npm run serve
 
 Open from http://localhost:4000/dot-portal
 
+### Development
+
+JS/CSS/image sources can be found in `_webpack`.
+
 ### Deployment/build
+
+Uses webpack to compile JS and CSS.
 
 ```
 $ npm run build
