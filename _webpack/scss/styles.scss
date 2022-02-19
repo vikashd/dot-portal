@@ -14,21 +14,21 @@
 @import "bootstrap/scss/grid";
 @import "bootstrap/scss/tables";
 @import "bootstrap/scss/buttons";
-/* purgecss start ignore */
+/*! purgecss start ignore */
 @import "bootstrap/scss/dropdown";
 @import "bootstrap/scss/forms";
 @import "bootstrap/scss/modal";
 @import "bootstrap/scss/carousel";
-/* purgecss end ignore */
+/*! purgecss end ignore */
 @import "bootstrap/scss/breadcrumb";
 @import "bootstrap/scss/helpers";
 @import "bootstrap/scss/utilities/api";
 
 @import "base";
-/* purgecss start ignore */
+/*! purgecss start ignore */
 @import "buttons";
 @import "notification-bar";
-/* purgecss end ignore */
+/*! purgecss end ignore */
 @import "nav";
 @import "carousel";
 @import "dashboard";
