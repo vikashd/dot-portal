@@ -1,11 +1,11 @@
-import { Dropdown } from "bootstrap";
+import { Dropdown } from 'bootstrap';
 
 const init = () => {
-    var sameWidth = {
-        name: "sameWidth",
+    const sameWidth = {
+        name: 'sameWidth',
         enabled: true,
-        phase: "beforeWrite",
-        requires: ["computeStyles"],
+        phase: 'beforeWrite',
+        requires: ['computeStyles'],
         fn: ({ state }) => {
             state.styles.popper.width = `${state.rects.reference.width}px`;
         },
@@ -14,8 +14,8 @@ const init = () => {
         },
     };
 
-    var offset = {
-        name: "offset",
+    const offset = {
+        name: 'offset',
         options: {
             offset: ({ placement, reference, popper }) => {
                 return [0, -reference.height - 10];
@@ -23,14 +23,15 @@ const init = () => {
         },
     };
 
-    var dropdownElementList = [].slice.call(document.querySelectorAll(".dropdown-btn"));
-    dropdownElementList.map(function (dropdownToggleEl) {
-        return new Dropdown(dropdownToggleEl, {
-            popperConfig: function (defaultBsPopperConfig) {
-                return Object.assign(defaultBsPopperConfig, { modifiers: [sameWidth, offset] });
-            },
-        });
-    });
+    const dropdownElementList = [].slice.call(document.querySelectorAll('.dropdown-btn'));
+
+    dropdownElementList.map(
+        (dropdownToggleEl) =>
+            new Dropdown(dropdownToggleEl, {
+                popperConfig: (defaultBsPopperConfig) =>
+                    Object.assign(defaultBsPopperConfig, { modifiers: [sameWidth, offset] }),
+            })
+    );
 };
 
 init();

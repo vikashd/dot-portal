@@ -1,33 +1,33 @@
 const init = () => {
-    var mobileMenuBtn = document.getElementById("mobile-menu-btn");
-    var mobileMenuBtnClose = document.getElementById("mobile-menu-close-btn");
-    var menu = document.getElementById("mobile-menu");
-    var open = false;
+    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+    const mobileMenuBtnClose = document.getElementById('mobile-menu-close-btn');
+    const menu = document.getElementById('mobile-menu');
+    let open = false;
 
-    function openMenu() {
+    const openMenu = () => {
         open = true;
-        menu.style.transform = "translate3d(0, 0, 0)";
-    }
+        menu.style.transform = 'translate3d(0, 0, 0)';
+    };
 
-    function closeMenu() {
+    const closeMenu = () => {
         open = false;
-        menu.style.transform = "translate3d(-100%, 0, 0)";
-    }
+        menu.style.transform = 'translate3d(-100%, 0, 0)';
+    };
 
-    function clickHandler() {
+    const clickHandler = () => {
         if (open) {
             closeMenu();
         } else {
             openMenu();
         }
-    }
+    };
 
-    mobileMenuBtn.addEventListener("click", clickHandler);
-    mobileMenuBtnClose.addEventListener("click", clickHandler);
+    mobileMenuBtn.addEventListener('click', clickHandler);
+    mobileMenuBtnClose.addEventListener('click', clickHandler);
 
-    var mediaQuery = window.matchMedia("(min-width: 768px)");
+    const mediaQuery = window.matchMedia('(min-width: 768px)');
 
-    mediaQuery.addEventListener("change", function (e) {
+    mediaQuery.addEventListener('change', (e) => {
         if (e.matches && open) {
             closeMenu();
         }

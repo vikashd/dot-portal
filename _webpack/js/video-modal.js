@@ -1,27 +1,27 @@
-import { Modal } from "bootstrap";
+import { Modal } from 'bootstrap';
 
 const init = () => {
-    var videoBtns = Array.prototype.slice.call(document.querySelectorAll("[data-toggle-video]"));
-    var modalEl = document.getElementById("modal-video");
+    const videoBtns = Array.prototype.slice.call(document.querySelectorAll('[data-toggle-video]'));
+    const modalEl = document.getElementById('modal-video');
 
     if (!modalEl) {
         return;
     }
 
-    var modal = new Modal(modalEl);
-    var iframe = modalEl.querySelector("iframe");
+    const modal = new Modal(modalEl);
+    const iframe = modalEl.querySelector('iframe');
 
-    videoBtns.forEach(function (btn) {
-        btn.addEventListener("click", function (e) {
-            var src = e.currentTarget.getAttribute("data-toggle-video");
+    videoBtns.forEach((btn) => {
+        btn.addEventListener('click', (e) => {
+            const src = e.currentTarget.getAttribute('data-toggle-video');
 
             iframe.src = src;
             modal.show();
         });
     });
 
-    modalEl.addEventListener("hidden.bs.modal", function () {
-        iframe.src = "";
+    modalEl.addEventListener('hidden.bs.modal', () => {
+        iframe.src = '';
     });
 };
 

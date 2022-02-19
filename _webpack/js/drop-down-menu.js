@@ -1,14 +1,14 @@
-import { Dropdown } from "bootstrap";
+import { Dropdown } from 'bootstrap';
 
 const init = () => {
-    var buttons = document.getElementsByClassName("js-menu-btn");
+    const buttons = document.getElementsByClassName('js-menu-btn');
 
     if (!buttons.length) {
         return;
     }
 
-    var offset = {
-        name: "offset",
+    const offset = {
+        name: 'offset',
         options: {
             offset: ({ placement, reference, popper }) => {
                 return [0, -reference.height];
@@ -19,13 +19,11 @@ const init = () => {
     [].slice.call(buttons).forEach(
         (button) =>
             new Dropdown(button, {
-                popperConfig: function (defaultBsPopperConfig) {
-                    return Object.assign(defaultBsPopperConfig, { modifiers: [offset] });
-                },
+                popperConfig: (defaultBsPopperConfig) => Object.assign(defaultBsPopperConfig, { modifiers: [offset] }),
             })
     );
 
-    var menus = document.querySelectorAll("[data-drop-item-menu]");
+    const menus = document.querySelectorAll('[data-drop-item-menu]');
 
     if (!menus.length) {
         return;
@@ -34,14 +32,14 @@ const init = () => {
     [].slice.call(menus).forEach((menu) => {
         const menuDataset = menu.dataset;
 
-        menu.addEventListener("click", function (e) {
+        menu.addEventListener('click', (e) => {
             e.preventDefault();
 
             if (!menuDataset.dropItemMenu) {
                 return;
             }
 
-            var dataset = e.target.dataset;
+            const dataset = e.target.dataset;
 
             alert(`${dataset.action} ${menuDataset.dropItemMenu}`);
         });

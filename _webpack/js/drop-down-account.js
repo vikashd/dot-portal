@@ -1,14 +1,14 @@
-import { Dropdown } from "bootstrap";
+import { Dropdown } from 'bootstrap';
 
 const init = () => {
-    var accountMenuBtn = document.getElementById("account-menu-btn");
+    const accountMenuBtn = document.getElementById('account-menu-btn');
 
     if (!accountMenuBtn) {
         return;
     }
 
-    var offset = {
-        name: "offset",
+    const offset = {
+        name: 'offset',
         options: {
             offset: ({ placement, reference, popper }) => {
                 return [-18, 20];
@@ -17,9 +17,7 @@ const init = () => {
     };
 
     new Dropdown(accountMenuBtn, {
-        popperConfig: function (defaultBsPopperConfig) {
-            return Object.assign(defaultBsPopperConfig, { modifiers: [offset] });
-        },
+        popperConfig: (defaultBsPopperConfig) => Object.assign(defaultBsPopperConfig, { modifiers: [offset] }),
     });
 };
 
