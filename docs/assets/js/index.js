@@ -88,24 +88,25 @@
             })
     );
 
-    // document.querySelectorAll('[data-drop-item]').forEach
-    var menus = document.getElementsByClassName("js-drop-item-menu");
+    var menus = document.querySelectorAll("[data-drop-item-menu]");
 
     if (!menus.length) {
         return;
     }
 
     [].slice.call(menus).forEach((menu) => {
+        const menuDataset = menu.dataset;
+
         menu.addEventListener("click", function (e) {
             e.preventDefault();
 
-            if (!e.target.dataset.dropItem) {
+            if (!menuDataset.dropItemMenu) {
                 return;
             }
 
             var dataset = e.target.dataset;
 
-            alert(`${dataset.action} ${dataset.dropItem}`);
+            alert(`${dataset.action} ${menuDataset.dropItemMenu}`);
         });
     });
 })();

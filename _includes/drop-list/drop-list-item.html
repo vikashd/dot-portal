@@ -17,43 +17,34 @@
                 <span></span>
             </button>
             <div class="dropdown-menu dropdown-menu-end menu" aria-labelledby="drop-list-1-menu-btn">
-                <ul class="list-unstyled mb-0 js-drop-item-menu">
+                <ul class="list-unstyled mb-0" data-drop-item-menu="folder/{{ include.item.id }}">
                     <li>
-                        <button class="menu-btn" data-drop-item="folder/{{ include.item.id }}" data-action="info">
+                        <button class="menu-btn" data-action="info">
                             Info
                         </button>
                     </li>
                     <li>
-                        <button
-                            class="menu-btn"
-                            data-drop-item="folder/{{ include.item.id }}"
-                            data-action="regenerate-token">
+                        <button class="menu-btn" data-action="regenerate-token">
                             Regenerate token
                         </button>
                     </li>
                     <li>
-                        <button
-                            class="menu-btn"
-                            data-drop-item="folder/{{ include.item.id }}"
-                            data-action="change-ownership">
+                        <button class="menu-btn" data-action="change-ownership">
                             Change ownership
                         </button>
                     </li>
                     <li>
-                        <button class="menu-btn" data-drop-item="folder/{{ include.item.id }}" data-action="rename">
+                        <button class="menu-btn" data-action="rename">
                             Rename
                         </button>
                     </li>
                     <li>
-                        <button class="menu-btn" data-drop-item="folder/{{ include.item.id }}" data-action="remove">
+                        <button class="menu-btn" data-action="remove">
                             Remove from list
                         </button>
                     </li>
                     <li>
-                        <button
-                            class="menu-btn text-red"
-                            data-drop-item="folder/{{ include.item.id }}"
-                            data-action="delete">
+                        <button class="menu-btn text-red" data-action="delete">
                             Delete
                         </button>
                     </li>
@@ -82,52 +73,29 @@
                         <div
                             class="dropdown-menu dropdown-menu-end menu"
                             aria-labelledby="drop-list-{{ file.id }}-menu-btn">
-                            <ul class="list-unstyled mb-0 js-drop-item-menu">
+                            <ul class="list-unstyled mb-0" data-drop-item-menu="file/{{ forloop.index }}">
                                 <li>
-                                    <button
-                                        class="menu-btn"
-                                        data-drop-item="file/{{ include.item.id }}"
-                                        data-action="info">
+                                    <button class="menu-btn" data-action="download">
+                                        Download
+                                    </button>
+                                </li>
+                                <li>
+                                    <button class="menu-btn" data-action="info">
                                         Info
                                     </button>
                                 </li>
                                 <li>
-                                    <button
-                                        class="menu-btn"
-                                        data-drop-item="file/{{ include.item.id }}"
-                                        data-action="regenerate-token">
-                                        Regenerate token
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="menu-btn"
-                                        data-drop-item="file/{{ include.item.id }}"
-                                        data-action="change-ownership">
-                                        Change ownership
-                                    </button>
-                                </li>
-                                <li>
-                                    <button
-                                        class="menu-btn"
-                                        data-drop-item="file/{{ include.item.id }}"
-                                        data-action="rename">
+                                    <button class="menu-btn" data-action="rename">
                                         Rename
                                     </button>
                                 </li>
                                 <li>
-                                    <button
-                                        class="menu-btn"
-                                        data-drop-item="file/{{ include.item.id }}"
-                                        data-action="remove">
+                                    <button class="menu-btn" data-action="remove">
                                         Remove from list
                                     </button>
                                 </li>
                                 <li>
-                                    <button
-                                        class="menu-btn text-red"
-                                        data-drop-item="file/{{ include.item.id }}"
-                                        data-action="delete">
+                                    <button class="menu-btn text-red" data-action="delete">
                                         Delete
                                     </button>
                                 </li>
