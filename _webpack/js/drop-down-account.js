@@ -1,3 +1,5 @@
+import { Dropdown } from "bootstrap";
+
 const init = () => {
     var accountMenuBtn = document.getElementById("account-menu-btn");
 
@@ -14,7 +16,7 @@ const init = () => {
         },
     };
 
-    new bootstrap.Dropdown(accountMenuBtn, {
+    new Dropdown(accountMenuBtn, {
         popperConfig: function (defaultBsPopperConfig) {
             return Object.assign(defaultBsPopperConfig, { modifiers: [offset] });
         },

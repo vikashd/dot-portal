@@ -1,3 +1,5 @@
+import { Dropdown } from "bootstrap";
+
 const init = () => {
     var sameWidth = {
         name: "sameWidth",
@@ -23,7 +25,7 @@ const init = () => {
 
     var dropdownElementList = [].slice.call(document.querySelectorAll(".dropdown-btn"));
     dropdownElementList.map(function (dropdownToggleEl) {
-        return new bootstrap.Dropdown(dropdownToggleEl, {
+        return new Dropdown(dropdownToggleEl, {
             popperConfig: function (defaultBsPopperConfig) {
                 return Object.assign(defaultBsPopperConfig, { modifiers: [sameWidth, offset] });
             },

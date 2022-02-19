@@ -1,3 +1,5 @@
+import { Modal } from "bootstrap";
+
 const init = () => {
     var videoBtns = Array.prototype.slice.call(document.querySelectorAll("[data-toggle-video]"));
     var modalEl = document.getElementById("modal-video");
@@ -6,7 +8,7 @@ const init = () => {
         return;
     }
 
-    var modal = new bootstrap.Modal(modalEl);
+    var modal = new Modal(modalEl);
     var iframe = modalEl.querySelector("iframe");
 
     videoBtns.forEach(function (btn) {

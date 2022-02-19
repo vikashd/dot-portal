@@ -1,3 +1,5 @@
+import { Dropdown } from "bootstrap";
+
 const init = () => {
     var buttons = document.getElementsByClassName("js-menu-btn");
 
@@ -16,7 +18,7 @@ const init = () => {
 
     [].slice.call(buttons).forEach(
         (button) =>
-            new bootstrap.Dropdown(button, {
+            new Dropdown(button, {
                 popperConfig: function (defaultBsPopperConfig) {
                     return Object.assign(defaultBsPopperConfig, { modifiers: [offset] });
                 },
