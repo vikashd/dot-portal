@@ -1,16 +1,17 @@
 <div class="mt-9 d-flex justify-content-end">
     <ul class="list-unstyled d-flex align-items-center mb-0">
         <li>
-            <button href="{{ '/' | relative_url }}dot-drop" class="btn btn-primary">
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#import-files">
                 <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
                 New
             </button>
         </li>
         <li class="ms-3">
-            <button href="{{ '/' | relative_url }}dot-drop" class="btn btn-outline-dark">
+            <button class="btn btn-outline-dark">
                 <svg class="icon"><use xlink:href="#icon-import"></use></svg>
                 Import
             </button>
         </li>
     </ul>
 </div>
+{% include drop-list/folder-create.html %}

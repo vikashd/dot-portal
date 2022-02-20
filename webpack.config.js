@@ -1,32 +1,32 @@
-const path = require("path");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const path = require('path');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
-const isProduction = process.env.NODE_ENV === "production";
+const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
     entry: {
-        index: path.join(__dirname, "_webpack", "js", "index"),
+        index: path.join(__dirname, '_webpack', 'js', 'index'),
     },
     output: {
-        path: path.resolve(__dirname, "assets"),
-        publicPath: isProduction ? "../" : "/dot-portal/assets/",
-        filename: "js/[name].js",
+        path: path.resolve(__dirname, 'assets'),
+        publicPath: isProduction ? '../' : '/dot-portal/assets/',
+        filename: 'js/[name].js',
     },
     resolve: {
-        extensions: [".json", ".js"],
-        modules: ["node_modules"],
+        extensions: ['.json', '.js'],
+        modules: ['node_modules'],
     },
     plugins: [
         isProduction &&
             new MiniCssExtractPlugin({
-                filename: "css/styles.css",
+                filename: 'css/styles.css',
             }),
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: "_webpack/img",
-                    to: "img",
+                    from: '_webpack/img',
+                    to: 'img',
                 },
             ],
         }),
@@ -37,28 +37,39 @@ module.exports = {
                 test: /\.js$/,
                 exclude: /node_modules/,
                 use: {
-                    loader: "babel-loader",
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [
+                            [
+                                '@babel/preset-env',
+                                {
+                                    useBuiltIns: 'entry',
+                                    corejs: '3',
+                                },
+                            ],
+                        ],
+                    },
                 },
             },
             {
                 test: /\.(sass|scss)$/,
                 use: [
-                    isProduction ? MiniCssExtractPlugin.loader : "style-loader",
+                    isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
                     {
-                        loader: "css-loader",
+                        loader: 'css-loader',
                         options: {
                             sourceMap: false,
                         },
                     },
                     {
-                        loader: "postcss-loader",
+                        loader: 'postcss-loader',
                         options: {
                             postcssOptions: {
                                 plugins: [
                                     [
-                                        "postcss-preset-env",
+                                        'postcss-preset-env',
                                         {
-                                            browsers: "last 2 versions",
+                                            browsers: 'last 2 versions',
                                         },
                                     ],
                                 ],
@@ -66,14 +77,14 @@ module.exports = {
                         },
                     },
                     {
-                        loader: "resolve-url-loader",
+                        loader: 'resolve-url-loader',
                     },
                     {
-                        loader: "sass-loader",
+                        loader: 'sass-loader',
                         options: {
                             sourceMap: true,
                             sassOptions: {
-                                includePaths: ["_webpack/scss"],
+                                includePaths: ['_webpack/scss'],
                             },
                         },
                     },
@@ -83,9 +94,9 @@ module.exports = {
                 test: /\.(png|svg|jpg|gif|ico|xml)$/,
                 use: [
                     {
-                        loader: "file-loader",
+                        loader: 'file-loader',
                         options: {
-                            name: "img/[name].[ext]",
+                            name: 'img/[name].[ext]',
                         },
                     },
                 ],

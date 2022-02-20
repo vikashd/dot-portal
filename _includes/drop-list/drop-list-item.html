@@ -7,7 +7,7 @@
         <div class="drop-list-item-title">
             <svg class="icon drop-list-item-icon">
                 <use
-                    xlink:href="#icon-{% if include.item.locked %}folder-locked{% else %}folder-unlocked{% endif %}"></use>
+                    xlink:href="#icon-{% if include.expanded %}folder-unlocked{% else %}folder-locked{% endif %}"></use>
             </svg>
             <span class="fw-semibold">{{ include.item.title }}</span>
         </div>

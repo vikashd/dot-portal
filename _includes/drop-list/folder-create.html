@@ -1,0 +1,75 @@
+<div
+    data-folder-create="#folder-create"
+    class="modal fade"
+    id="import-files"
+    tabindex="-1"
+    aria-labelledby="import-files-label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-form justify-content-center">
+        <div class="bg-white position-relative pe-auto px-4 py-8 px-sm-10 py-sm-9 w-100">
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
+            <form id="folder-create" method="post" enctype="multipart/form-data" autocomplete="off">
+                <div id="folder-create-select">
+                    <h3 class="modal-title mb-6" id="import-files-label">Create folder</h3>
+                    <div class="mb-7">
+                        <label for="folder-name" class="form-label">Name</label>
+                        <input id="folder-name" type="text" class="form-control" />
+                        <div class="uploaded-files my-6">
+                            <div class="fw-semibold mb-5" id="drop-file-heading">No files</div>
+                            <ol class="drop-file-upload-list"></ol>
+                        </div>
+                    </div>
+                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                        <li>
+                            <label for="drop-file-upload" class="btn btn-outline-dark" tabindex="0">
+                                <input id="drop-file-upload" type="file" multiple class="d-none" />
+                                <svg class="icon"><use xlink:href="#icon-search"></use></svg>
+                                Browse
+                            </label>
+                        </li>
+                        <li class="ms-3">
+                            <button id="drop-file-submit" class="btn btn-primary" disabled>Generate a token</button>
+                        </li>
+                    </ul>
+                </div>
+                <div id="folder-create-token" class="d-none">
+                    <h3 class="modal-title mb-6" id="import-files-label">Token is generated.</h3>
+                    <div class="drop-icon-container drop-icon-offset mb-4">
+                        <div class="drop-icon-icon">
+                            <div class="drop-key-icon">
+                                <svg class="icon"><use xlink:href="#icon-key"></use></svg>
+                            </div>
+                        </div>
+                        <div class="drop-icon-input drop-key-copy">
+                            <input id="token" type="password" readonly />
+                            <button id="copy-btn" class="drop-key-input-btn">
+                                <svg class="icon"><use xlink:href="#icon-copy"></use></svg>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="drop-icon-container drop-icon-offset mb-8">
+                        <div class="form-check">
+                            <input id="show-token" class="form-check-input" type="checkbox" />
+                            <label class="form-check-label" for="show-token">
+                                <span class="fs-7">Show token</span>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="drop-icon-container drop-icon-offset mb-10">
+                        <div class="drop-icon-icon">
+                            <svg class="icon"><use xlink:href="#icon-error"></use></svg>
+                        </div>
+                        <span class="fs-5">
+                            Please copy this token and save it safely as it will be asked everytime you access folder.
+                        </span>
+                    </div>
+                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                        <li>
+                            <button id="drop-file-create" class="btn btn-primary">Create</button>
+                        </li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
