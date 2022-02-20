@@ -60,7 +60,7 @@ class FolderCreate {
         if (files.length) {
             heading.innerHTML = `${files.length} File(s)`;
         } else {
-            heading.innerHTML = `No files`;
+            heading.innerHTML = null;
         }
 
         if (this.isComplete(uppy)) {
