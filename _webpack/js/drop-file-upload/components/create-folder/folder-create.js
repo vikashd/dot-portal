@@ -1,7 +1,5 @@
-import renderSelectedFiles from './render-selected-files';
-
 class FolderCreate {
-    constructor({ container, uppy }) {
+    constructor(container, { uppy }) {
         this.container = container;
         this.uppy = uppy;
         this.folderName = this.container.querySelector('#folder-name');
@@ -18,17 +16,14 @@ class FolderCreate {
 
             onSubmitHandler();
         });
-    }
 
-    removeFile(e) {
-        e.preventDefault();
-
-        const {
-            dataset: { id },
-        } = e.currentTarget;
-
-        this.uppy.removeFile(id);
-        this.update();
+        this.uppy
+            .on('file-added', () => {
+                this.update();
+            })
+            .on('file-removed', () => {
+                this.update();
+            });
     }
 
     show() {
@@ -51,19 +46,7 @@ class FolderCreate {
     }
 
     update() {
-        const heading = this.container.querySelector('#drop-file-heading');
-        const fileListContainer = this.container.querySelector('.uploaded-files ol');
-        const files = this.uppy.getFiles();
-
-        renderSelectedFiles(files, fileListContainer, { onClick: this.removeFile.bind(this) });
-
-        if (files.length) {
-            heading.innerHTML = `${files.length} File(s)`;
-        } else {
-            heading.innerHTML = null;
-        }
-
-        if (this.isComplete(uppy)) {
+        if (this.isComplete()) {
             this.submit.removeAttribute('disabled');
         } else {
             this.submit.setAttribute('disabled', 'disabled');

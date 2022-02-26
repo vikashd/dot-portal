@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from 'uuid';
 
 class GeneratedToken {
-    constructor({ container }) {
+    constructor(container) {
         this.container = container;
         this.showToken = container.querySelector('#show-token');
         this.tokenField = container.querySelector('#token');
@@ -38,6 +38,7 @@ class GeneratedToken {
     }
 
     reset() {
+        this.tokenField.setAttribute('type', 'password');
         this.tokenField.value = uuidv4();
         this.showToken.checked = false;
     }

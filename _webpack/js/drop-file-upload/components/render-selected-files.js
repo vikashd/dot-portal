@@ -15,4 +15,14 @@ const createFileListItem = (file, { onClick }) => {
     return li;
 };
 
-export default createFileListItem;
+const renderSelectedFiles = (files, container, { onClick }) => {
+    Array.from(container.childNodes).forEach((file) => {
+        file.parentNode.removeChild(file);
+    });
+
+    files.forEach((file) => {
+        container.appendChild(createFileListItem(file, { onClick }));
+    });
+};
+
+export default renderSelectedFiles;

@@ -1,8 +1,8 @@
 import '../scss/styles.scss';
 import './drop-down';
 import './drop-down-account';
-import './drop-down-menu';
-import './drop-file-upload';
+import './drop-file-upload/components/create-folder';
+import './drop-file-upload/components/folder-list';
 import './landing-page';
 import './mobile-menu';
 import './notification-bar';

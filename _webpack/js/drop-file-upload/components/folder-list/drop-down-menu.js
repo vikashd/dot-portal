@@ -1,7 +1,7 @@
 import { Dropdown } from 'bootstrap';
 
-const init = () => {
-    const buttons = document.getElementsByClassName('js-menu-btn');
+const init = (container, onClick) => {
+    const buttons = container.getElementsByClassName('js-menu-btn');
 
     if (!buttons.length) {
         return;
@@ -10,7 +10,7 @@ const init = () => {
     const offset = {
         name: 'offset',
         options: {
-            offset: ({ placement, reference, popper }) => {
+            offset: ({ reference }) => {
                 return [0, -reference.height];
             },
         },
@@ -23,27 +23,31 @@ const init = () => {
             })
     );
 
-    const menus = document.querySelectorAll('[data-drop-item-menu]');
+    const menus = container.querySelectorAll('[data-drop-item-menu]');
 
     if (!menus.length) {
         return;
     }
 
     [].slice.call(menus).forEach((menu) => {
-        const menuDataset = menu.dataset;
+        const {
+            dataset: { dropItemMenu },
+        } = menu;
 
         menu.addEventListener('click', (e) => {
             e.preventDefault();
 
-            if (!menuDataset.dropItemMenu) {
+            if (!dropItemMenu) {
                 return;
             }
 
-            const dataset = e.target.dataset;
+            const {
+                dataset: { action },
+            } = e.target;
 
-            alert(`${dataset.action} ${menuDataset.dropItemMenu}`);
+            onClick({ id: dropItemMenu, action });
         });
     });
 };
 
-init();
+export default init;
