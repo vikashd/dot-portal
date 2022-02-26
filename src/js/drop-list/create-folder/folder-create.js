@@ -14,7 +14,9 @@ class FolderCreate {
         this.submit.addEventListener('click', (e) => {
             e.preventDefault();
 
-            onSubmitHandler();
+            if (this.isComplete()) {
+                onSubmitHandler();
+            }
         });
 
         this.uppy

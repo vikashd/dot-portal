@@ -4,6 +4,7 @@
 
 -   [Jekyll](https://jekyllrb.com)
 -   [Bootstrap](https://getbootstrap.com/)
+-   [Uppy](https://uppy.io/)
 
 ## Setup
 
