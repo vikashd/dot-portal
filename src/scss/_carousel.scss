@@ -4,13 +4,13 @@
     margin: auto;
 
     &:before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         right: 0;
         bottom: 0;
         left: 0;
-        background-image: url("../img/ipad-vertical-md.png");
+        background-image: url('../img/ipad-vertical-md.png');
         background-repeat: no-repeat;
         background-size: cover;
         pointer-events: none;
@@ -31,10 +31,10 @@
             > .carousel-item {
                 height: 100%;
 
-                [class*="col-"] {
+                [class*='col-'] {
                     height: 45%;
 
-                    + [class*="col-"] {
+                    + [class*='col-'] {
                         height: 55%;
                     }
                 }
@@ -67,7 +67,7 @@
         padding-top: calc((2246 / 2931) * 59%);
 
         &:before {
-            background-image: url("../img/ipad.png");
+            background-image: url('../img/ipad.png');
         }
 
         > .carousel {
@@ -84,10 +84,10 @@
                 > .carousel-item {
                     height: 100%;
 
-                    [class*="col-"] {
+                    [class*='col-'] {
                         height: auto;
 
-                        + [class*="col-"] {
+                        + [class*='col-'] {
                             height: auto;
                         }
                     }
@@ -129,7 +129,7 @@
         opacity: 1;
 
         &:before {
-            content: "";
+            content: '';
             position: absolute;
             display: block;
             top: 0;

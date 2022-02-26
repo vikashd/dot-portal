@@ -8,7 +8,7 @@ const isProduction = process.env.NODE_ENV === 'production';
 module.exports = {
     devtool: 'source-map',
     entry: {
-        index: path.join(__dirname, '_webpack', 'js', 'index'),
+        index: path.join(__dirname, 'src', 'js', 'index'),
     },
     output: {
         path: path.resolve(__dirname, 'assets'),
@@ -27,7 +27,7 @@ module.exports = {
         new CopyWebpackPlugin({
             patterns: [
                 {
-                    from: '_webpack/img',
+                    from: 'src/img',
                     to: 'img',
                 },
             ],
@@ -86,7 +86,7 @@ module.exports = {
                         options: {
                             sourceMap: true,
                             sassOptions: {
-                                includePaths: ['_webpack/scss'],
+                                includePaths: ['src/scss'],
                             },
                         },
                     },

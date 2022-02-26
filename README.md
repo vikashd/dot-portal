@@ -23,7 +23,7 @@ Open from http://localhost:4000/dot-portal
 
 ### Development
 
-JS/CSS/image sources can be found in `_webpack`.
+JS/SCSS/image files can be found in `src`.
 
 ### Deployment/build
 
