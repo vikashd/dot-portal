@@ -1,10 +1,12 @@
 const path = require('path');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
 module.exports = {
+    devtool: 'source-map',
     entry: {
         index: path.join(__dirname, '_webpack', 'js', 'index'),
     },
@@ -103,4 +105,18 @@ module.exports = {
             },
         ],
     },
+    optimization: isProduction
+        ? {
+              minimize: true,
+              minimizer: [
+                  new TerserPlugin({
+                      terserOptions: {
+                          format: {
+                              comments: false,
+                          },
+                      },
+                  }),
+              ],
+          }
+        : {},
 };

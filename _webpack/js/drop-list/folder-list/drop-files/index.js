@@ -1,4 +1,4 @@
-import FileUploader from '../../file-uploader';
+import FileUploader from '../../components/file-uploader';
 import FilesSelect from './files-select';
 
 const init = () => {

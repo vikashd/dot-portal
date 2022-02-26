@@ -1,8 +1,10 @@
+import 'core-js/stable';
+import 'regenerator-runtime/runtime';
 import '../scss/styles.scss';
 import './drop-down';
 import './drop-down-account';
-import './drop-file-upload/components/create-folder';
-import './drop-file-upload/components/folder-list';
+import './drop-list/create-folder';
+import './drop-list/folder-list';
 import './landing-page';
 import './mobile-menu';
 import './notification-bar';

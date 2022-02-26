@@ -1,25 +1,25 @@
-import dropdownMenu from './drop-down-menu';
+import dropdownMenu from '../components/drop-down-menu';
 
 class Folder {
-    constructor(folder) {
-        this.folder = folder;
+    constructor(container) {
+        this.container = container;
         this.selected = [];
         this.fileOptions = [];
         this.fileActions = [];
     }
 
     init() {
-        dropdownMenu(this.folder, ({ id, action }) => {
+        dropdownMenu(this.container, ({ id, action }) => {
             alert(`${action} ${id}`);
         });
 
-        this.folder.querySelectorAll('input[type=checkbox]').forEach((input) => {
+        this.container.querySelectorAll('input[type=checkbox]').forEach((input) => {
             input.addEventListener('change', () => {
                 this.updateSelected(input);
             });
         });
 
-        this.folder.querySelectorAll('[data-file-actions] [data-action]').forEach((button) => {
+        this.container.querySelectorAll('[data-file-actions] [data-action]').forEach((button) => {
             button.addEventListener('click', (e) => {
                 e.preventDefault();
 
@@ -31,7 +31,7 @@ class Folder {
             });
         });
 
-        this.fileOptions = this.folder.querySelectorAll('.js-file-options');
+        this.fileOptions = this.container.querySelectorAll('.js-file-options');
     }
 
     updateSelected(input) {

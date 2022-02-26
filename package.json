@@ -15,7 +15,8 @@
         "serve:webpack": "webpack --mode development --watch",
         "prepare": "husky install",
         "deploy": "npm run build && gh-pages -d docs",
-        "minify-css": "JEKYLL_ENV=production NODE_ENV=production postcss -o docs/assets/css/styles.css docs/assets/css/styles.css"
+        "minify-css": "JEKYLL_ENV=production NODE_ENV=production postcss -o docs/assets/css/styles.css docs/assets/css/styles.css",
+        "prettier:docs": "npx pretty-quick docs"
     },
     "keywords": [],
     "author": "",
@@ -45,6 +46,7 @@
         "sass": "^1.49.8",
         "sass-loader": "^10.2.1",
         "style-loader": "^2.0.0",
+        "terser-webpack-plugin": "^4.2.3",
         "webpack": "^4.46.0",
         "webpack-cli": "^4.9.2"
     },

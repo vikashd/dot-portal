@@ -1,4 +1,4 @@
-import dropdownMenu from './drop-down-menu';
+import dropdownMenu from '../components/drop-down-menu';
 
 const init = () => {
     const folders = document.querySelectorAll('[data-drop-folder=closed]');
