@@ -8,6 +8,7 @@ footer: false
 {% include drop-list/header.html active='drop-list' %}
 <div class="container py-8 d-flex justify-content-end">{% include dropdown-sort-by.html %}</div>
 <div class="container pb-8">
-    {% for item in site.data.drop-list.drop-lists.items %} {% include drop-list/drop-list-item.html item=item
-    expanded=false %} {% endfor %} {% include drop-list/actions.html %}
+    {% for item in site.data.drop-list.drop-lists.items %} {% include drop-list/folder.html item=item expanded=false %}
+    {% endfor %} {% include drop-list/actions.html %}
 </div>
+{% include drop-list/folder-unlock.html %}

@@ -1,0 +1,40 @@
+<div
+    data-folder-unlock="#folder-unlock-form"
+    class="modal fade"
+    id="folder-open"
+    tabindex="-1"
+    aria-labelledby="unlock-folder-label"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-form justify-content-center">
+        <div class="bg-white position-relative pe-auto px-4 py-8 px-sm-10 py-sm-9 w-100">
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
+            <form id="folder-unlock-form" method="post" autocomplete="off">
+                <h3 class="modal-title mb-6" id="unlock-folder-label">Unlock folder</h3>
+                <p class="mb-9">Please insert a token in the field below to access folder.</p>
+                <div class="drop-icon-container drop-icon-offset mb-4">
+                    <div class="drop-icon-icon">
+                        <div class="drop-key-icon">
+                            <svg class="icon"><use xlink:href="#icon-key"></use></svg>
+                        </div>
+                    </div>
+                    <div class="drop-icon-input drop-key-copy">
+                        <input id="token-unlock" type="password" autocomplete="off" />
+                    </div>
+                </div>
+                <div class="drop-icon-container drop-icon-offset mb-8">
+                    <div class="form-check">
+                        <input id="show-token-unlock" class="form-check-input" type="checkbox" />
+                        <label class="form-check-label" for="show-token-unlock">
+                            <span class="fs-7">Show token</span>
+                        </label>
+                    </div>
+                </div>
+                <ul class="list-unstyled d-flex align-items-center mb-0">
+                    <li>
+                        <button type="submit" id="show-token-submit" class="btn btn-primary" disabled>Submit</button>
+                    </li>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>

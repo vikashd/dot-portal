@@ -19,6 +19,6 @@ footer: false
     </div>
     <div class="container">
         {% for item in site.data.drop-list.drop-lists.items %}{% if forloop.index == 1 %} {% include
-        drop-list/drop-list-item.html item=item open=true expanded=true %}{% endif %}{% endfor %}
+        drop-list/folder.html item=item open=true expanded=true %}{% endif %}{% endfor %}
     </div>
 </div>

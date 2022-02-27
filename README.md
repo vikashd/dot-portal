@@ -45,3 +45,7 @@ SVG icon map generated using [IcoMoon app](https://icomoon.io/app/#/select).
 3. Add/remove icons as necessary
 4. Click 'Generate SVG & More'
 5. Download and copy the contents of `symbol-defs.svg` into `includes/svg.html`
+
+## Notes
+
+When committing your changes, if there are any Prettier errors with formatting (run as part of the `precommit` hook) use the `--no-verify` option to by pass it.

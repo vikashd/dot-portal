@@ -1,4 +1,5 @@
 import FileUploader from '../../components/file-uploader';
+import FileProgress from '../../components/file-progress';
 import FilesSelect from './files-select';
 
 const init = () => {
@@ -21,9 +22,13 @@ const init = () => {
         },
     });
 
-    const fs = new FilesSelect(dropFiles, { uppy: fileUpload.uppy });
+    const fs = new FilesSelect(dropFiles.querySelector('#files-drop-select'), { uppy: fileUpload.uppy });
+    const fp = new FileProgress(dropFiles.querySelector('#files-drop-upload-progress'));
+
     fs.init({
         onSubmitHandler: () => {
+            fs.hide();
+            fp.show();
             console.log('submit');
         },
     });
@@ -32,6 +37,8 @@ const init = () => {
         fileUpload.reset();
 
         fs.reset();
+        fs.show();
+        fp.hide();
     });
 };
 

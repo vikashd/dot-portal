@@ -1,8 +1,9 @@
 class FolderCreate {
     constructor(container, { uppy }) {
         this.container = container;
+        this.folderName = container.querySelector('#folder-name');
+        this.submit = container.querySelector('#drop-file-submit');
         this.uppy = uppy;
-        this.folderName = this.container.querySelector('#folder-name');
     }
 
     init({ onSubmitHandler }) {
@@ -10,7 +11,6 @@ class FolderCreate {
             this.update();
         });
 
-        this.submit = this.container.querySelector('#drop-file-submit');
         this.submit.addEventListener('click', (e) => {
             e.preventDefault();
 

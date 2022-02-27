@@ -4,11 +4,12 @@ class Folder {
     constructor(container) {
         this.container = container;
         this.selected = [];
-        this.fileOptions = [];
-        this.fileActions = [];
+        this.filesActions = [];
     }
 
-    init() {
+    init({ actionHandler }) {
+        this.actionHandler = actionHandler;
+
         dropdownMenu(this.container, ({ id, action }) => {
             alert(`${action} ${id}`);
         });
@@ -19,19 +20,29 @@ class Folder {
             });
         });
 
-        this.container.querySelectorAll('[data-file-actions] [data-action]').forEach((button) => {
-            button.addEventListener('click', (e) => {
-                e.preventDefault();
+        this.filesActions = this.container.querySelectorAll('.js-files-actions');
 
+        this.initDeleteDialog();
+    }
+
+    initDeleteDialog() {
+        const deleteFilesDialog = document.querySelector('#files-drop-delete');
+
+        if (!deleteFilesDialog) {
+            return;
+        }
+
+        const buttons = deleteFilesDialog.querySelectorAll('[data-action]');
+
+        buttons.forEach((button) => {
+            button.addEventListener('click', (e) => {
                 const {
                     dataset: { action },
                 } = e.currentTarget;
 
-                alert(action);
+                this.actionHandler(action, { selected: this.selected });
             });
         });
-
-        this.fileOptions = this.container.querySelectorAll('.js-file-options');
     }
 
     updateSelected(input) {
@@ -51,7 +62,7 @@ class Folder {
     }
 
     update() {
-        this.fileOptions.forEach((option) => {
+        this.filesActions.forEach((option) => {
             if (this.selected.length) {
                 option.classList.remove('d-none');
             } else {

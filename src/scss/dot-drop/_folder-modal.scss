@@ -1,0 +1,53 @@
+.drop-action-dialog-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: $gray-900;
+}
+
+.dialog-folder-dot {
+    position: absolute;
+    background-color: $gray-700;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+}
+
+.dialog-folder {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    height: 100px;
+    margin-bottom: 3rem;
+
+    .dialog-folder-dot {
+        left: 0;
+        right: 0;
+        top: -42px;
+        margin: auto;
+        opacity: 0;
+    }
+
+    img {
+        width: 76px;
+        height: auto;
+    }
+
+    &.top {
+        align-items: flex-start;
+    }
+}
+
+.progress {
+    border: 1px solid $gray-700;
+}
+
+.progress-bar {
+    border-radius: $border-radius;
+}
+
+.dialog-trash {
+    width: 82px;
+    height: auto;
+}

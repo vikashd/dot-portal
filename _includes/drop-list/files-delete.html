@@ -1,0 +1,27 @@
+<div class="modal fade" id="files-delete" tabindex="-1" aria-labelledby="file-drop-label" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-form justify-content-center">
+        <div class="bg-white position-relative pe-auto px-4 py-8 px-sm-10 py-sm-9 w-100">
+            <button class="btn-close" data-bs-dismiss="modal" aria-label="Close"><span></span></button>
+            <div id="files-drop-delete" class="drop-action-dialog-container">
+                <img src="{{ '/' | relative_url }}assets/img/dot-drop/trash.svg" class="dialog-trash mb-6" />
+                <div class="h3 mb-6">
+                    Delete
+                    <span>2 files</span>
+                </div>
+                <p class="mb-8 text-center">
+                    Are you sure you want to delete
+                    <span>2 files</span>
+                    from your folder?
+                </p>
+                <ul class="list-unstyled d-flex align-items-center mb-0">
+                    <li>
+                        <button class="btn btn-primary" data-action="delete">Delete</button>
+                    </li>
+                    <li class="ms-3">
+                        <button class="btn btn-outline-dark" data-bs-dismiss="modal">Cancel</button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

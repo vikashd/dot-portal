@@ -1,5 +1,5 @@
 .modal {
-    [data-bs-dismiss='modal'] {
+    .btn-close[data-bs-dismiss='modal'] {
         position: absolute;
         top: 1rem;
         right: 1rem;

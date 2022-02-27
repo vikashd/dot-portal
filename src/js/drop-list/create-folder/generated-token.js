@@ -37,9 +37,13 @@ class GeneratedToken {
         this.container.classList.add('d-none');
     }
 
+    generateToken() {
+        return uuidv4();
+    }
+
     reset() {
         this.tokenField.setAttribute('type', 'password');
-        this.tokenField.value = uuidv4();
+        this.tokenField.value = this.generateToken();
         this.showToken.checked = false;
     }
 }

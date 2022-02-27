@@ -107,17 +107,17 @@
             {% endfor %}
         </ul>
         <div class="hstack small gap-4" data-file-actions>
-            <button class="btn btn-primary btn-icon" data-bs-toggle="modal" data-bs-target="#files-drop-import">
+            <button class="btn btn-primary btn-icon" data-bs-toggle="modal" data-bs-target="#files-upload">
                 <svg class="icon"><use xlink:href="#icon-plus"></use></svg>
                 <span>Make a drop</span>
             </button>
-            <div class="vr js-file-options d-none"></div>
-            <div class="hstack small gap-4 d-none js-file-options">
-                <button class="btn btn-outline-dark btn-icon" data-action="download">
+            <div class="vr js-files-actions d-none"></div>
+            <div class="hstack small gap-4 js-files-actions d-none">
+                <button class="btn btn-outline-dark btn-icon" data-bs-toggle="modal" data-bs-target="#files-download">
                     <svg class="icon"><use xlink:href="#icon-download-2"></use></svg>
                     <span>Download</span>
                 </button>
-                <button class="btn btn-outline-dark btn-icon" data-action="delete">
+                <button class="btn btn-outline-dark btn-icon" data-bs-toggle="modal" data-bs-target="#files-delete">
                     <svg class="icon"><use xlink:href="#icon-delete"></use></svg>
                     <span>Delete</span>
                 </button>
@@ -127,7 +127,9 @@
     {% endif %}
 {% if include.open %}
 </div>
-{% include drop-list/files-drop.html %}
+{% include drop-list/files-upload.html %}
+{% include drop-list/files-download.html %}
+{% include drop-list/files-delete.html %}
 {% else %}
 </a>
 {% endif %}

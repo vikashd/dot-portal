@@ -34,6 +34,7 @@ $utilities: map-merge(
                             map-get(map-get($utilities, 'color'), 'values'),
                             (
                                 'gray-700': $gray-700,
+                                'gray-900': $gray-900,
                                 'form-success': $form-feedback-icon-valid-color,
                                 'red': $red,
                             )
