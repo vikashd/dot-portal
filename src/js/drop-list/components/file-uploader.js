@@ -75,11 +75,7 @@ class FileUploader {
     update() {
         const files = this.uppy.getFiles();
 
-        if (files.length) {
-            this.heading.innerHTML = `${files.length} File(s)`;
-        } else {
-            this.heading.innerHTML = null;
-        }
+        this.heading.innerHTML = files.length ? `${files.length} File${files.length > 1 ? 's' : ''}` : null;
 
         renderSelectedFiles(this.uppy.getFiles(), this.fileListContainer, { onClick: this.removeFile.bind(this) });
     }
