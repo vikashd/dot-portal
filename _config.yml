@@ -51,7 +51,6 @@ destination: ./docs
 # their entries' file path in the `include:` list.
 #
 exclude:
-    - icons
     - src
     - package.json
     - package-lock.json

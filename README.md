@@ -40,7 +40,7 @@ Static files generated in `docs` folder
 
 SVG icon map generated using [IcoMoon app](https://icomoon.io/app/#/select).
 
-1. Import icons from `icons` folder
+1. Import icons from `src/icons` folder
 2. Select the icons
 3. Add/remove icons as necessary
 4. Click 'Generate SVG & More'
@@ -48,4 +48,4 @@ SVG icon map generated using [IcoMoon app](https://icomoon.io/app/#/select).
 
 ## Notes
 
-When committing your changes, if there are any Prettier errors with formatting (run as part of the `precommit` hook) use the `--no-verify` option to by pass it.
+When committing your changes, if there are any Prettier errors with formatting (run as part of the `precommit` hook) bypass it using the `--no-verify` option.
