@@ -48,4 +48,10 @@
         height: 1.125rem;
         margin-right: 1.25rem;
     }
+
+    &:active,
+    &:focus,
+    &:hover {
+        background-color: rgba($blue, 0.2);
+    }
 }

@@ -95,8 +95,9 @@ a.drop-list-item {
     }
 
     &:active,
+    &:focus,
     &:hover {
-        background-color: rgba(#00c8e6, 0.2);
+        background-color: rgba($blue, 0.2);
         transition: none;
     }
 }
