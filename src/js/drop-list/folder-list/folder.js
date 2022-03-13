@@ -1,4 +1,6 @@
 import dropdownMenu from '../components/drop-down-menu';
+import FilesDelete from './delete';
+import FilesDownload from './download';
 
 class Folder {
     constructor(container) {
@@ -9,6 +11,14 @@ class Folder {
 
     init({ actionHandler }) {
         this.actionHandler = actionHandler;
+        this.filesDownload = new FilesDownload();
+
+        this.filesDelete = new FilesDelete();
+        this.filesDelete.init({
+            onActionHandler: (action) => {
+                this.actionHandler(action, { selected: this.selected });
+            },
+        });
 
         dropdownMenu(this.container, ({ id, action }) => {
             alert(`${action} ${id}`);
@@ -21,36 +31,44 @@ class Folder {
         });
 
         this.filesActions = this.container.querySelectorAll('.js-files-actions');
-
-        this.initDeleteDialog();
+        this.initFilesActions();
     }
 
-    initDeleteDialog() {
-        const deleteFilesDialog = document.querySelector('#files-drop-delete');
+    initFilesActions() {
+        const filesActionsButtons = this.container.querySelectorAll('[data-files-action]');
 
-        if (!deleteFilesDialog) {
-            return;
-        }
-
-        const buttons = deleteFilesDialog.querySelectorAll('[data-action]');
-
-        buttons.forEach((button) => {
+        filesActionsButtons.forEach((button) => {
             button.addEventListener('click', (e) => {
+                e.preventDefault();
+
                 const {
-                    dataset: { action },
+                    dataset: { filesAction },
                 } = e.currentTarget;
 
-                this.actionHandler(action, { selected: this.selected });
+                switch (filesAction) {
+                    case 'download':
+                        this.filesDownload.show(this.selected);
+
+                        break;
+                    case 'delete':
+                        this.filesDelete.show(this.selected);
+
+                        break;
+                }
             });
         });
     }
 
     updateSelected(input) {
-        const index = this.selected.indexOf(input.id);
+        const {
+            id,
+            dataset: { name },
+        } = input;
+        const index = this.selected.findIndex(({ id: inputId }) => inputId === id);
 
         if (input.checked) {
             if (index === -1) {
-                this.selected.push(input.id);
+                this.selected.push({ id, name });
             }
         } else if (!input.checked) {
             if (index > -1) {

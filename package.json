@@ -55,6 +55,7 @@
         "@uppy/core": "^2.1.5",
         "@uppy/form": "^2.0.4",
         "@uppy/xhr-upload": "^2.0.7",
+        "animejs": "^3.2.1",
         "bootstrap": "^5.1.1",
         "core-js": "^3.21.1",
         "uuid": "^8.3.2"

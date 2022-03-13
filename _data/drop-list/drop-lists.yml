@@ -8,10 +8,10 @@ items:
             name: Electricity Generation data 2010-2022.csv
             date: 10 Jan 2022
           - id: 2
-            name: Agricultural emission data 2010-2022.csv
+            name: Agricultural emission data 2010-2022-1.csv
             date: 10 Jan 2022
           - id: 3
-            name: Agricultural emission data 2010-2022.csv
+            name: Agricultural emission data 2010-2022-2.csv
             date: 10 Jan 2022
     - id: 2
       title: Carbon Net Emission Data 2022

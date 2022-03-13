@@ -3,17 +3,17 @@ import FileProgress from '../../components/file-progress';
 import FilesSelect from './files-select';
 
 const init = () => {
-    const dropFiles = document.querySelector('[data-files-drop]');
+    const container = document.querySelector('[data-files-drop]');
 
-    if (!dropFiles) {
+    if (!container) {
         return;
     }
 
     const {
         dataset: { filesDrop: formId },
-    } = dropFiles;
+    } = container;
 
-    const fileUpload = new FileUploader(dropFiles, formId);
+    const fileUpload = new FileUploader(container, formId);
     fileUpload.init({
         xhrUploadOptions: {
             endpoint: 'https://xhr-server.herokuapp.com/upload',
@@ -22,18 +22,18 @@ const init = () => {
         },
     });
 
-    const fs = new FilesSelect(dropFiles.querySelector('#files-drop-select'), { uppy: fileUpload.uppy });
-    const fp = new FileProgress(dropFiles.querySelector('#files-drop-upload-progress'));
+    const fs = new FilesSelect(container.querySelector('#files-drop-select'), { uppy: fileUpload.uppy });
+    const fp = new FileProgress(container.querySelector('#files-drop-progress'));
 
     fs.init({
         onSubmitHandler: () => {
             fs.hide();
-            fp.show();
+            fp.show(fileUpload.uppy.getFiles().map(({ name }) => ({ name })));
             console.log('submit');
         },
     });
 
-    dropFiles.addEventListener('hidden.bs.modal', () => {
+    container.addEventListener('hidden.bs.modal', () => {
         fileUpload.reset();
 
         fs.reset();
